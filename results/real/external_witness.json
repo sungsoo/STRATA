@@ -1,0 +1,252 @@
+{
+  "source_check": "external_check.json",
+  "tool": {
+    "adapter": "raphtory",
+    "version": "0.17.0",
+    "function": "raphtory.algorithms.temporally_reachable_nodes"
+  },
+  "semantics": "closure",
+  "rows": [
+    {
+      "dataset": "CollegeMsg",
+      "n": 1899,
+      "m": 59835,
+      "sources": 64,
+      "disagreements": [
+        {
+          "source": 960,
+          "strata_size": 1546,
+          "independent_size": 1546,
+          "independent_matches_strata": true,
+          "external_size": 1545,
+          "missed_by_external": [
+            {
+              "vertex": 283,
+              "reachable_independent": true,
+              "path": [
+                [
+                  960,
+                  41,
+                  1084186543
+                ],
+                [
+                  41,
+                  816,
+                  1084298306
+                ],
+                [
+                  816,
+                  447,
+                  1084313167
+                ],
+                [
+                  447,
+                  243,
+                  1084325641
+                ],
+                [
+                  243,
+                  585,
+                  1084338520
+                ],
+                [
+                  585,
+                  512,
+                  1084338719
+                ],
+                [
+                  512,
+                  249,
+                  1084385523
+                ],
+                [
+                  249,
+                  7,
+                  1084395559
+                ],
+                [
+                  7,
+                  999,
+                  1084396766
+                ],
+                [
+                  999,
+                  295,
+                  1084408997
+                ],
+                [
+                  295,
+                  927,
+                  1084425456
+                ],
+                [
+                  927,
+                  713,
+                  1084452079
+                ],
+                [
+                  713,
+                  283,
+                  1084867320
+                ]
+              ],
+              "hops": 13,
+              "path_valid": true
+            }
+          ],
+          "reported_only_by_external": [],
+          "examples_complete": true
+        },
+        {
+          "source": 1515,
+          "strata_size": 747,
+          "independent_size": 747,
+          "independent_matches_strata": true,
+          "external_size": 746,
+          "missed_by_external": [
+            {
+              "vertex": 296,
+              "reachable_independent": true,
+              "path": [
+                [
+                  1515,
+                  392,
+                  1087171285
+                ],
+                [
+                  392,
+                  1345,
+                  1088494932
+                ],
+                [
+                  1345,
+                  556,
+                  1088559932
+                ],
+                [
+                  556,
+                  524,
+                  1088559981
+                ],
+                [
+                  524,
+                  1712,
+                  1088662390
+                ],
+                [
+                  1712,
+                  1547,
+                  1088750781
+                ],
+                [
+                  1547,
+                  877,
+                  1088753004
+                ],
+                [
+                  877,
+                  782,
+                  1089017490
+                ],
+                [
+                  782,
+                  1740,
+                  1089379200
+                ],
+                [
+                  1740,
+                  296,
+                  1089615174
+                ]
+              ],
+              "hops": 10,
+              "path_valid": true
+            }
+          ],
+          "reported_only_by_external": [],
+          "examples_complete": true
+        }
+      ]
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "n": 5881,
+      "m": 35592,
+      "sources": 64,
+      "disagreements": []
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "n": 5573,
+      "m": 32029,
+      "sources": 64,
+      "disagreements": [
+        {
+          "source": 1284,
+          "strata_size": 4391,
+          "independent_size": 4391,
+          "independent_matches_strata": true,
+          "external_size": 4390,
+          "missed_by_external": [
+            {
+              "vertex": 321,
+              "reachable_independent": true,
+              "path": [
+                [
+                  1284,
+                  1262,
+                  1310556851
+                ],
+                [
+                  1262,
+                  1244,
+                  1310602079
+                ],
+                [
+                  1244,
+                  1002,
+                  1310776928
+                ],
+                [
+                  1002,
+                  835,
+                  1311051450
+                ],
+                [
+                  835,
+                  1294,
+                  1311055980
+                ],
+                [
+                  1294,
+                  1269,
+                  1311056142
+                ],
+                [
+                  1269,
+                  321,
+                  1312013907
+                ]
+              ],
+              "hops": 7,
+              "path_valid": true
+            }
+          ],
+          "reported_only_by_external": [],
+          "examples_complete": true
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "sampled_sources": 192,
+    "agreeing_sources": 189,
+    "disagreeing_sources": 3,
+    "missed_vertices": 3,
+    "missed_with_valid_witness": 3,
+    "external_only_vertices": 0,
+    "external_only_with_path": 0,
+    "independent_matches_strata_all": true
+  },
+  "note": "offline correctness record; no timing"
+}

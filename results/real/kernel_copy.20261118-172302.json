@@ -1,0 +1,400 @@
+{
+  "dataset": "sx-stackoverflow",
+  "n": 2601977,
+  "m": 63497050,
+  "meta": {
+    "dataset": "sx-stackoverflow",
+    "max_edges": null,
+    "max_nodes": null,
+    "n": 2601977,
+    "relabel_compact": true,
+    "temporal_edges": 63497050,
+    "timestamp_max": 1457273428,
+    "timestamp_min": 1217567877,
+    "unique_timestamps": 52423237
+  },
+  "block_bits": 65536,
+  "repeats": 3,
+  "schedule": "static, chunks = threads",
+  "verified_sources": 16,
+  "variants": [
+    "strict",
+    "copy",
+    "copy_prefault",
+    "copy_reuse",
+    "copy_aligned",
+    "tiles"
+  ],
+  "checksums": {
+    "strict_pairs": 135861202069,
+    "strict": [
+      12795222921763444699,
+      1545706645574725509
+    ],
+    "tiles_pairs": 135861202069
+  },
+  "rows": [
+    {
+      "variant": "strict",
+      "threads": 1,
+      "chunks": 1,
+      "seconds_samples": [
+        32.873523415997624,
+        32.42921991698677,
+        32.47556408296805
+      ],
+      "seconds_median": 32.47556408296805
+    },
+    {
+      "variant": "copy",
+      "threads": 1,
+      "chunks": 1,
+      "seconds_samples": [
+        3.5231617909739725,
+        3.5460518329637125,
+        3.4227237079758197
+      ],
+      "seconds_median": 3.5231617909739725
+    },
+    {
+      "variant": "copy_prefault",
+      "threads": 1,
+      "chunks": 1,
+      "seconds_samples": [
+        3.418187667033635,
+        3.434434707975015,
+        3.413241999980528
+      ],
+      "seconds_median": 3.418187667033635
+    },
+    {
+      "variant": "copy_reuse",
+      "threads": 1,
+      "chunks": 1,
+      "seconds_samples": [
+        2.411914166994393,
+        2.413900666986592,
+        2.4352286249632016
+      ],
+      "seconds_median": 2.413900666986592
+    },
+    {
+      "variant": "copy_aligned",
+      "threads": 1,
+      "chunks": 1,
+      "seconds_samples": [
+        4.952748249983415,
+        3.620535292022396,
+        3.5916782499989495
+      ],
+      "seconds_median": 3.620535292022396
+    },
+    {
+      "variant": "tiles",
+      "threads": 1,
+      "chunks": 1,
+      "seconds_samples": [
+        30.927221541991457,
+        31.054751291987486,
+        30.910237750038505
+      ],
+      "seconds_median": 30.927221541991457
+    },
+    {
+      "variant": "strict",
+      "threads": 6,
+      "chunks": 6,
+      "seconds_samples": [
+        17.568875750002917,
+        17.56651787494775,
+        17.686682499945164
+      ],
+      "seconds_median": 17.568875750002917
+    },
+    {
+      "variant": "copy",
+      "threads": 6,
+      "chunks": 6,
+      "seconds_samples": [
+        6.593834541039541,
+        6.607216750038788,
+        6.689492708013859
+      ],
+      "seconds_median": 6.607216750038788
+    },
+    {
+      "variant": "copy_prefault",
+      "threads": 6,
+      "chunks": 6,
+      "seconds_samples": [
+        6.5665511669940315,
+        6.507970958016813,
+        7.147426916984841
+      ],
+      "seconds_median": 6.5665511669940315
+    },
+    {
+      "variant": "copy_reuse",
+      "threads": 6,
+      "chunks": 6,
+      "seconds_samples": [
+        0.9278989169979468,
+        0.866201083001215,
+        0.8858638750389218
+      ],
+      "seconds_median": 0.8858638750389218
+    },
+    {
+      "variant": "copy_aligned",
+      "threads": 6,
+      "chunks": 6,
+      "seconds_samples": [
+        8.429592499975115,
+        7.894054958014749,
+        6.7086085000191815
+      ],
+      "seconds_median": 7.894054958014749
+    },
+    {
+      "variant": "tiles",
+      "threads": 6,
+      "chunks": 6,
+      "seconds_samples": [
+        12.208038040960673,
+        12.503895749978255,
+        12.66195316601079
+      ],
+      "seconds_median": 12.503895749978255
+    },
+    {
+      "variant": "strict",
+      "threads": 12,
+      "chunks": 12,
+      "seconds_samples": [
+        25.62126308400184,
+        20.987053333956283,
+        21.209736667049583
+      ],
+      "seconds_median": 21.209736667049583
+    },
+    {
+      "variant": "copy",
+      "threads": 12,
+      "chunks": 12,
+      "seconds_samples": [
+        21.62894291698467,
+        21.71654891601065,
+        21.68689741700655
+      ],
+      "seconds_median": 21.68689741700655
+    },
+    {
+      "variant": "copy_prefault",
+      "threads": 12,
+      "chunks": 12,
+      "seconds_samples": [
+        21.671700500010047,
+        21.62087091698777,
+        21.69784816703759
+      ],
+      "seconds_median": 21.671700500010047
+    },
+    {
+      "variant": "copy_reuse",
+      "threads": 12,
+      "chunks": 12,
+      "seconds_samples": [
+        0.7589351670467295,
+        0.7779036249849014,
+        0.775729707966093
+      ],
+      "seconds_median": 0.775729707966093
+    },
+    {
+      "variant": "copy_aligned",
+      "threads": 12,
+      "chunks": 12,
+      "seconds_samples": [
+        21.774825250031427,
+        21.535730291972868,
+        21.65484066598583
+      ],
+      "seconds_median": 21.65484066598583
+    },
+    {
+      "variant": "tiles",
+      "threads": 12,
+      "chunks": 12,
+      "seconds_samples": [
+        8.330434582952876,
+        8.45605566597078,
+        8.392846957955044
+      ],
+      "seconds_median": 8.392846957955044
+    },
+    {
+      "variant": "strict",
+      "threads": 18,
+      "chunks": 18,
+      "seconds_samples": [
+        27.450928375008516,
+        22.86534208402736,
+        22.958351584034972
+      ],
+      "seconds_median": 22.958351584034972
+    },
+    {
+      "variant": "copy",
+      "threads": 18,
+      "chunks": 18,
+      "seconds_samples": [
+        31.38619066699175,
+        31.43007658299757,
+        31.398311708995607
+      ],
+      "seconds_median": 31.398311708995607
+    },
+    {
+      "variant": "copy_prefault",
+      "threads": 18,
+      "chunks": 18,
+      "seconds_samples": [
+        31.30639137502294,
+        31.37223833304597,
+        31.459123916982207
+      ],
+      "seconds_median": 31.37223833304597
+    },
+    {
+      "variant": "copy_reuse",
+      "threads": 18,
+      "chunks": 18,
+      "seconds_samples": [
+        0.5953799589769915,
+        0.5831112919840962,
+        0.5606232919963077
+      ],
+      "seconds_median": 0.5831112919840962
+    },
+    {
+      "variant": "copy_aligned",
+      "threads": 18,
+      "chunks": 18,
+      "seconds_samples": [
+        31.608506624994334,
+        31.45167895796476,
+        31.42396791698411
+      ],
+      "seconds_median": 31.45167895796476
+    },
+    {
+      "variant": "tiles",
+      "threads": 18,
+      "chunks": 18,
+      "seconds_samples": [
+        6.487593500001822,
+        6.250328083988279,
+        6.54556312499335
+      ],
+      "seconds_median": 6.487593500001822
+    }
+  ],
+  "summary": {
+    "strict": {
+      "seconds": {
+        "1": 32.47556408296805,
+        "6": 17.568875750002917,
+        "12": 21.209736667049583,
+        "18": 22.958351584034972
+      },
+      "ref_threads": 6,
+      "pmax_over_ref": 1.3067627041548837
+    },
+    "copy": {
+      "seconds": {
+        "1": 3.5231617909739725,
+        "6": 6.607216750038788,
+        "12": 21.68689741700655,
+        "18": 31.398311708995607
+      },
+      "ref_threads": 6,
+      "pmax_over_ref": 4.752123760554894
+    },
+    "copy_prefault": {
+      "seconds": {
+        "1": 3.418187667033635,
+        "6": 6.5665511669940315,
+        "12": 21.671700500010047,
+        "18": 31.37223833304597
+      },
+      "ref_threads": 6,
+      "pmax_over_ref": 4.777582255162299
+    },
+    "copy_reuse": {
+      "seconds": {
+        "1": 2.413900666986592,
+        "6": 0.8858638750389218,
+        "12": 0.775729707966093,
+        "18": 0.5831112919840962
+      },
+      "ref_threads": 6,
+      "pmax_over_ref": 0.6582402877174287
+    },
+    "copy_aligned": {
+      "seconds": {
+        "1": 3.620535292022396,
+        "6": 7.894054958014749,
+        "12": 21.65484066598583,
+        "18": 31.45167895796476
+      },
+      "ref_threads": 6,
+      "pmax_over_ref": 3.984223459963654
+    },
+    "tiles": {
+      "seconds": {
+        "1": 30.927221541991457,
+        "6": 12.503895749978255,
+        "12": 8.392846957955044,
+        "18": 6.487593500001822
+      },
+      "ref_threads": 6,
+      "pmax_over_ref": 0.5188457765263361
+    }
+  },
+  "note": "nosnap is not strict semantics (timing comparison only); copy has no edges; prealloc allocates and touches all tiles before the clock starts",
+  "peak_rss_bytes": 72077459456,
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.18",
+    "numpy": "2.5.5",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.5, Numba 0.68.1"
+  },
+  "threads_record": {
+    "numba": 18,
+    "graphblas": null,
+    "threadpools": []
+  }
+}

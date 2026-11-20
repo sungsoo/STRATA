@@ -1,0 +1,254 @@
+{
+  "dataset": "sx-stackoverflow",
+  "n": 2601977,
+  "edges": 16000000,
+  "words": 1024,
+  "repeats": 3,
+  "schedule": "static, chunks = threads",
+  "stream_triad": {
+    "array_mib": 1024,
+    "n_elems": 134217728,
+    "rows": [
+      {
+        "threads": 1,
+        "seconds": 0.025799875031225383,
+        "samples_s": [
+          0.025799875031225383,
+          0.0258841670001857,
+          0.025891375029459596
+        ],
+        "GBps": 124.85430522827635,
+        "GBps_write_allocate": 166.47240697103516
+      },
+      {
+        "threads": 6,
+        "seconds": 0.018103624985087663,
+        "samples_s": [
+          0.01814712502527982,
+          0.018103624985087663,
+          0.01817845896584913
+        ],
+        "GBps": 177.9326225909668,
+        "GBps_write_allocate": 237.2434967879557
+      },
+      {
+        "threads": 12,
+        "seconds": 0.012137208017520607,
+        "samples_s": [
+          0.012176375021226704,
+          0.012165250023826957,
+          0.012137208017520607
+        ],
+        "GBps": 265.4008621546253,
+        "GBps_write_allocate": 353.8678162061671
+      },
+      {
+        "threads": 18,
+        "seconds": 0.009249125025235116,
+        "samples_s": [
+          0.009284625004511327,
+          0.009293708018958569,
+          0.009249125025235116
+        ],
+        "GBps": 348.27353541132555,
+        "GBps_write_allocate": 464.36471388176744
+      }
+    ]
+  },
+  "rows": [
+    {
+      "order": "stream",
+      "threads": 1,
+      "chunks": 1,
+      "edges": 16000000,
+      "words": 1024,
+      "seconds_samples": [
+        6.096674167027231,
+        6.15567208401626,
+        6.1460707079968415
+      ],
+      "seconds_median": 6.1460707079968415,
+      "row_updates_per_s": 2603289.28191176,
+      "touched_GBps": 63.978437392263416,
+      "checksum": 18018311586362301874,
+      "triad_GBps": 124.85430522827635
+    },
+    {
+      "order": "stream",
+      "threads": 6,
+      "chunks": 6,
+      "edges": 16000000,
+      "words": 1024,
+      "seconds_samples": [
+        1.9765845829970203,
+        1.9953804169781506,
+        2.0374840419972315
+      ],
+      "seconds_median": 1.9953804169781506,
+      "row_updates_per_s": 48111126.67196793,
+      "touched_GBps": 197.06317484838064,
+      "checksum": 18018311586362301874,
+      "triad_GBps": 177.9326225909668
+    },
+    {
+      "order": "stream",
+      "threads": 12,
+      "chunks": 12,
+      "edges": 16000000,
+      "words": 1024,
+      "seconds_samples": [
+        1.4615647500031628,
+        1.4237295420025475,
+        1.3479576669633389
+      ],
+      "seconds_median": 1.4237295420025475,
+      "row_updates_per_s": 134857073.858243,
+      "touched_GBps": 276.18728726168166,
+      "checksum": 18018311586362301874,
+      "triad_GBps": 265.4008621546253
+    },
+    {
+      "order": "stream",
+      "threads": 18,
+      "chunks": 18,
+      "edges": 16000000,
+      "words": 1024,
+      "seconds_samples": [
+        1.116060208005365,
+        1.0995876250090078,
+        1.0932951249997132
+      ],
+      "seconds_median": 1.0995876250090078,
+      "row_updates_per_s": 261916370.6918225,
+      "touched_GBps": 357.60315145123496,
+      "checksum": 18018311586362301874,
+      "triad_GBps": 348.27353541132555
+    },
+    {
+      "order": "random",
+      "threads": 1,
+      "chunks": 1,
+      "edges": 16000000,
+      "words": 1024,
+      "seconds_samples": [
+        10.461784666986205,
+        10.392949124972802,
+        10.367223375011235
+      ],
+      "seconds_median": 10.392949124972802,
+      "row_updates_per_s": 1539505.274932429,
+      "touched_GBps": 37.834881636739375,
+      "checksum": 13451357636291705449,
+      "triad_GBps": 124.85430522827635
+    },
+    {
+      "order": "random",
+      "threads": 6,
+      "chunks": 6,
+      "edges": 16000000,
+      "words": 1024,
+      "seconds_samples": [
+        6.144608625036199,
+        5.766242375015281,
+        5.913739415991586
+      ],
+      "seconds_median": 5.913739415991586,
+      "row_updates_per_s": 16233383.523866888,
+      "touched_GBps": 66.49193891375877,
+      "checksum": 13451357636291705449,
+      "triad_GBps": 177.9326225909668
+    },
+    {
+      "order": "random",
+      "threads": 12,
+      "chunks": 12,
+      "edges": 16000000,
+      "words": 1024,
+      "seconds_samples": [
+        4.093407125037629,
+        4.032797584019136,
+        4.045141667011194
+      ],
+      "seconds_median": 4.045141667011194,
+      "row_updates_per_s": 47464345.084819175,
+      "touched_GBps": 97.20697873370968,
+      "checksum": 13451357636291705449,
+      "triad_GBps": 265.4008621546253
+    },
+    {
+      "order": "random",
+      "threads": 18,
+      "chunks": 18,
+      "edges": 16000000,
+      "words": 1024,
+      "seconds_samples": [
+        2.9691290840273723,
+        2.885124291991815,
+        2.9244312079972588
+      ],
+      "seconds_median": 2.9244312079972588,
+      "row_updates_per_s": 98480688.89855383,
+      "touched_GBps": 134.45896724282548,
+      "checksum": 13451357636291705449,
+      "triad_GBps": 348.27353541132555
+    }
+  ],
+  "summary": {
+    "random": {
+      "seconds": {
+        "1": 10.392949124972802,
+        "6": 5.913739415991586,
+        "12": 4.045141667011194,
+        "18": 2.9244312079972588
+      },
+      "best_threads": 18,
+      "largest_over_best": 1.0
+    },
+    "stream": {
+      "seconds": {
+        "1": 6.1460707079968415,
+        "6": 1.9953804169781506,
+        "12": 1.4237295420025475,
+        "18": 1.0995876250090078
+      },
+      "best_threads": 18,
+      "largest_over_best": 1.0
+    }
+  },
+  "note": "hardware measurement of the kernel's access shape (tile[v] |= tile[u]); no timestamps, snapshots, or reachability semantics",
+  "peak_rss_bytes": 58263109632,
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.18",
+    "numpy": "2.5.5",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.5, Numba 0.68.1"
+  },
+  "threads_record": {
+    "numba": 18,
+    "graphblas": null,
+    "threadpools": []
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "machine": "macOS-27.2.1-arm64-arm-64bit-Mach-O; 18 cores; torch 2.15.0; device mps",
+  "requested_device": "mps",
+  "fallback_reason": null,
+  "rows": [
+    {
+      "dataset": "CollegeMsg",
+      "mode": "strict",
+      "numba_s": 0.05959008299396373,
+      "torch_s": 0.44328770801075734
+    },
+    {
+      "dataset": "CollegeMsg",
+      "mode": "closure",
+      "numba_s": 0.12209154199808836,
+      "torch_s": 12.5530639589997
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "mode": "strict",
+      "numba_s": 0.0370418330130633,
+      "torch_s": 0.2521352919866331
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "mode": "closure",
+      "numba_s": 0.09508962501422502,
+      "torch_s": 9.691477916989243
+    }
+  ],
+  "verified": [
+    "CollegeMsg/strict/mps",
+    "CollegeMsg/closure/mps",
+    "BitcoinOTC/strict/mps",
+    "BitcoinOTC/closure/mps"
+  ],
+  "status": "MEASURED"
+}

@@ -1,0 +1,2325 @@
+{
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.15.2",
+    "numpy": "2.5.4",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.15.2, NumPy 2.5.4, Numba 0.68.1"
+  },
+  "thread_grid": [
+    1,
+    2,
+    4,
+    6,
+    8,
+    12,
+    16,
+    18
+  ],
+  "pending": false,
+  "note": "achieved_GBps uses touched bytes (traffic.py); cache reuse can make ratios exceed 1, which indicates cache residency, not DRAM efficiency",
+  "stream_triad": {
+    "array_mib": 2048.0,
+    "n_elems": 268435456,
+    "rows": [
+      {
+        "threads": 1,
+        "seconds": 0.05236387500190176,
+        "GBps": 123.03235663453138,
+        "GBps_write_allocate": 164.0431421793752
+      },
+      {
+        "threads": 2,
+        "seconds": 0.029124332999344915,
+        "GBps": 221.205098298557,
+        "GBps_write_allocate": 294.9401310647427
+      },
+      {
+        "threads": 4,
+        "seconds": 0.019675916992127895,
+        "GBps": 327.42824370409517,
+        "GBps_write_allocate": 436.5709916054603
+      },
+      {
+        "threads": 6,
+        "seconds": 0.021608915994875133,
+        "GBps": 298.1385528791875,
+        "GBps_write_allocate": 397.5180705055833
+      },
+      {
+        "threads": 8,
+        "seconds": 0.025487749982858077,
+        "GBps": 252.7665623027888,
+        "GBps_write_allocate": 337.02208307038507
+      },
+      {
+        "threads": 12,
+        "seconds": 0.019895457982784137,
+        "GBps": 323.8151617105149,
+        "GBps_write_allocate": 431.75354894735324
+      },
+      {
+        "threads": 16,
+        "seconds": 0.018045542004983872,
+        "GBps": 357.0106645852313,
+        "GBps_write_allocate": 476.0142194469751
+      },
+      {
+        "threads": 18,
+        "seconds": 0.018049416976282373,
+        "GBps": 356.9340191135053,
+        "GBps_write_allocate": 475.9120254846738
+      }
+    ]
+  },
+  "best_stream_GBps": 357.0106645852313,
+  "kernels": [
+    {
+      "dataset": "CollegeMsg",
+      "n": 1899,
+      "m": 59835,
+      "W": 30,
+      "reference": "interpreted",
+      "state_bytes": 455760,
+      "num_directed_edges": 59835,
+      "dirty_total": 59779,
+      "verified_bit_identical": true,
+      "rows": [
+        {
+          "threads": 1,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 1,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 1,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=1, W=30)=1 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0010674590012058616,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 0,
+            "total_bytes": 71775120
+          },
+          "achieved_GBps": 67.23922878435499,
+          "ratio_same_threads": 0.5465166288254534,
+          "ratio_best_stream": 0.18833955244018366
+        },
+        {
+          "threads": 1,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 1,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 1,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=1, W=30)=1 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0006779999821446836,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 1823040,
+            "total_bytes": 73598160
+          },
+          "achieved_GBps": 108.55186126582275,
+          "ratio_same_threads": 0.8823033568988436,
+          "ratio_best_stream": 0.30405775522682604
+        },
+        {
+          "threads": 2,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 2,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 2,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=2, W=30)=2 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0014925409923307598,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 0,
+            "total_bytes": 71775120
+          },
+          "achieved_GBps": 48.08921186674787,
+          "ratio_same_threads": 0.21739648966789465,
+          "ratio_best_stream": 0.1346996508426914
+        },
+        {
+          "threads": 2,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 2,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 2,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=2, W=30)=2 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0006594579899683595,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 1823040,
+            "total_bytes": 73598160
+          },
+          "achieved_GBps": 111.60401590331966,
+          "ratio_same_threads": 0.5045273222079606,
+          "ratio_best_stream": 0.312606952604565
+        },
+        {
+          "threads": 4,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 4,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 4,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=4, W=30)=4 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0013532500015571713,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 0,
+            "total_bytes": 71775120
+          },
+          "achieved_GBps": 53.03906884715247,
+          "ratio_same_threads": 0.16198684709400074,
+          "ratio_best_stream": 0.14856438226788637
+        },
+        {
+          "threads": 4,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 4,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 4,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=4, W=30)=4 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0005138749838806689,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 1823040,
+            "total_bytes": 73598160
+          },
+          "achieved_GBps": 143.22191643617901,
+          "ratio_same_threads": 0.4374146677633959,
+          "ratio_best_stream": 0.4011698546948778
+        },
+        {
+          "threads": 6,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 6,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 6,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=6, W=30)=6 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0009789580071810633,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 0,
+            "total_bytes": 71775120
+          },
+          "achieved_GBps": 73.31787418203815,
+          "ratio_same_threads": 0.2459187967271989,
+          "ratio_best_stream": 0.20536606173156638
+        },
+        {
+          "threads": 6,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 6,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 6,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=6, W=30)=6 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0004515000036917627,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 1823040,
+            "total_bytes": 73598160
+          },
+          "achieved_GBps": 163.00810497943027,
+          "ratio_same_threads": 0.5467528550240359,
+          "ratio_best_stream": 0.45659169640999436
+        },
+        {
+          "threads": 8,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 8,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 8,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=8, W=30)=8 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0008934999932534993,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 0,
+            "total_bytes": 71775120
+          },
+          "achieved_GBps": 80.33029719300325,
+          "ratio_same_threads": 0.31780428732806704,
+          "ratio_best_stream": 0.22500811645593155
+        },
+        {
+          "threads": 8,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 8,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 8,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=8, W=30)=8 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0004524160176515579,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 1823040,
+            "total_bytes": 73598160
+          },
+          "achieved_GBps": 162.67805985747367,
+          "ratio_same_threads": 0.6435901108731376,
+          "ratio_best_stream": 0.4556672278865119
+        },
+        {
+          "threads": 12,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 12,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 12,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=12, W=30)=12 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0010295409883838147,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 0,
+            "total_bytes": 71775120
+          },
+          "achieved_GBps": 69.71565077042091,
+          "ratio_same_threads": 0.2152945847320932,
+          "ratio_best_stream": 0.19527610148961605
+        },
+        {
+          "threads": 12,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 12,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 12,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=12, W=30)=12 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.00040883402107283473,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 1823040,
+            "total_bytes": 73598160
+          },
+          "achieved_GBps": 180.01965640449555,
+          "ratio_same_threads": 0.5559333770956345,
+          "ratio_best_stream": 0.5042416775242252
+        },
+        {
+          "threads": 16,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 16,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 16,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=16, W=30)=16 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0010976250050589442,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 0,
+            "total_bytes": 71775120
+          },
+          "achieved_GBps": 65.39129453974635,
+          "ratio_same_threads": 0.1831634206662056,
+          "ratio_best_stream": 0.1831634206662056
+        },
+        {
+          "threads": 16,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 16,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 16,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=16, W=30)=16 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0003893749963026494,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 1823040,
+            "total_bytes": 73598160
+          },
+          "achieved_GBps": 189.01614304682877,
+          "ratio_same_threads": 0.5294411674408225,
+          "ratio_best_stream": 0.5294411674408225
+        },
+        {
+          "threads": 18,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 18,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 18,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=18, W=30)=18 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0010762499878183007,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 0,
+            "total_bytes": 71775120
+          },
+          "achieved_GBps": 66.69000772348211,
+          "ratio_same_threads": 0.18684127640485462,
+          "ratio_best_stream": 0.18680116405195174
+        },
+        {
+          "threads": 18,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 18,
+            "words": 30,
+            "line_words": 16,
+            "nchunks": 18,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=18, W=30)=18 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.00041037501068785787,
+          "model": {
+            "edge_bytes": 43081200,
+            "snapshot_bytes": 28693920,
+            "tile_bytes": 1823040,
+            "total_bytes": 73598160
+          },
+          "achieved_GBps": 179.3436687985388,
+          "ratio_same_threads": 0.5024560820623472,
+          "ratio_best_stream": 0.5023482113815763
+        }
+      ]
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "n": 5881,
+      "m": 35592,
+      "W": 92,
+      "reference": "interpreted",
+      "state_bytes": 4328416,
+      "num_directed_edges": 35592,
+      "dirty_total": 35592,
+      "verified_bit_identical": true,
+      "rows": [
+        {
+          "threads": 1,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 1,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 1,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=1, W=92)=1 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0016663330025039613,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 0,
+            "total_bytes": 130978560
+          },
+          "achieved_GBps": 78.60287217691868,
+          "ratio_same_threads": 0.6388796762660505,
+          "ratio_best_stream": 0.22016953546258375
+        },
+        {
+          "threads": 1,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 1,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 1,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=1, W=92)=1 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0010889999975915998,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 17313664,
+            "total_bytes": 148292224
+          },
+          "achieved_GBps": 136.17284143981516,
+          "ratio_same_threads": 1.1068051134248993,
+          "ratio_best_stream": 0.38142513641159254
+        },
+        {
+          "threads": 2,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 2,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 2,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=2, W=92)=2 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0017090829787775874,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 0,
+            "total_bytes": 130978560
+          },
+          "achieved_GBps": 76.63674708976491,
+          "ratio_same_threads": 0.34645108851121287,
+          "ratio_best_stream": 0.21466234679235738
+        },
+        {
+          "threads": 2,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 2,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 2,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=2, W=92)=2 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0007330829976126552,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 17313664,
+            "total_bytes": 148292224
+          },
+          "achieved_GBps": 202.285722739343,
+          "ratio_same_threads": 0.9144713403771606,
+          "ratio_best_stream": 0.5666097481271462
+        },
+        {
+          "threads": 4,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 4,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 4,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=4, W=92)=4 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0013515829923562706,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 0,
+            "total_bytes": 130978560
+          },
+          "achieved_GBps": 96.90752306054077,
+          "ratio_same_threads": 0.2959656807985033,
+          "ratio_best_stream": 0.2714415357118987
+        },
+        {
+          "threads": 4,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 4,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 4,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=4, W=92)=4 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0008129590132739395,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 17313664,
+            "total_bytes": 148292224
+          },
+          "achieved_GBps": 182.41045560562668,
+          "ratio_same_threads": 0.5571005529091603,
+          "ratio_best_stream": 0.5109383940044142
+        },
+        {
+          "threads": 6,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 6,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 6,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=6, W=92)=6 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0010730000212788582,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 0,
+            "total_bytes": 130978560
+          },
+          "achieved_GBps": 122.06762106480933,
+          "ratio_same_threads": 0.4094325268771057,
+          "ratio_best_stream": 0.3419158954442589
+        },
+        {
+          "threads": 6,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 6,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 6,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=6, W=92)=6 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0006142500205896795,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 17313664,
+            "total_bytes": 148292224
+          },
+          "achieved_GBps": 241.4199739995769,
+          "ratio_same_threads": 0.8097576501533693,
+          "ratio_best_stream": 0.6762262250066238
+        },
+        {
+          "threads": 8,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 8,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 8,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=8, W=92)=8 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0011074589856434613,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 0,
+            "total_bytes": 130978560
+          },
+          "achieved_GBps": 118.26944536812637,
+          "ratio_same_threads": 0.46789988474207883,
+          "ratio_best_stream": 0.3312770656460073
+        },
+        {
+          "threads": 8,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 8,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 8,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=8, W=92)=8 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0005551249778363854,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 17313664,
+            "total_bytes": 148292224
+          },
+          "achieved_GBps": 267.13304196466345,
+          "ratio_same_threads": 1.0568369468294823,
+          "ratio_best_stream": 0.7482494739338218
+        },
+        {
+          "threads": 12,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 12,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 12,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=12, W=92)=12 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.000960665987804532,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 0,
+            "total_bytes": 130978560
+          },
+          "achieved_GBps": 136.34141487545864,
+          "ratio_same_threads": 0.42104703854894077,
+          "ratio_best_stream": 0.38189731680384864
+        },
+        {
+          "threads": 12,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 12,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 12,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=12, W=92)=12 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.00048645801143720746,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 17313664,
+            "total_bytes": 148292224
+          },
+          "achieved_GBps": 304.84074784148504,
+          "ratio_same_threads": 0.9414035656366436,
+          "ratio_best_stream": 0.8538701447354342
+        },
+        {
+          "threads": 16,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 16,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 16,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=16, W=92)=16 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0009178750042337924,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 0,
+            "total_bytes": 130978560
+          },
+          "achieved_GBps": 142.6975997775819,
+          "ratio_same_threads": 0.3997012244532399,
+          "ratio_best_stream": 0.3997012244532399
+        },
+        {
+          "threads": 16,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 16,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 16,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=16, W=92)=16 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.000514750019647181,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 17313664,
+            "total_bytes": 148292224
+          },
+          "achieved_GBps": 288.08590255449076,
+          "ratio_same_threads": 0.8069392069538983,
+          "ratio_best_stream": 0.8069392069538983
+        },
+        {
+          "threads": 18,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 18,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 18,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=18, W=92)=18 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0008748330001253635,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 0,
+            "total_bytes": 130978560
+          },
+          "achieved_GBps": 149.71835765366737,
+          "ratio_same_threads": 0.4194566772467177,
+          "ratio_best_stream": 0.4193666254413086
+        },
+        {
+          "threads": 18,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 18,
+            "words": 92,
+            "line_words": 16,
+            "nchunks": 18,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=18, W=92)=18 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.000493333995109424,
+          "model": {
+            "edge_bytes": 78587136,
+            "snapshot_bytes": 52391424,
+            "tile_bytes": 17313664,
+            "total_bytes": 148292224
+          },
+          "achieved_GBps": 300.591942720485,
+          "ratio_same_threads": 0.8421498837993823,
+          "ratio_best_stream": 0.8419690853484935
+        }
+      ]
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "n": 5573,
+      "m": 32029,
+      "W": 88,
+      "reference": "interpreted",
+      "state_bytes": 3923392,
+      "num_directed_edges": 32029,
+      "dirty_total": 32029,
+      "verified_bit_identical": true,
+      "rows": [
+        {
+          "threads": 1,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 1,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 1,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=1, W=88)=1 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0014505840081255883,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 0,
+            "total_bytes": 112742080
+          },
+          "achieved_GBps": 77.72185503801516,
+          "ratio_same_threads": 0.6317188190492731,
+          "ratio_best_stream": 0.21770177405851737
+        },
+        {
+          "threads": 1,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 1,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 1,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=1, W=88)=1 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0010618339874781668,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 15693568,
+            "total_bytes": 128435648
+          },
+          "achieved_GBps": 120.95642964398978,
+          "ratio_same_threads": 0.9831269834429965,
+          "ratio_best_stream": 0.33880340741225423
+        },
+        {
+          "threads": 2,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 2,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 2,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=2, W=88)=2 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0010487079853191972,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 0,
+            "total_bytes": 112742080
+          },
+          "achieved_GBps": 107.50569422400697,
+          "ratio_same_threads": 0.4860000743694806,
+          "ratio_best_stream": 0.30112740287157863
+        },
+        {
+          "threads": 2,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 2,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 2,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=2, W=88)=2 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0009019580029416829,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 15693568,
+            "total_bytes": 128435648
+          },
+          "achieved_GBps": 142.39648362907664,
+          "ratio_same_threads": 0.6437305682570045,
+          "ratio_best_stream": 0.39885778704821145
+        },
+        {
+          "threads": 4,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 4,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 4,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=4, W=88)=4 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.001199457998154685,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 0,
+            "total_bytes": 112742080
+          },
+          "achieved_GBps": 93.99418751923695,
+          "ratio_same_threads": 0.2870680502570871,
+          "ratio_best_stream": 0.263281175727447
+        },
+        {
+          "threads": 4,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 4,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 4,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=4, W=88)=4 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0007251250208355486,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 15693568,
+            "total_bytes": 128435648
+          },
+          "achieved_GBps": 177.12207455206263,
+          "ratio_same_threads": 0.5409492857071063,
+          "ratio_best_stream": 0.4961254442016177
+        },
+        {
+          "threads": 6,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 6,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 6,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=6, W=88)=6 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0011215000122319907,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 0,
+            "total_bytes": 112742080
+          },
+          "achieved_GBps": 100.52793470382812,
+          "ratio_same_threads": 0.33718529097632105,
+          "ratio_best_stream": 0.2815824418596002
+        },
+        {
+          "threads": 6,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 6,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 6,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=6, W=88)=6 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0006072079995647073,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 15693568,
+            "total_bytes": 128435648
+          },
+          "achieved_GBps": 211.51837276859396,
+          "ratio_same_threads": 0.7094633375184658,
+          "ratio_best_stream": 0.5924707403750313
+        },
+        {
+          "threads": 8,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 8,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 8,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=8, W=88)=8 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0008149169734679163,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 0,
+            "total_bytes": 112742080
+          },
+          "achieved_GBps": 138.34793441621537,
+          "ratio_same_threads": 0.5473347944277872,
+          "ratio_best_stream": 0.3875176518240584
+        },
+        {
+          "threads": 8,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 8,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 8,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=8, W=88)=8 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0004888339899480343,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 15693568,
+            "total_bytes": 128435648
+          },
+          "achieved_GBps": 262.7387838019476,
+          "ratio_same_threads": 1.0394522970455764,
+          "ratio_best_stream": 0.7359409952282318
+        },
+        {
+          "threads": 12,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 12,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 12,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=12, W=88)=12 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.000767707999330014,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 0,
+            "total_bytes": 112742080
+          },
+          "achieved_GBps": 146.85541911558963,
+          "ratio_same_threads": 0.4535161922000299,
+          "ratio_best_stream": 0.41134742931616247
+        },
+        {
+          "threads": 12,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 12,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 12,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=12, W=88)=12 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.00047820800682529807,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 15693568,
+            "total_bytes": 128435648
+          },
+          "achieved_GBps": 268.5769501281498,
+          "ratio_same_threads": 0.829414375501827,
+          "ratio_best_stream": 0.7522939137971628
+        },
+        {
+          "threads": 16,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 16,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 16,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=16, W=88)=16 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0007877919997554272,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 0,
+            "total_bytes": 112742080
+          },
+          "achieved_GBps": 143.1114812475897,
+          "ratio_same_threads": 0.4008605216705615,
+          "ratio_best_stream": 0.4008605216705615
+        },
+        {
+          "threads": 16,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 16,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 16,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=16, W=88)=16 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0004775419947691262,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 15693568,
+            "total_bytes": 128435648
+          },
+          "achieved_GBps": 268.95152553461577,
+          "ratio_same_threads": 0.753343113285086,
+          "ratio_best_stream": 0.753343113285086
+        },
+        {
+          "threads": 18,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 18,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 18,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=18, W=88)=18 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0008087499882094562,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 0,
+            "total_bytes": 112742080
+          },
+          "achieved_GBps": 139.40288302149713,
+          "ratio_same_threads": 0.3905564489698218,
+          "ratio_best_stream": 0.390472601661502
+        },
+        {
+          "threads": 18,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 18,
+            "words": 88,
+            "line_words": 16,
+            "nchunks": 18,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=18, W=88)=18 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0004695420211646706,
+          "model": {
+            "edge_bytes": 67645248,
+            "snapshot_bytes": 45096832,
+            "tile_bytes": 15693568,
+            "total_bytes": 128435648
+          },
+          "achieved_GBps": 273.5338738829448,
+          "ratio_same_threads": 0.7663429632241381,
+          "ratio_best_stream": 0.7661784395172946
+        }
+      ]
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1e6,G=200)",
+      "n": 8000,
+      "m": 1000000,
+      "W": 125,
+      "reference": "interpreted",
+      "state_bytes": 8000000,
+      "num_directed_edges": 1000000,
+      "dirty_total": 465867,
+      "verified_bit_identical": true,
+      "rows": [
+        {
+          "threads": 1,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 1,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 1,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=1, W=125)=1 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.0512061660119798,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 0,
+            "total_bytes": 3931734000
+          },
+          "achieved_GBps": 76.7824327851486,
+          "ratio_same_threads": 0.6240832483866943,
+          "ratio_best_stream": 0.21507041778248578
+        },
+        {
+          "threads": 1,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 1,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 1,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=1, W=125)=1 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.03439633297966793,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 32000000,
+            "total_bytes": 3963734000
+          },
+          "achieved_GBps": 115.23710979141319,
+          "ratio_same_threads": 0.9366406768402069,
+          "ratio_best_stream": 0.32278338218633784
+        },
+        {
+          "threads": 2,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 2,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 2,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=2, W=125)=2 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.07586475001880899,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 0,
+            "total_bytes": 3931734000
+          },
+          "achieved_GBps": 51.82557115162461,
+          "ratio_same_threads": 0.2342874171990216,
+          "ratio_best_stream": 0.14516533059827397
+        },
+        {
+          "threads": 2,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 2,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 2,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=2, W=125)=2 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.023492540989536792,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 32000000,
+            "total_bytes": 3963734000
+          },
+          "achieved_GBps": 168.72308541529776,
+          "ratio_same_threads": 0.7627450122671897,
+          "ratio_best_stream": 0.4725995667701335
+        },
+        {
+          "threads": 4,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 4,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 4,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=4, W=125)=4 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.06102566601475701,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 0,
+            "total_bytes": 3931734000
+          },
+          "achieved_GBps": 64.4275475674324,
+          "ratio_same_threads": 0.1967684486792689,
+          "ratio_best_stream": 0.18046392995649915
+        },
+        {
+          "threads": 4,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 4,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 4,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=4, W=125)=4 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.01394062498002313,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 32000000,
+            "total_bytes": 3963734000
+          },
+          "achieved_GBps": 284.3297202012117,
+          "ratio_same_threads": 0.8683726149726027,
+          "ratio_best_stream": 0.7964180020547592
+        },
+        {
+          "threads": 6,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 6,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 6,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=6, W=125)=6 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.04649995799991302,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 0,
+            "total_bytes": 3931734000
+          },
+          "achieved_GBps": 84.55349572589623,
+          "ratio_same_threads": 0.28360470294547657,
+          "ratio_best_stream": 0.2368374508479431
+        },
+        {
+          "threads": 6,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 6,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 6,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=6, W=125)=6 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.010389709001174197,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 32000000,
+            "total_bytes": 3963734000
+          },
+          "achieved_GBps": 381.5057764901825,
+          "ratio_same_threads": 1.279625774009768,
+          "ratio_best_stream": 1.0686117092143708
+        },
+        {
+          "threads": 8,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 8,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 8,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=8, W=125)=8 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.04020337501424365,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 0,
+            "total_bytes": 3931734000
+          },
+          "achieved_GBps": 97.79611782859092,
+          "ratio_same_threads": 0.38690290732142435,
+          "ratio_best_stream": 0.27393052233386006
+        },
+        {
+          "threads": 8,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 8,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 8,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=8, W=125)=8 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.008985542022855952,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 32000000,
+            "total_bytes": 3963734000
+          },
+          "achieved_GBps": 441.12352820983995,
+          "ratio_same_threads": 1.7451814994477732,
+          "ratio_best_stream": 1.235603224128695
+        },
+        {
+          "threads": 12,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 12,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 12,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=12, W=125)=12 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.03383483301149681,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 0,
+            "total_bytes": 3931734000
+          },
+          "achieved_GBps": 116.20373591511527,
+          "ratio_same_threads": 0.3588582304215866,
+          "ratio_best_stream": 0.3254909375049586
+        },
+        {
+          "threads": 12,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 12,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 12,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=12, W=125)=12 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.007141625013900921,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 32000000,
+            "total_bytes": 3963734000
+          },
+          "achieved_GBps": 555.0184996110454,
+          "ratio_same_threads": 1.7139978766875106,
+          "ratio_best_stream": 1.5546272273290662
+        },
+        {
+          "threads": 16,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 16,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 16,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=16, W=125)=16 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.028840874991146848,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 0,
+            "total_bytes": 3931734000
+          },
+          "achieved_GBps": 136.325059527733,
+          "ratio_same_threads": 0.3818515048734274,
+          "ratio_best_stream": 0.3818515048734274
+        },
+        {
+          "threads": 16,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 16,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 16,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=16, W=125)=16 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.006746375001966953,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 32000000,
+            "total_bytes": 3963734000
+          },
+          "achieved_GBps": 587.5353799402413,
+          "ratio_same_threads": 1.6457082048874634,
+          "ratio_best_stream": 1.6457082048874634
+        },
+        {
+          "threads": 18,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 18,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 18,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=18, W=125)=18 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.026007667009253055,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 0,
+            "total_bytes": 3931734000
+          },
+          "achieved_GBps": 151.17595894322858,
+          "ratio_same_threads": 0.42354034877004676,
+          "ratio_best_stream": 0.4234494202543281
+        },
+        {
+          "threads": 18,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 18,
+            "words": 125,
+            "line_words": 16,
+            "nchunks": 18,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=18, W=125)=18 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.007400083006359637,
+          "model": {
+            "edge_bytes": 3000000000,
+            "snapshot_bytes": 931734000,
+            "tile_bytes": 32000000,
+            "total_bytes": 3963734000
+          },
+          "achieved_GBps": 535.6337214857678,
+          "ratio_same_threads": 1.5006519210919926,
+          "ratio_best_stream": 1.5003297509559204
+        }
+      ]
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "n": 100000,
+      "m": 2000000,
+      "W": 1563,
+      "reference": "compiled",
+      "state_bytes": 1250400000,
+      "num_directed_edges": 2000000,
+      "dirty_total": 1427502,
+      "verified_bit_identical": true,
+      "rows": [
+        {
+          "threads": 1,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 1,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 1,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=1, W=1563)=1 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 2.101312292012153,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 0,
+            "total_bytes": 110722970016
+          },
+          "achieved_GBps": 52.692296350665245,
+          "ratio_same_threads": 0.42827998903725906,
+          "ratio_best_stream": 0.14759305975322115
+        },
+        {
+          "threads": 1,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 1,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 1,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=1, W=1563)=1 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 1.6940059160115197,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 5001600000,
+            "total_bytes": 115724570016
+          },
+          "achieved_GBps": 68.31414750219388,
+          "ratio_same_threads": 0.5552535070519832,
+          "ratio_best_stream": 0.19135043929726875
+        },
+        {
+          "threads": 2,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 2,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 2,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=2, W=1563)=2 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 1.669859624991659,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 0,
+            "total_bytes": 110722970016
+          },
+          "achieved_GBps": 66.30675318983957,
+          "ratio_same_threads": 0.2997523732493109,
+          "ratio_best_stream": 0.18572765400964586
+        },
+        {
+          "threads": 2,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 2,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 2,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=2, W=1563)=2 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 1.3458067500032485,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 5001600000,
+            "total_bytes": 115724570016
+          },
+          "achieved_GBps": 85.98899508842608,
+          "ratio_same_threads": 0.38872971622185715,
+          "ratio_best_stream": 0.24085833735058468
+        },
+        {
+          "threads": 4,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 4,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 4,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=4, W=1563)=4 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 1.232902792020468,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 0,
+            "total_bytes": 110722970016
+          },
+          "achieved_GBps": 89.80673150601628,
+          "ratio_same_threads": 0.27427912293105905,
+          "ratio_best_stream": 0.2515519574474117
+        },
+        {
+          "threads": 4,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 4,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 4,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=4, W=1563)=4 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.9483739999996033,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 5001600000,
+            "total_bytes": 115724570016
+          },
+          "achieved_GBps": 122.02419089520423,
+          "ratio_same_threads": 0.37267460349413367,
+          "ratio_best_stream": 0.3417942459421199
+        },
+        {
+          "threads": 6,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 6,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 6,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=6, W=1563)=6 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 1.1204824580054265,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 0,
+            "total_bytes": 110722970016
+          },
+          "achieved_GBps": 98.81722754776386,
+          "ratio_same_threads": 0.3314473307576791,
+          "ratio_best_stream": 0.27679068820694186
+        },
+        {
+          "threads": 6,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 6,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 6,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=6, W=1563)=6 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.8887947920011356,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 5001600000,
+            "total_bytes": 115724570016
+          },
+          "achieved_GBps": 130.20392452507997,
+          "ratio_same_threads": 0.43672287018123934,
+          "ratio_best_stream": 0.3647059806360367
+        },
+        {
+          "threads": 8,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 8,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 8,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=8, W=1563)=8 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 1.0941287500027101,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 0,
+            "total_bytes": 110722970016
+          },
+          "achieved_GBps": 101.19738651938883,
+          "ratio_same_threads": 0.40035907280395966,
+          "ratio_best_stream": 0.2834576010130066
+        },
+        {
+          "threads": 8,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 8,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 8,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=8, W=1563)=8 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.8130107080214657,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 5001600000,
+            "total_bytes": 115724570016
+          },
+          "achieved_GBps": 142.34076977611537,
+          "ratio_same_threads": 0.5631313274957844,
+          "ratio_best_stream": 0.39870173049727897
+        },
+        {
+          "threads": 12,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 12,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 12,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=12, W=1563)=12 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.9061620830034371,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 0,
+            "total_bytes": 110722970016
+          },
+          "achieved_GBps": 122.18892413707407,
+          "ratio_same_threads": 0.3773415781139638,
+          "ratio_best_stream": 0.34225566981039907
+        },
+        {
+          "threads": 12,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 12,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 12,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=12, W=1563)=12 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.6804503750172444,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 5001600000,
+            "total_bytes": 115724570016
+          },
+          "achieved_GBps": 170.07055071880478,
+          "ratio_same_threads": 0.5252087327240251,
+          "ratio_best_stream": 0.47637386663614023
+        },
+        {
+          "threads": 16,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 16,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 16,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=16, W=1563)=16 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.8470626669877674,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 0,
+            "total_bytes": 110722970016
+          },
+          "achieved_GBps": 130.71402427607987,
+          "ratio_same_threads": 0.36613478879669076,
+          "ratio_best_stream": 0.36613478879669076
+        },
+        {
+          "threads": 16,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 16,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 16,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=16, W=1563)=16 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.5829979169939179,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 5001600000,
+            "total_bytes": 115724570016
+          },
+          "achieved_GBps": 198.49911404950578,
+          "ratio_same_threads": 0.5560033179404278,
+          "ratio_best_stream": 0.5560033179404278
+        },
+        {
+          "threads": 18,
+          "layout": "rowmajor",
+          "resolved_layout": "rowmajor",
+          "plan": {
+            "layout": "rowmajor",
+            "resolved_layout": "rowmajor",
+            "schedule": "static",
+            "threads": 18,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 18,
+            "oversub": 4,
+            "rule": "explicit layout=rowmajor; chunks=min(p=18, W=1563)=18 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.7996641669888049,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 0,
+            "total_bytes": 110722970016
+          },
+          "achieved_GBps": 138.46183758981675,
+          "ratio_same_threads": 0.3879199800952169,
+          "ratio_best_stream": 0.3878366988019231
+        },
+        {
+          "threads": 18,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 18,
+            "words": 1563,
+            "line_words": 16,
+            "nchunks": 18,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=18, W=1563)=18 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.5818101660115644,
+          "model": {
+            "edge_bytes": 75024000000,
+            "snapshot_bytes": 35698970016,
+            "tile_bytes": 5001600000,
+            "total_bytes": 115724570016
+          },
+          "achieved_GBps": 198.90434505350288,
+          "ratio_same_threads": 0.5572580208171504,
+          "ratio_best_stream": 0.5571383848843463
+        }
+      ]
+    }
+  ]
+}

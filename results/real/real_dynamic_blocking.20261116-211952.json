@@ -1,0 +1,164 @@
+{
+  "insertion_CollegeMsg": [
+    {
+      "batch": 1,
+      "batch_edges": 5983,
+      "full_recompute_s": 0.031,
+      "incremental_s": 0.0044,
+      "speedup": 7.1,
+      "bit_identical": true,
+      "pairs": 885199
+    },
+    {
+      "batch": 2,
+      "batch_edges": 5983,
+      "full_recompute_s": 0.0358,
+      "incremental_s": 0.0044,
+      "speedup": 8.1,
+      "bit_identical": true,
+      "pairs": 1086662
+    },
+    {
+      "batch": 3,
+      "batch_edges": 5983,
+      "full_recompute_s": 0.04,
+      "incremental_s": 0.0043,
+      "speedup": 9.3,
+      "bit_identical": true,
+      "pairs": 1347697
+    },
+    {
+      "batch": 4,
+      "batch_edges": 5983,
+      "full_recompute_s": 0.0454,
+      "incremental_s": 0.0043,
+      "speedup": 10.5,
+      "bit_identical": true,
+      "pairs": 1564888
+    },
+    {
+      "batch": 5,
+      "batch_edges": 5986,
+      "full_recompute_s": 0.0505,
+      "incremental_s": 0.0042,
+      "speedup": 11.9,
+      "bit_identical": true,
+      "pairs": 1794244
+    }
+  ],
+  "window_CollegeMsg": [
+    {
+      "slot": 1,
+      "window_edges": 14933,
+      "seconds": 0.0129,
+      "pairs": 240475
+    },
+    {
+      "slot": 2,
+      "window_edges": 14982,
+      "seconds": 0.0133,
+      "pairs": 324379
+    },
+    {
+      "slot": 3,
+      "window_edges": 15074,
+      "seconds": 0.0128,
+      "pairs": 397399
+    },
+    {
+      "slot": 4,
+      "window_edges": 15050,
+      "seconds": 0.0129,
+      "pairs": 413083
+    },
+    {
+      "slot": 5,
+      "window_edges": 15039,
+      "seconds": 0.0128,
+      "pairs": 411339
+    },
+    {
+      "slot": 6,
+      "window_edges": 15010,
+      "seconds": 0.0132,
+      "pairs": 435574
+    },
+    {
+      "slot": 7,
+      "window_edges": 14947,
+      "seconds": 0.0129,
+      "pairs": 419469
+    },
+    {
+      "slot": 8,
+      "window_edges": 14983,
+      "seconds": 0.0127,
+      "pairs": 456558
+    }
+  ],
+  "deletion_CollegeMsg": [
+    {
+      "cut": "early",
+      "suffix_edges": 56844,
+      "suffix_fraction_pct": 95.0,
+      "repair_s": 0.042,
+      "per_1k_suffix_s": 0.0007,
+      "bit_identical": true
+    },
+    {
+      "cut": "middle",
+      "suffix_edges": 29918,
+      "suffix_fraction_pct": 50.0,
+      "repair_s": 0.0219,
+      "per_1k_suffix_s": 0.0007,
+      "bit_identical": true
+    },
+    {
+      "cut": "late",
+      "suffix_edges": 2992,
+      "suffix_fraction_pct": 5.0,
+      "repair_s": 0.0022,
+      "per_1k_suffix_s": 0.0007,
+      "bit_identical": true
+    }
+  ],
+  "blocking_BitcoinOTC": [
+    {
+      "beta": 5881,
+      "passes": 1,
+      "resident_words": 541052,
+      "seconds": 0.0321,
+      "pairs": 15294857,
+      "bit_identical": true
+    },
+    {
+      "beta": 2048,
+      "passes": 3,
+      "resident_words": 188192,
+      "seconds": 0.0822,
+      "pairs": 15294857,
+      "bit_identical": true
+    },
+    {
+      "beta": 1024,
+      "passes": 6,
+      "resident_words": 94096,
+      "seconds": 0.1562,
+      "pairs": 15294857,
+      "bit_identical": true
+    },
+    {
+      "beta": 512,
+      "passes": 12,
+      "resident_words": 47048,
+      "seconds": 0.3047,
+      "pairs": 15294857,
+      "bit_identical": true
+    }
+  ],
+  "threads": {
+    "numba": 1,
+    "graphblas": null,
+    "threadpools": []
+  }
+}

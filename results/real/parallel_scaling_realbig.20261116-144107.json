@@ -1,0 +1,1735 @@
+{
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.18",
+    "numpy": "2.5.5",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.5, Numba 0.68.1",
+    "repeats": 3,
+    "tex_summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.5, Numba 0.68.1"
+  },
+  "thread_grid": [
+    1,
+    2,
+    4,
+    6,
+    8,
+    12,
+    16,
+    18
+  ],
+  "configs": [
+    [
+      "tiled",
+      "static"
+    ],
+    [
+      "tiled",
+      "dynamic"
+    ]
+  ],
+  "chunk_policy": "threads",
+  "block_bits": null,
+  "table_config": [
+    "tiled",
+    "static"
+  ],
+  "oversub": 4,
+  "pending": false,
+  "prep_parallel": "compare",
+  "samples": "every timed configuration stores all repeat samples (STRATA-v9, R26)",
+  "results": [
+    {
+      "dataset": "sx-askubuntu",
+      "n": 159316,
+      "m": 964437,
+      "W": 2490,
+      "pairs": 4179407085,
+      "stream_path": "arrays",
+      "load_s": 0.08087874998454936,
+      "reference": "sampled",
+      "reference_s": 1.7324222919996828,
+      "seq_interpreted_s": null,
+      "prep_s": 0.18501441599801183,
+      "prep_phases_s": {
+        "sort_validate_s": 0.1781675410165917,
+        "flatten_s": 2.9199873097240925e-07,
+        "group_boundaries_s": 0.0011165420000907034,
+        "snapshot_plan_s": 0.005730040982598439,
+        "total_s": 0.18501441599801183
+      },
+      "prep_cold_s": 0.18388466601027176,
+      "prep_timing": "best-of-R after a cold call (cold call includes JIT compilation)",
+      "prep_samples_s": [
+        0.18501441599801183,
+        0.1864791249972768,
+        0.18550524997408502
+      ],
+      "prep_parallel_mode": "compare",
+      "block_bits": null,
+      "baseline_skipped": "n*m=1.54e+11 exceeds --baseline-max-work 1e+10",
+      "num_directed_edges": 964437,
+      "dirty_total": 964276,
+      "verified_bit_identical": true,
+      "rows": [
+        {
+          "threads": 1,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 1,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 1,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 1,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=1, W=2490)=1 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.8487295829982031,
+          "end_to_end_s": 1.033743998996215,
+          "kernel_samples_s": [
+            0.8677504159859382,
+            0.860881792003056,
+            0.8487295829982031
+          ],
+          "kernel_stats": {
+            "min_s": 0.8487295829982031,
+            "median_s": 0.860881792003056,
+            "max_s": 0.8677504159859382,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.18985133297974244,
+            "phases_s": {
+              "sort_validate_s": 0.17936279199784622,
+              "flatten_s": 3.7500285543501377e-07,
+              "group_boundaries_s": 0.0012033329985570163,
+              "snapshot_plan_s": 0.00928483298048377,
+              "total_s": 0.18985133297974244
+            },
+            "samples_s": [
+              0.18985133297974244,
+              0.18989662500098348,
+              0.19037216700962745
+            ],
+            "blocks": 1
+          },
+          "end_to_end_par_s": 1.0385809159779456
+        },
+        {
+          "threads": 1,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 4,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 1,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 4,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=4, W=2490)=4 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 1.0656262499978766,
+          "end_to_end_s": 1.2506406659958884,
+          "kernel_samples_s": [
+            1.0656345000024885,
+            1.0656262499978766,
+            1.0739238329988439
+          ],
+          "kernel_stats": {
+            "min_s": 1.0656262499978766,
+            "median_s": 1.0656345000024885,
+            "max_s": 1.0739238329988439,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.18985133297974244,
+            "phases_s": {
+              "sort_validate_s": 0.17936279199784622,
+              "flatten_s": 3.7500285543501377e-07,
+              "group_boundaries_s": 0.0012033329985570163,
+              "snapshot_plan_s": 0.00928483298048377,
+              "total_s": 0.18985133297974244
+            },
+            "samples_s": [
+              0.18985133297974244,
+              0.18989662500098348,
+              0.19037216700962745
+            ],
+            "blocks": 1
+          },
+          "end_to_end_par_s": 1.255477582977619
+        },
+        {
+          "threads": 2,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 2,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 2,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 2,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=2, W=2490)=2 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.5298533330205828,
+          "end_to_end_s": 0.7148677490185946,
+          "kernel_samples_s": [
+            0.5318125829799101,
+            0.5298533330205828,
+            0.5319988340197597
+          ],
+          "kernel_stats": {
+            "min_s": 0.5298533330205828,
+            "median_s": 0.5318125829799101,
+            "max_s": 0.5319988340197597,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.18528424997930415,
+            "phases_s": {
+              "sort_validate_s": 0.17899704098817892,
+              "flatten_s": 4.5899651013314724e-07,
+              "group_boundaries_s": 0.0008588329947087914,
+              "snapshot_plan_s": 0.0054279169999063015,
+              "total_s": 0.18528424997930415
+            },
+            "samples_s": [
+              0.18528424997930415,
+              0.1867296659911517,
+              0.1870092500175815
+            ],
+            "blocks": 2
+          },
+          "end_to_end_par_s": 0.715137582999887
+        },
+        {
+          "threads": 2,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 8,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 2,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 8,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=8, W=2490)=8 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.7545239999890327,
+          "end_to_end_s": 0.9395384159870446,
+          "kernel_samples_s": [
+            0.7560192499950062,
+            0.7545239999890327,
+            0.7570810829929542
+          ],
+          "kernel_stats": {
+            "min_s": 0.7545239999890327,
+            "median_s": 0.7560192499950062,
+            "max_s": 0.7570810829929542,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.18528424997930415,
+            "phases_s": {
+              "sort_validate_s": 0.17899704098817892,
+              "flatten_s": 4.5899651013314724e-07,
+              "group_boundaries_s": 0.0008588329947087914,
+              "snapshot_plan_s": 0.0054279169999063015,
+              "total_s": 0.18528424997930415
+            },
+            "samples_s": [
+              0.18528424997930415,
+              0.1867296659911517,
+              0.1870092500175815
+            ],
+            "blocks": 2
+          },
+          "end_to_end_par_s": 0.9398082499683369
+        },
+        {
+          "threads": 4,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 4,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 4,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 4,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=4, W=2490)=4 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.35022966700489633,
+          "end_to_end_s": 0.5352440830029082,
+          "kernel_samples_s": [
+            0.35061462500016205,
+            0.35066724999342114,
+            0.35022966700489633
+          ],
+          "kernel_stats": {
+            "min_s": 0.35022966700489633,
+            "median_s": 0.35061462500016205,
+            "max_s": 0.35066724999342114,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.18325320800067857,
+            "phases_s": {
+              "sort_validate_s": 0.17839216699940152,
+              "flatten_s": 5.410111043602228e-07,
+              "group_boundaries_s": 0.0008511669875588268,
+              "snapshot_plan_s": 0.004009333002613857,
+              "total_s": 0.18325320800067857
+            },
+            "samples_s": [
+              0.18364787500468083,
+              0.18325320800067857,
+              0.18391633298597299
+            ],
+            "blocks": 4
+          },
+          "end_to_end_par_s": 0.5334828750055749
+        },
+        {
+          "threads": 4,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 16,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 4,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 16,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=16, W=2490)=16 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.511898333003046,
+          "end_to_end_s": 0.6969127490010578,
+          "kernel_samples_s": [
+            0.511898333003046,
+            0.5128517909906805,
+            0.5134986250195652
+          ],
+          "kernel_stats": {
+            "min_s": 0.511898333003046,
+            "median_s": 0.5128517909906805,
+            "max_s": 0.5134986250195652,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.18325320800067857,
+            "phases_s": {
+              "sort_validate_s": 0.17839216699940152,
+              "flatten_s": 5.410111043602228e-07,
+              "group_boundaries_s": 0.0008511669875588268,
+              "snapshot_plan_s": 0.004009333002613857,
+              "total_s": 0.18325320800067857
+            },
+            "samples_s": [
+              0.18364787500468083,
+              0.18325320800067857,
+              0.18391633298597299
+            ],
+            "blocks": 4
+          },
+          "end_to_end_par_s": 0.6951515410037246
+        },
+        {
+          "threads": 6,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 6,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 6,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 6,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=6, W=2490)=6 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.3185453750193119,
+          "end_to_end_s": 0.5035597910173237,
+          "kernel_samples_s": [
+            0.3268850409949664,
+            0.3268629170197528,
+            0.3185453750193119
+          ],
+          "kernel_stats": {
+            "min_s": 0.3185453750193119,
+            "median_s": 0.3268629170197528,
+            "max_s": 0.3268850409949664,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.18342287500854582,
+            "phases_s": {
+              "sort_validate_s": 0.17898979102028534,
+              "flatten_s": 8.399365469813347e-08,
+              "group_boundaries_s": 0.0008482499979436398,
+              "snapshot_plan_s": 0.00358474999666214,
+              "total_s": 0.18342287500854582
+            },
+            "samples_s": [
+              0.183915708999848,
+              0.18406487500760704,
+              0.18342287500854582
+            ],
+            "blocks": 6
+          },
+          "end_to_end_par_s": 0.5019682500278577
+        },
+        {
+          "threads": 6,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 24,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 6,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 24,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=24, W=2490)=24 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.4345677090168465,
+          "end_to_end_s": 0.6195821250148583,
+          "kernel_samples_s": [
+            0.4345677090168465,
+            0.44950791701558046,
+            0.4446069579862524
+          ],
+          "kernel_stats": {
+            "min_s": 0.4345677090168465,
+            "median_s": 0.4446069579862524,
+            "max_s": 0.44950791701558046,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.18342287500854582,
+            "phases_s": {
+              "sort_validate_s": 0.17898979102028534,
+              "flatten_s": 8.399365469813347e-08,
+              "group_boundaries_s": 0.0008482499979436398,
+              "snapshot_plan_s": 0.00358474999666214,
+              "total_s": 0.18342287500854582
+            },
+            "samples_s": [
+              0.183915708999848,
+              0.18406487500760704,
+              0.18342287500854582
+            ],
+            "blocks": 6
+          },
+          "end_to_end_par_s": 0.6179905840253923
+        },
+        {
+          "threads": 8,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 8,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 8,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 8,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=8, W=2490)=8 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.28351241699419916,
+          "end_to_end_s": 0.468526832992211,
+          "kernel_samples_s": [
+            0.2851987920003012,
+            0.28351241699419916,
+            0.28826349999872036
+          ],
+          "kernel_stats": {
+            "min_s": 0.28351241699419916,
+            "median_s": 0.2851987920003012,
+            "max_s": 0.28826349999872036,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.18562841601669788,
+            "phases_s": {
+              "sort_validate_s": 0.18124274999718182,
+              "flatten_s": 4.100729711353779e-08,
+              "group_boundaries_s": 0.0008032920013647527,
+              "snapshot_plan_s": 0.0035823330108541995,
+              "total_s": 0.18562841601669788
+            },
+            "samples_s": [
+              0.19015987499733455,
+              0.18562841601669788,
+              0.1858062079991214
+            ],
+            "blocks": 8
+          },
+          "end_to_end_par_s": 0.46914083301089704
+        },
+        {
+          "threads": 8,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 32,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 8,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 32,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=32, W=2490)=32 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.339664458995685,
+          "end_to_end_s": 0.5246788749936968,
+          "kernel_samples_s": [
+            0.339664458995685,
+            0.3587314589822199,
+            0.35511145801865496
+          ],
+          "kernel_stats": {
+            "min_s": 0.339664458995685,
+            "median_s": 0.35511145801865496,
+            "max_s": 0.3587314589822199,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.18562841601669788,
+            "phases_s": {
+              "sort_validate_s": 0.18124274999718182,
+              "flatten_s": 4.100729711353779e-08,
+              "group_boundaries_s": 0.0008032920013647527,
+              "snapshot_plan_s": 0.0035823330108541995,
+              "total_s": 0.18562841601669788
+            },
+            "samples_s": [
+              0.19015987499733455,
+              0.18562841601669788,
+              0.1858062079991214
+            ],
+            "blocks": 8
+          },
+          "end_to_end_par_s": 0.5252928750123829
+        },
+        {
+          "threads": 12,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 12,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 12,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 12,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=12, W=2490)=12 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.2318242079927586,
+          "end_to_end_s": 0.41683862399077043,
+          "kernel_samples_s": [
+            0.24089424998965114,
+            0.23391629199613817,
+            0.2318242079927586
+          ],
+          "kernel_stats": {
+            "min_s": 0.2318242079927586,
+            "median_s": 0.23391629199613817,
+            "max_s": 0.24089424998965114,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.18775733400252648,
+            "phases_s": {
+              "sort_validate_s": 0.18349949998082593,
+              "flatten_s": 4.1996827349066734e-08,
+              "group_boundaries_s": 0.0008060000254772604,
+              "snapshot_plan_s": 0.0034517919993959367,
+              "total_s": 0.18775733400252648
+            },
+            "samples_s": [
+              0.18924533401150256,
+              0.1882015830196906,
+              0.18775733400252648
+            ],
+            "blocks": 12
+          },
+          "end_to_end_par_s": 0.4195815419952851
+        },
+        {
+          "threads": 12,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 48,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 12,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 48,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=48, W=2490)=48 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.28231499998946674,
+          "end_to_end_s": 0.46732941598747857,
+          "kernel_samples_s": [
+            0.28231499998946674,
+            0.28477229198324494,
+            0.2853927090181969
+          ],
+          "kernel_stats": {
+            "min_s": 0.28231499998946674,
+            "median_s": 0.28477229198324494,
+            "max_s": 0.2853927090181969,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.18775733400252648,
+            "phases_s": {
+              "sort_validate_s": 0.18349949998082593,
+              "flatten_s": 4.1996827349066734e-08,
+              "group_boundaries_s": 0.0008060000254772604,
+              "snapshot_plan_s": 0.0034517919993959367,
+              "total_s": 0.18775733400252648
+            },
+            "samples_s": [
+              0.18924533401150256,
+              0.1882015830196906,
+              0.18775733400252648
+            ],
+            "blocks": 12
+          },
+          "end_to_end_par_s": 0.4700723339919932
+        },
+        {
+          "threads": 16,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 16,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 16,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 16,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=16, W=2490)=16 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.20495462502003647,
+          "end_to_end_s": 0.3899690410180483,
+          "kernel_samples_s": [
+            0.20825312499073334,
+            0.22066712501691654,
+            0.20495462502003647
+          ],
+          "kernel_stats": {
+            "min_s": 0.20495462502003647,
+            "median_s": 0.20825312499073334,
+            "max_s": 0.22066712501691654,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.1897994160244707,
+            "phases_s": {
+              "sort_validate_s": 0.18524991601589136,
+              "flatten_s": 4.1996827349066734e-08,
+              "group_boundaries_s": 0.00080825001350604,
+              "snapshot_plan_s": 0.0037412079982459545,
+              "total_s": 0.1897994160244707
+            },
+            "samples_s": [
+              0.22464762500021607,
+              0.1901251660019625,
+              0.1897994160244707
+            ],
+            "blocks": 16
+          },
+          "end_to_end_par_s": 0.3947540410445072
+        },
+        {
+          "threads": 16,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 64,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 16,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 64,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=64, W=2490)=64 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.25209787499625236,
+          "end_to_end_s": 0.4371122909942642,
+          "kernel_samples_s": [
+            0.2534247500007041,
+            0.25209787499625236,
+            0.25730362499598414
+          ],
+          "kernel_stats": {
+            "min_s": 0.25209787499625236,
+            "median_s": 0.2534247500007041,
+            "max_s": 0.25730362499598414,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.1897994160244707,
+            "phases_s": {
+              "sort_validate_s": 0.18524991601589136,
+              "flatten_s": 4.1996827349066734e-08,
+              "group_boundaries_s": 0.00080825001350604,
+              "snapshot_plan_s": 0.0037412079982459545,
+              "total_s": 0.1897994160244707
+            },
+            "samples_s": [
+              0.22464762500021607,
+              0.1901251660019625,
+              0.1897994160244707
+            ],
+            "blocks": 16
+          },
+          "end_to_end_par_s": 0.44189729102072306
+        },
+        {
+          "threads": 18,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 18,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 18,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 18,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=18, W=2490)=18 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.19918808399233967,
+          "end_to_end_s": 0.3842024999903515,
+          "kernel_samples_s": [
+            0.20417533299769275,
+            0.19918808399233967,
+            0.20059904200024903
+          ],
+          "kernel_stats": {
+            "min_s": 0.19918808399233967,
+            "median_s": 0.20059904200024903,
+            "max_s": 0.20417533299769275,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.19139500000164844,
+            "phases_s": {
+              "sort_validate_s": 0.18733604199951515,
+              "flatten_s": 4.100729711353779e-08,
+              "group_boundaries_s": 0.0008017090149223804,
+              "snapshot_plan_s": 0.003257207979913801,
+              "total_s": 0.19139500000164844
+            },
+            "samples_s": [
+              0.19357762500294484,
+              0.1916672500083223,
+              0.19139500000164844
+            ],
+            "blocks": 18
+          },
+          "end_to_end_par_s": 0.3905830839939881
+        },
+        {
+          "threads": 18,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 72,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 18,
+            "words": 2490,
+            "line_words": 16,
+            "nchunks": 72,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=72, W=2490)=72 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.23465379199478775,
+          "end_to_end_s": 0.4196682079927996,
+          "kernel_samples_s": [
+            0.23722829201142304,
+            0.23465379199478775,
+            0.24075591698056087
+          ],
+          "kernel_stats": {
+            "min_s": 0.23465379199478775,
+            "median_s": 0.23722829201142304,
+            "max_s": 0.24075591698056087,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.19139500000164844,
+            "phases_s": {
+              "sort_validate_s": 0.18733604199951515,
+              "flatten_s": 4.100729711353779e-08,
+              "group_boundaries_s": 0.0008017090149223804,
+              "snapshot_plan_s": 0.003257207979913801,
+              "total_s": 0.19139500000164844
+            },
+            "samples_s": [
+              0.19357762500294484,
+              0.1916672500083223,
+              0.19139500000164844
+            ],
+            "blocks": 18
+          },
+          "end_to_end_par_s": 0.4260487919964362
+        }
+      ]
+    },
+    {
+      "dataset": "sx-superuser",
+      "n": 194085,
+      "m": 1443339,
+      "W": 3033,
+      "pairs": 7788531210,
+      "stream_path": "arrays",
+      "load_s": 0.12008100000093691,
+      "reference": "sampled",
+      "reference_s": 2.9183411250123754,
+      "seq_interpreted_s": null,
+      "prep_s": 0.31905441600247286,
+      "prep_phases_s": {
+        "sort_validate_s": 0.3081064159923699,
+        "flatten_s": 3.33995558321476e-07,
+        "group_boundaries_s": 0.002302208013134077,
+        "snapshot_plan_s": 0.008645458001410589,
+        "total_s": 0.31905441600247286
+      },
+      "prep_cold_s": 0.3221330000087619,
+      "prep_timing": "best-of-R after a cold call (cold call includes JIT compilation)",
+      "prep_samples_s": [
+        0.32032920900383033,
+        0.3202907079830766,
+        0.31905441600247286
+      ],
+      "prep_parallel_mode": "compare",
+      "block_bits": null,
+      "baseline_skipped": "n*m=2.8e+11 exceeds --baseline-max-work 1e+10",
+      "num_directed_edges": 1443339,
+      "dirty_total": 1443028,
+      "verified_bit_identical": true,
+      "rows": [
+        {
+          "threads": 1,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 1,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 1,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 1,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=1, W=3033)=1 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 2.2107062920113094,
+          "end_to_end_s": 2.5297607080137823,
+          "kernel_samples_s": [
+            2.2200560409983154,
+            2.224230791995069,
+            2.2107062920113094
+          ],
+          "kernel_stats": {
+            "min_s": 2.2107062920113094,
+            "median_s": 2.2200560409983154,
+            "max_s": 2.224230791995069,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.3264215420058463,
+            "phases_s": {
+              "sort_validate_s": 0.31046762500773184,
+              "flatten_s": 5.420006345957518e-07,
+              "group_boundaries_s": 0.0018817500094883144,
+              "snapshot_plan_s": 0.014071624987991527,
+              "total_s": 0.3264215420058463
+            },
+            "samples_s": [
+              0.3264841250202153,
+              0.3264215420058463,
+              0.3265946250176057
+            ],
+            "blocks": 1
+          },
+          "end_to_end_par_s": 2.5371278340171557
+        },
+        {
+          "threads": 1,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 4,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 1,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 4,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=4, W=3033)=4 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 2.1088596249755938,
+          "end_to_end_s": 2.4279140409780666,
+          "kernel_samples_s": [
+            2.120083167013945,
+            2.121917124983156,
+            2.1088596249755938
+          ],
+          "kernel_stats": {
+            "min_s": 2.1088596249755938,
+            "median_s": 2.120083167013945,
+            "max_s": 2.121917124983156,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.3264215420058463,
+            "phases_s": {
+              "sort_validate_s": 0.31046762500773184,
+              "flatten_s": 5.420006345957518e-07,
+              "group_boundaries_s": 0.0018817500094883144,
+              "snapshot_plan_s": 0.014071624987991527,
+              "total_s": 0.3264215420058463
+            },
+            "samples_s": [
+              0.3264841250202153,
+              0.3264215420058463,
+              0.3265946250176057
+            ],
+            "blocks": 1
+          },
+          "end_to_end_par_s": 2.43528116698144
+        },
+        {
+          "threads": 2,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 2,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 2,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 2,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=2, W=3033)=2 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 1.2651232079952024,
+          "end_to_end_s": 1.5841776239976753,
+          "kernel_samples_s": [
+            1.267389250017004,
+            1.2715004579804372,
+            1.2651232079952024
+          ],
+          "kernel_stats": {
+            "min_s": 1.2651232079952024,
+            "median_s": 1.267389250017004,
+            "max_s": 1.2715004579804372,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.31669524998869747,
+            "phases_s": {
+              "sort_validate_s": 0.3070435000117868,
+              "flatten_s": 4.5797787606716156e-07,
+              "group_boundaries_s": 0.001241584017407149,
+              "snapshot_plan_s": 0.008409707981627434,
+              "total_s": 0.31669524998869747
+            },
+            "samples_s": [
+              0.31669524998869747,
+              0.3210810419986956,
+              0.31882195800426416
+            ],
+            "blocks": 2
+          },
+          "end_to_end_par_s": 1.5818184579838999
+        },
+        {
+          "threads": 2,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 8,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 2,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 8,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=8, W=3033)=8 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 1.4787035420013126,
+          "end_to_end_s": 1.7977579580037855,
+          "kernel_samples_s": [
+            1.4893930830003228,
+            1.4900299170112703,
+            1.4787035420013126
+          ],
+          "kernel_stats": {
+            "min_s": 1.4787035420013126,
+            "median_s": 1.4893930830003228,
+            "max_s": 1.4900299170112703,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.31669524998869747,
+            "phases_s": {
+              "sort_validate_s": 0.3070435000117868,
+              "flatten_s": 4.5797787606716156e-07,
+              "group_boundaries_s": 0.001241584017407149,
+              "snapshot_plan_s": 0.008409707981627434,
+              "total_s": 0.31669524998869747
+            },
+            "samples_s": [
+              0.31669524998869747,
+              0.3210810419986956,
+              0.31882195800426416
+            ],
+            "blocks": 2
+          },
+          "end_to_end_par_s": 1.79539879199001
+        },
+        {
+          "threads": 4,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 4,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 4,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 4,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=4, W=3033)=4 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.9220256250118837,
+          "end_to_end_s": 1.2410800410143565,
+          "kernel_samples_s": [
+            0.9287415419821627,
+            0.9223730420053471,
+            0.9220256250118837
+          ],
+          "kernel_stats": {
+            "min_s": 0.9220256250118837,
+            "median_s": 0.9223730420053471,
+            "max_s": 0.9287415419821627,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.314658707997296,
+            "phases_s": {
+              "sort_validate_s": 0.30752641599974595,
+              "flatten_s": 2.500019036233425e-07,
+              "group_boundaries_s": 0.0013759589928667992,
+              "snapshot_plan_s": 0.005756083002779633,
+              "total_s": 0.314658707997296
+            },
+            "samples_s": [
+              0.3157937499927357,
+              0.314658707997296,
+              0.32132391701452434
+            ],
+            "blocks": 4
+          },
+          "end_to_end_par_s": 1.2366843330091797
+        },
+        {
+          "threads": 4,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 16,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 4,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 16,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=16, W=3033)=16 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 1.0788969999994151,
+          "end_to_end_s": 1.397951416001888,
+          "kernel_samples_s": [
+            1.0948472919990309,
+            1.1113915829919279,
+            1.0788969999994151
+          ],
+          "kernel_stats": {
+            "min_s": 1.0788969999994151,
+            "median_s": 1.0948472919990309,
+            "max_s": 1.1113915829919279,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.314658707997296,
+            "phases_s": {
+              "sort_validate_s": 0.30752641599974595,
+              "flatten_s": 2.500019036233425e-07,
+              "group_boundaries_s": 0.0013759589928667992,
+              "snapshot_plan_s": 0.005756083002779633,
+              "total_s": 0.314658707997296
+            },
+            "samples_s": [
+              0.3157937499927357,
+              0.314658707997296,
+              0.32132391701452434
+            ],
+            "blocks": 4
+          },
+          "end_to_end_par_s": 1.3935557079967111
+        },
+        {
+          "threads": 6,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 6,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 6,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 6,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=6, W=3033)=6 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.8383169159933459,
+          "end_to_end_s": 1.1573713319958188,
+          "kernel_samples_s": [
+            0.8496552080032416,
+            0.8383169159933459,
+            0.8434535840060562
+          ],
+          "kernel_stats": {
+            "min_s": 0.8383169159933459,
+            "median_s": 0.8434535840060562,
+            "max_s": 0.8496552080032416,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.3208370410138741,
+            "phases_s": {
+              "sort_validate_s": 0.3145122910209466,
+              "flatten_s": 3.33995558321476e-07,
+              "group_boundaries_s": 0.0012059159926138818,
+              "snapshot_plan_s": 0.005118500004755333,
+              "total_s": 0.3208370410138741
+            },
+            "samples_s": [
+              0.32453854102641344,
+              0.3208370410138741,
+              0.32098962500458583
+            ],
+            "blocks": 6
+          },
+          "end_to_end_par_s": 1.15915395700722
+        },
+        {
+          "threads": 6,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 24,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 6,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 24,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=24, W=3033)=24 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.8977958750037942,
+          "end_to_end_s": 1.216850291006267,
+          "kernel_samples_s": [
+            0.9035262500110548,
+            0.9065406669978984,
+            0.8977958750037942
+          ],
+          "kernel_stats": {
+            "min_s": 0.8977958750037942,
+            "median_s": 0.9035262500110548,
+            "max_s": 0.9065406669978984,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.3208370410138741,
+            "phases_s": {
+              "sort_validate_s": 0.3145122910209466,
+              "flatten_s": 3.33995558321476e-07,
+              "group_boundaries_s": 0.0012059159926138818,
+              "snapshot_plan_s": 0.005118500004755333,
+              "total_s": 0.3208370410138741
+            },
+            "samples_s": [
+              0.32453854102641344,
+              0.3208370410138741,
+              0.32098962500458583
+            ],
+            "blocks": 6
+          },
+          "end_to_end_par_s": 1.2186329160176683
+        },
+        {
+          "threads": 8,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 8,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 8,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 8,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=8, W=3033)=8 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.8093052080075722,
+          "end_to_end_s": 1.128359624010045,
+          "kernel_samples_s": [
+            0.8093052080075722,
+            0.8230831670225598,
+            0.82198158299434
+          ],
+          "kernel_stats": {
+            "min_s": 0.8093052080075722,
+            "median_s": 0.82198158299434,
+            "max_s": 0.8230831670225598,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.3239743339945562,
+            "phases_s": {
+              "sort_validate_s": 0.3174193750019185,
+              "flatten_s": 3.7500285543501377e-07,
+              "group_boundaries_s": 0.0012398750113788992,
+              "snapshot_plan_s": 0.00531470897840336,
+              "total_s": 0.3239743339945562
+            },
+            "samples_s": [
+              0.32398375001503155,
+              0.33104729201295413,
+              0.3239743339945562
+            ],
+            "blocks": 8
+          },
+          "end_to_end_par_s": 1.1332795420021284
+        },
+        {
+          "threads": 8,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 32,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 8,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 32,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=32, W=3033)=32 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.824433500005398,
+          "end_to_end_s": 1.1434879160078708,
+          "kernel_samples_s": [
+            0.824433500005398,
+            0.9014712080243044,
+            0.8284478340065107
+          ],
+          "kernel_stats": {
+            "min_s": 0.824433500005398,
+            "median_s": 0.8284478340065107,
+            "max_s": 0.9014712080243044,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.3239743339945562,
+            "phases_s": {
+              "sort_validate_s": 0.3174193750019185,
+              "flatten_s": 3.7500285543501377e-07,
+              "group_boundaries_s": 0.0012398750113788992,
+              "snapshot_plan_s": 0.00531470897840336,
+              "total_s": 0.3239743339945562
+            },
+            "samples_s": [
+              0.32398375001503155,
+              0.33104729201295413,
+              0.3239743339945562
+            ],
+            "blocks": 8
+          },
+          "end_to_end_par_s": 1.1484078339999542
+        },
+        {
+          "threads": 12,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 12,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 12,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 12,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=12, W=3033)=12 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.7010652919998392,
+          "end_to_end_s": 1.020119708002312,
+          "kernel_samples_s": [
+            0.7482685830036644,
+            0.7010652919998392,
+            0.7531589159916621
+          ],
+          "kernel_stats": {
+            "min_s": 0.7010652919998392,
+            "median_s": 0.7482685830036644,
+            "max_s": 0.7531589159916621,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.32548500000848435,
+            "phases_s": {
+              "sort_validate_s": 0.3192011250066571,
+              "flatten_s": 5.409820005297661e-07,
+              "group_boundaries_s": 0.0012037920241709799,
+              "snapshot_plan_s": 0.005079541995655745,
+              "total_s": 0.32548500000848435
+            },
+            "samples_s": [
+              0.32548500000848435,
+              0.33041125000454485,
+              0.3291445829963777
+            ],
+            "blocks": 12
+          },
+          "end_to_end_par_s": 1.0265502920083236
+        },
+        {
+          "threads": 12,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 48,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 12,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 48,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=48, W=3033)=48 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.7438104999891948,
+          "end_to_end_s": 1.0628649159916677,
+          "kernel_samples_s": [
+            0.7457325829891488,
+            0.7438104999891948,
+            0.8108146669983398
+          ],
+          "kernel_stats": {
+            "min_s": 0.7438104999891948,
+            "median_s": 0.7457325829891488,
+            "max_s": 0.8108146669983398,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.32548500000848435,
+            "phases_s": {
+              "sort_validate_s": 0.3192011250066571,
+              "flatten_s": 5.409820005297661e-07,
+              "group_boundaries_s": 0.0012037920241709799,
+              "snapshot_plan_s": 0.005079541995655745,
+              "total_s": 0.32548500000848435
+            },
+            "samples_s": [
+              0.32548500000848435,
+              0.33041125000454485,
+              0.3291445829963777
+            ],
+            "blocks": 12
+          },
+          "end_to_end_par_s": 1.0692954999976791
+        },
+        {
+          "threads": 16,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 16,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 16,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 16,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=16, W=3033)=16 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.6361960420035757,
+          "end_to_end_s": 0.9552504580060486,
+          "kernel_samples_s": [
+            0.6633862500020768,
+            0.6361960420035757,
+            0.6550317500077654
+          ],
+          "kernel_stats": {
+            "min_s": 0.6361960420035757,
+            "median_s": 0.6550317500077654,
+            "max_s": 0.6633862500020768,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.32604029099456966,
+            "phases_s": {
+              "sort_validate_s": 0.3197901250096038,
+              "flatten_s": 6.250047590583563e-07,
+              "group_boundaries_s": 0.0012106659996788949,
+              "snapshot_plan_s": 0.005038874980527908,
+              "total_s": 0.32604029099456966
+            },
+            "samples_s": [
+              0.32604029099456966,
+              0.3282897919998504,
+              0.3285654580104165
+            ],
+            "blocks": 16
+          },
+          "end_to_end_par_s": 0.9622363329981454
+        },
+        {
+          "threads": 16,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 64,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 16,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 64,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=64, W=3033)=64 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.6935321249766275,
+          "end_to_end_s": 1.0125865409791004,
+          "kernel_samples_s": [
+            0.7095922080043238,
+            0.7128081659902819,
+            0.6935321249766275
+          ],
+          "kernel_stats": {
+            "min_s": 0.6935321249766275,
+            "median_s": 0.7095922080043238,
+            "max_s": 0.7128081659902819,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.32604029099456966,
+            "phases_s": {
+              "sort_validate_s": 0.3197901250096038,
+              "flatten_s": 6.250047590583563e-07,
+              "group_boundaries_s": 0.0012106659996788949,
+              "snapshot_plan_s": 0.005038874980527908,
+              "total_s": 0.32604029099456966
+            },
+            "samples_s": [
+              0.32604029099456966,
+              0.3282897919998504,
+              0.3285654580104165
+            ],
+            "blocks": 16
+          },
+          "end_to_end_par_s": 1.0195724159711972
+        },
+        {
+          "threads": 18,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "static",
+          "chunks": 18,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "static",
+            "threads": 18,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 18,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(p=18, W=3033)=18 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.6081729579891544,
+          "end_to_end_s": 0.9272273739916272,
+          "kernel_samples_s": [
+            0.63859158300329,
+            0.6081729579891544,
+            0.63283849999425
+          ],
+          "kernel_stats": {
+            "min_s": 0.6081729579891544,
+            "median_s": 0.63283849999425,
+            "max_s": 0.63859158300329,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.3254704160208348,
+            "phases_s": {
+              "sort_validate_s": 0.3193497500033118,
+              "flatten_s": 5.410111043602228e-07,
+              "group_boundaries_s": 0.0012062919849995524,
+              "snapshot_plan_s": 0.004913833021419123,
+              "total_s": 0.3254704160208348
+            },
+            "samples_s": [
+              0.3254704160208348,
+              0.32610458400449716,
+              0.32549574997392483
+            ],
+            "blocks": 18
+          },
+          "end_to_end_par_s": 0.9336433740099892
+        },
+        {
+          "threads": 18,
+          "layout": "tiled",
+          "resolved_layout": "tiled",
+          "schedule": "dynamic",
+          "chunks": 72,
+          "chunk_policy": "threads",
+          "plan": {
+            "layout": "tiled",
+            "resolved_layout": "tiled",
+            "schedule": "dynamic",
+            "threads": 18,
+            "words": 3033,
+            "line_words": 16,
+            "nchunks": 72,
+            "oversub": 4,
+            "rule": "explicit layout=tiled; chunks=min(oversub*p=72, W=3033)=72 [chunk_policy=threads]",
+            "chunk_policy": "threads"
+          },
+          "kernel_s": 0.6907516249921173,
+          "end_to_end_s": 1.0098060409945901,
+          "kernel_samples_s": [
+            0.7107081249996554,
+            0.7096658750087954,
+            0.6907516249921173
+          ],
+          "kernel_stats": {
+            "min_s": 0.6907516249921173,
+            "median_s": 0.7096658750087954,
+            "max_s": 0.7107081249996554,
+            "n": 3
+          },
+          "prep_par": {
+            "total_s": 0.3254704160208348,
+            "phases_s": {
+              "sort_validate_s": 0.3193497500033118,
+              "flatten_s": 5.410111043602228e-07,
+              "group_boundaries_s": 0.0012062919849995524,
+              "snapshot_plan_s": 0.004913833021419123,
+              "total_s": 0.3254704160208348
+            },
+            "samples_s": [
+              0.3254704160208348,
+              0.32610458400449716,
+              0.32549574997392483
+            ],
+            "blocks": 18
+          },
+          "end_to_end_par_s": 1.016222041012952
+        }
+      ]
+    }
+  ]
+}

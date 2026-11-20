@@ -1,0 +1,9 @@
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+scipy>=1.10
+pytest>=7.0
+requests>=2.31
+# Optional: install tgb for TGB/TGB2 dataset export when network is available.
+# tgb>=1.1.0
+numba>=0.60

@@ -1,0 +1,286 @@
+{
+  "dataset": "sx-stackoverflow",
+  "n": 2601977,
+  "m": 63497050,
+  "meta": {
+    "dataset": "sx-stackoverflow",
+    "max_edges": null,
+    "max_nodes": null,
+    "n": 2601977,
+    "relabel_compact": true,
+    "temporal_edges": 63497050,
+    "timestamp_max": 1457273428,
+    "timestamp_min": 1217567877,
+    "unique_timestamps": 52423237
+  },
+  "block_bits": 65536,
+  "repeats": 3,
+  "schedule": "static, chunks = threads",
+  "verified_sources": 16,
+  "checksums": {
+    "strict": [
+      12795222921763444699,
+      1545706645574725509
+    ],
+    "nosnap": [
+      1719550189396438037,
+      10205341472801056591
+    ]
+  },
+  "rows": [
+    {
+      "variant": "strict",
+      "threads": 1,
+      "chunks": 1,
+      "seconds_samples": [
+        32.44986383302603,
+        32.950115374987945,
+        33.36042129097041
+      ],
+      "seconds_median": 32.950115374987945
+    },
+    {
+      "variant": "nosnap",
+      "threads": 1,
+      "chunks": 1,
+      "seconds_samples": [
+        26.843938792007975,
+        26.388273667020258,
+        27.148628124967217
+      ],
+      "seconds_median": 26.843938792007975
+    },
+    {
+      "variant": "copy",
+      "threads": 1,
+      "chunks": 1,
+      "seconds_samples": [
+        3.695208041986916,
+        3.638163083989639,
+        3.609286708990112
+      ],
+      "seconds_median": 3.638163083989639
+    },
+    {
+      "variant": "prealloc",
+      "threads": 1,
+      "chunks": 1,
+      "seconds_samples": [
+        31.89920333295595,
+        31.974075583042577,
+        31.985045166045893
+      ],
+      "seconds_median": 31.974075583042577
+    },
+    {
+      "variant": "strict",
+      "threads": 6,
+      "chunks": 6,
+      "seconds_samples": [
+        18.388538333994802,
+        18.02486195799429,
+        17.66699537500972
+      ],
+      "seconds_median": 18.02486195799429
+    },
+    {
+      "variant": "nosnap",
+      "threads": 6,
+      "chunks": 6,
+      "seconds_samples": [
+        15.922247749986127,
+        16.15426729194587,
+        15.951467833016068
+      ],
+      "seconds_median": 15.951467833016068
+    },
+    {
+      "variant": "copy",
+      "threads": 6,
+      "chunks": 6,
+      "seconds_samples": [
+        6.5578832919709384,
+        6.545161166985054,
+        6.54701749997912
+      ],
+      "seconds_median": 6.54701749997912
+    },
+    {
+      "variant": "prealloc",
+      "threads": 6,
+      "chunks": 6,
+      "seconds_samples": [
+        17.641720540996175,
+        17.605485457985196,
+        17.635046582960058
+      ],
+      "seconds_median": 17.635046582960058
+    },
+    {
+      "variant": "strict",
+      "threads": 12,
+      "chunks": 12,
+      "seconds_samples": [
+        29.275540958042257,
+        29.024447125033475,
+        29.011396749992855
+      ],
+      "seconds_median": 29.024447125033475
+    },
+    {
+      "variant": "nosnap",
+      "threads": 12,
+      "chunks": 12,
+      "seconds_samples": [
+        27.532226709008683,
+        27.89811920898501,
+        26.825852374953683
+      ],
+      "seconds_median": 27.532226709008683
+    },
+    {
+      "variant": "copy",
+      "threads": 12,
+      "chunks": 12,
+      "seconds_samples": [
+        20.67892237502383,
+        20.68188712495612,
+        20.659368332999293
+      ],
+      "seconds_median": 20.67892237502383
+    },
+    {
+      "variant": "prealloc",
+      "threads": 12,
+      "chunks": 12,
+      "seconds_samples": [
+        28.150339582993183,
+        28.139969207986724,
+        27.943276249978226
+      ],
+      "seconds_median": 28.139969207986724
+    },
+    {
+      "variant": "strict",
+      "threads": 18,
+      "chunks": 18,
+      "seconds_samples": [
+        34.41222829098115,
+        35.301695749978535,
+        35.13553616596619
+      ],
+      "seconds_median": 35.13553616596619
+    },
+    {
+      "variant": "nosnap",
+      "threads": 18,
+      "chunks": 18,
+      "seconds_samples": [
+        34.98586987500312,
+        34.75295241596177,
+        35.049704832956195
+      ],
+      "seconds_median": 34.98586987500312
+    },
+    {
+      "variant": "copy",
+      "threads": 18,
+      "chunks": 18,
+      "seconds_samples": [
+        32.44097308302298,
+        32.73402687499765,
+        32.24672787502641
+      ],
+      "seconds_median": 32.44097308302298
+    },
+    {
+      "variant": "prealloc",
+      "threads": 18,
+      "chunks": 18,
+      "seconds_samples": [
+        36.26253283396363,
+        36.35431716701714,
+        36.050620792026166
+      ],
+      "seconds_median": 36.26253283396363
+    }
+  ],
+  "summary": {
+    "strict": {
+      "seconds": {
+        "1": 32.950115374987945,
+        "6": 18.02486195799429,
+        "12": 29.024447125033475,
+        "18": 35.13553616596619
+      },
+      "ref_threads": 6,
+      "pmax_over_ref": 1.9492818445903861
+    },
+    "nosnap": {
+      "seconds": {
+        "1": 26.843938792007975,
+        "6": 15.951467833016068,
+        "12": 27.532226709008683,
+        "18": 34.98586987500312
+      },
+      "ref_threads": 6,
+      "pmax_over_ref": 2.193269625168286
+    },
+    "copy": {
+      "seconds": {
+        "1": 3.638163083989639,
+        "6": 6.54701749997912,
+        "12": 20.67892237502383,
+        "18": 32.44097308302298
+      },
+      "ref_threads": 6,
+      "pmax_over_ref": 4.955076580004016
+    },
+    "prealloc": {
+      "seconds": {
+        "1": 31.974075583042577,
+        "6": 17.635046582960058,
+        "12": 28.139969207986724,
+        "18": 36.26253283396363
+      },
+      "ref_threads": 6,
+      "pmax_over_ref": 2.0562765549483983
+    }
+  },
+  "note": "nosnap is not strict semantics (timing comparison only); copy has no edges; prealloc allocates and touches all tiles before the clock starts",
+  "peak_rss_bytes": 66959409152,
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.18",
+    "numpy": "2.5.5",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.5, Numba 0.68.1"
+  },
+  "threads_record": {
+    "numba": 18,
+    "graphblas": null,
+    "threadpools": []
+  }
+}

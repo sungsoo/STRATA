@@ -1,0 +1,161 @@
+{
+  "package": {
+    "source": "build",
+    "commit": "e56c3ddb2b665455fb16aacca1044b99a62850f0",
+    "route": "pip"
+  },
+  "library_version": "1.7.1",
+  "strict_matches": true,
+  "rows": [
+    {
+      "dataset": "chain-same-time",
+      "mode": "strict",
+      "tt": 1,
+      "sources": 4,
+      "mismatched_sources": [],
+      "n_mismatched": 0,
+      "matched": true
+    },
+    {
+      "dataset": "chain-same-time",
+      "mode": "closure",
+      "tt": 0,
+      "sources": 4,
+      "mismatched_sources": [],
+      "n_mismatched": 0,
+      "matched": true
+    },
+    {
+      "dataset": "reverse-order",
+      "mode": "strict",
+      "tt": 1,
+      "sources": 4,
+      "mismatched_sources": [],
+      "n_mismatched": 0,
+      "matched": true
+    },
+    {
+      "dataset": "reverse-order",
+      "mode": "closure",
+      "tt": 0,
+      "sources": 4,
+      "mismatched_sources": [
+        0
+      ],
+      "n_mismatched": 1,
+      "matched": false
+    },
+    {
+      "dataset": "late-entry",
+      "mode": "strict",
+      "tt": 1,
+      "sources": 4,
+      "mismatched_sources": [],
+      "n_mismatched": 0,
+      "matched": true
+    },
+    {
+      "dataset": "late-entry",
+      "mode": "closure",
+      "tt": 0,
+      "sources": 4,
+      "mismatched_sources": [],
+      "n_mismatched": 0,
+      "matched": true
+    },
+    {
+      "dataset": "star-ties",
+      "mode": "strict",
+      "tt": 1,
+      "sources": 5,
+      "mismatched_sources": [],
+      "n_mismatched": 0,
+      "matched": true
+    },
+    {
+      "dataset": "star-ties",
+      "mode": "closure",
+      "tt": 0,
+      "sources": 5,
+      "mismatched_sources": [],
+      "n_mismatched": 0,
+      "matched": true
+    },
+    {
+      "dataset": "path",
+      "mode": "strict",
+      "tt": 1,
+      "sources": 5,
+      "mismatched_sources": [],
+      "n_mismatched": 0,
+      "matched": true
+    },
+    {
+      "dataset": "path",
+      "mode": "closure",
+      "tt": 0,
+      "sources": 5,
+      "mismatched_sources": [],
+      "n_mismatched": 0,
+      "matched": true
+    },
+    {
+      "dataset": "CollegeMsg",
+      "mode": "strict",
+      "tt": 1,
+      "sources": 64,
+      "mismatched_sources": [],
+      "n_mismatched": 0,
+      "matched": true
+    },
+    {
+      "dataset": "CollegeMsg",
+      "mode": "closure",
+      "tt": 0,
+      "sources": 64,
+      "mismatched_sources": [
+        1475,
+        1674,
+        1693
+      ],
+      "n_mismatched": 3,
+      "matched": false
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "mode": "strict",
+      "tt": 1,
+      "sources": 64,
+      "mismatched_sources": [],
+      "n_mismatched": 0,
+      "matched": true
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "mode": "closure",
+      "tt": 0,
+      "sources": 64,
+      "mismatched_sources": [],
+      "n_mismatched": 0,
+      "matched": true
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "mode": "strict",
+      "tt": 1,
+      "sources": 64,
+      "mismatched_sources": [],
+      "n_mismatched": 0,
+      "matched": true
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "mode": "closure",
+      "tt": 0,
+      "sources": 64,
+      "mismatched_sources": [],
+      "n_mismatched": 0,
+      "matched": true
+    }
+  ]
+}

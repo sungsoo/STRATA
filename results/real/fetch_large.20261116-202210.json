@@ -1,0 +1,41 @@
+{
+  "fetched": [
+    {
+      "dataset": "sx-askubuntu",
+      "url": "https://snap.stanford.edu/data/sx-askubuntu.txt.gz",
+      "fetched": "2026-11-16T14:47:03",
+      "raw_sha256": "1a416ccaf5a679996156dd31290dfcca3e7dde3431171afed1b1fd616fbd31e6",
+      "standard_sha256": "655a5b25bd7b604277f4497fd8690536a5fd6c625ea5af2f2cb32194abe0ec68",
+      "meta": {
+        "dataset": "sx-askubuntu",
+        "n": 159316,
+        "temporal_edges": 964437,
+        "unique_timestamps": 960866,
+        "timestamp_min": 1231431607,
+        "timestamp_max": 1457266069,
+        "relabel_compact": true,
+        "max_nodes": null,
+        "max_edges": null
+      }
+    },
+    {
+      "dataset": "sx-superuser",
+      "url": "https://snap.stanford.edu/data/sx-superuser.txt.gz",
+      "fetched": "2026-11-16T14:47:04",
+      "raw_sha256": "d99a66429d0cb69b6f61be71cac3064868cd683b251140b232f377bf42112be7",
+      "standard_sha256": "c535e84e0a59df648b7e64cb8a88502906a5a777578f395e3bc068b591cc2087",
+      "meta": {
+        "dataset": "sx-superuser",
+        "n": 194085,
+        "temporal_edges": 1443339,
+        "unique_timestamps": 1437199,
+        "timestamp_min": 1217651565,
+        "timestamp_max": 1457266493,
+        "relabel_compact": true,
+        "max_nodes": null,
+        "max_edges": null
+      }
+    }
+  ],
+  "failed": []
+}

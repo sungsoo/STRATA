@@ -1,0 +1,60 @@
+{
+  "rows": [
+    {
+      "n": 1899,
+      "m": 59835,
+      "W": 30,
+      "groups": 58911,
+      "snapshot_rows": 59779,
+      "pairs": 1794244,
+      "bfs_edge_checks": 113626665,
+      "bfs_vertex_steps": 7212402,
+      "bfs_steps": 122633311,
+      "strata_merge_words": 1795050,
+      "strata_snapshot_words": 1793370,
+      "strata_word_ops": 3588420,
+      "step_ratio": 34.17473734958561,
+      "dataset": "CollegeMsg",
+      "measured_kernel_ratio": 164.5103183183755,
+      "cost_per_step_ratio": 4.813799053831508
+    },
+    {
+      "n": 5881,
+      "m": 35592,
+      "W": 92,
+      "groups": 35427,
+      "snapshot_rows": 35592,
+      "pairs": 15294857,
+      "bfs_edge_checks": 209316552,
+      "bfs_vertex_steps": 69172322,
+      "bfs_steps": 293783731,
+      "strata_merge_words": 3274464,
+      "strata_snapshot_words": 3274464,
+      "strata_word_ops": 6548928,
+      "step_ratio": 44.859819958319896,
+      "dataset": "BitcoinOTC",
+      "measured_kernel_ratio": 237.68974998389083,
+      "cost_per_step_ratio": 5.298499864795107
+    },
+    {
+      "n": 5573,
+      "m": 32029,
+      "W": 88,
+      "groups": 31986,
+      "snapshot_rows": 32029,
+      "pairs": 13351977,
+      "bfs_edge_checks": 178497617,
+      "bfs_vertex_steps": 62116658,
+      "bfs_steps": 253966252,
+      "strata_merge_words": 2818552,
+      "strata_snapshot_words": 2818552,
+      "strata_word_ops": 5637104,
+      "step_ratio": 45.05261070223292,
+      "dataset": "BitcoinOTCpos",
+      "measured_kernel_ratio": 238.4847006559596,
+      "cost_per_step_ratio": 5.293471275886343
+    }
+  ],
+  "machine_independent": true,
+  "measured_from": "compiled_real.json"
+}

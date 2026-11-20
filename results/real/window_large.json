@@ -1,0 +1,155 @@
+{
+  "dataset": "sx-askubuntu",
+  "n": 159316,
+  "m": 964437,
+  "threads": 18,
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.18",
+    "numpy": "2.5.5",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.5, Numba 0.68.1"
+  },
+  "threads_record": {
+    "numba": 18,
+    "graphblas": null,
+    "threadpools": []
+  },
+  "windows": [
+    {
+      "slot": 0,
+      "lo": 0,
+      "hi": 241109,
+      "edges": 241109,
+      "prep_s": 0.007607666018884629,
+      "kernel_s": 0.04045212495839223,
+      "pairs": 272966688,
+      "verified_sources": 16
+    },
+    {
+      "slot": 1,
+      "lo": 103332,
+      "hi": 344441,
+      "edges": 241109,
+      "prep_s": 0.0035317500005476177,
+      "kernel_s": 0.047063999983947724,
+      "pairs": 357113479,
+      "verified_sources": 16
+    },
+    {
+      "slot": 2,
+      "lo": 206664,
+      "hi": 447773,
+      "edges": 241109,
+      "prep_s": 0.003157040977384895,
+      "kernel_s": 0.04666908399667591,
+      "pairs": 376707439,
+      "verified_sources": 16
+    },
+    {
+      "slot": 3,
+      "lo": 309996,
+      "hi": 551105,
+      "edges": 241109,
+      "prep_s": 0.0031891249818727374,
+      "kernel_s": 0.049180832982528955,
+      "pairs": 350354812,
+      "verified_sources": 16
+    },
+    {
+      "slot": 4,
+      "lo": 413328,
+      "hi": 654437,
+      "edges": 241109,
+      "prep_s": 0.0031736670061945915,
+      "kernel_s": 0.04979575000470504,
+      "pairs": 325591572,
+      "verified_sources": 16
+    },
+    {
+      "slot": 5,
+      "lo": 516660,
+      "hi": 757769,
+      "edges": 241109,
+      "prep_s": 0.0031038750312291086,
+      "kernel_s": 0.0482138330116868,
+      "pairs": 304801658,
+      "verified_sources": 16
+    },
+    {
+      "slot": 6,
+      "lo": 619992,
+      "hi": 861101,
+      "edges": 241109,
+      "prep_s": 0.00318566698115319,
+      "kernel_s": 0.04909279098501429,
+      "pairs": 277412826,
+      "verified_sources": 16
+    },
+    {
+      "slot": 7,
+      "lo": 723324,
+      "hi": 964433,
+      "edges": 241109,
+      "prep_s": 0.0031162499799393117,
+      "kernel_s": 0.047462041955441236,
+      "pairs": 246900410,
+      "verified_sources": 16
+    }
+  ],
+  "insertion": {
+    "base_edges": 482218,
+    "base_kernel_s": 0.14079941698582843,
+    "batches": [
+      {
+        "batch": 0,
+        "edges": 96443,
+        "kernel_s": 0.10821616603061557
+      },
+      {
+        "batch": 1,
+        "edges": 96444,
+        "kernel_s": 0.10954400000628084
+      },
+      {
+        "batch": 2,
+        "edges": 96444,
+        "kernel_s": 0.10161749995313585
+      },
+      {
+        "batch": 3,
+        "edges": 96444,
+        "kernel_s": 0.10192091600038111
+      },
+      {
+        "batch": 4,
+        "edges": 96444,
+        "kernel_s": 0.10501520795514807
+      }
+    ],
+    "full_kernel_s": 0.32013804104644805,
+    "bit_identical": true
+  }
+}

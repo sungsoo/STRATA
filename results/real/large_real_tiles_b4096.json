@@ -1,0 +1,239 @@
+{
+  "dataset": "sx-stackoverflow",
+  "n": 2601977,
+  "m": 63497050,
+  "meta": {
+    "dataset": "sx-stackoverflow",
+    "max_edges": null,
+    "max_nodes": null,
+    "n": 2601977,
+    "relabel_compact": true,
+    "temporal_edges": 63497050,
+    "timestamp_max": 1457273428,
+    "timestamp_min": 1217567877,
+    "unique_timestamps": 52423237
+  },
+  "groups": 52423237,
+  "block_bits": 4096,
+  "blocks_total": 636,
+  "load_s": 5.581724292016588,
+  "prep": {
+    "sort_validate_s": 25.699424833001103,
+    "flatten_s": 5.830079317092896e-07,
+    "group_boundaries_s": 0.04817512497538701,
+    "snapshot_plan_s": 0.2607561250333674,
+    "total_s": 26.00835666601779
+  },
+  "prep_sort": "time-then-group",
+  "prep_parallel": true,
+  "resident_block_bytes": 1332212224,
+  "relation_bits": 6770284308529,
+  "verified_sources": [
+    8,
+    9,
+    151,
+    184,
+    368,
+    397,
+    438,
+    496,
+    525,
+    944,
+    999,
+    1067,
+    1212,
+    1449,
+    1527,
+    1556,
+    1859,
+    1911,
+    2146,
+    2218,
+    2262,
+    2301,
+    2325,
+    2509,
+    2790,
+    2954,
+    3057,
+    3120,
+    3202,
+    3325,
+    3546,
+    3813,
+    4025,
+    4191,
+    4455,
+    4539,
+    4650,
+    5126,
+    5316,
+    5414,
+    5436,
+    5452,
+    5525,
+    5554,
+    5794,
+    6115,
+    6315,
+    6372,
+    6508,
+    6544,
+    6570,
+    6888,
+    7117,
+    7139,
+    7190,
+    7234,
+    7323,
+    7328,
+    7382,
+    7834,
+    7945,
+    7970,
+    8141,
+    8162
+  ],
+  "reference": "per-source strict BFS",
+  "peak_rss_bytes": 12108103680,
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.18",
+    "numpy": "2.5.5",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.5, Numba 0.68.1"
+  },
+  "threads_record": {
+    "numba": 18,
+    "graphblas": null,
+    "threadpools": []
+  },
+  "runs": [
+    {
+      "threads": 1,
+      "layout": "tiled",
+      "schedule": "static",
+      "state": "tiles",
+      "chunks": 1,
+      "blocks_run": 2,
+      "verified_sources": 64,
+      "kernel_s_total": 6.661610959039535,
+      "kernel_s_mean_block": 3.3308054795197677,
+      "extrapolated_all_blocks_s": 2118.3922849745722,
+      "blocks": [
+        {
+          "start": 0,
+          "width": 4096,
+          "kernel_s": 3.388355834002141,
+          "pairs": 8955830833
+        },
+        {
+          "start": 4096,
+          "width": 4096,
+          "kernel_s": 3.2732551250373945,
+          "pairs": 8806754782
+        }
+      ]
+    },
+    {
+      "threads": 6,
+      "layout": "tiled",
+      "schedule": "static",
+      "state": "tiles",
+      "chunks": 6,
+      "blocks_run": 2,
+      "verified_sources": 64,
+      "kernel_s_total": 2.931321666983422,
+      "kernel_s_mean_block": 1.465660833491711,
+      "extrapolated_all_blocks_s": 932.1602901007282,
+      "blocks": [
+        {
+          "start": 0,
+          "width": 4096,
+          "kernel_s": 1.3139521249686368,
+          "pairs": 8955830833
+        },
+        {
+          "start": 4096,
+          "width": 4096,
+          "kernel_s": 1.617369542014785,
+          "pairs": 8806754782
+        }
+      ]
+    },
+    {
+      "threads": 12,
+      "layout": "tiled",
+      "schedule": "static",
+      "state": "tiles",
+      "chunks": 12,
+      "blocks_run": 2,
+      "verified_sources": 64,
+      "kernel_s_total": 3.2002841670182534,
+      "kernel_s_mean_block": 1.6001420835091267,
+      "extrapolated_all_blocks_s": 1017.6903651118046,
+      "blocks": [
+        {
+          "start": 0,
+          "width": 4096,
+          "kernel_s": 1.5878490839968435,
+          "pairs": 8955830833
+        },
+        {
+          "start": 4096,
+          "width": 4096,
+          "kernel_s": 1.6124350830214098,
+          "pairs": 8806754782
+        }
+      ]
+    },
+    {
+      "threads": 18,
+      "layout": "tiled",
+      "schedule": "static",
+      "state": "tiles",
+      "chunks": 18,
+      "blocks_run": 2,
+      "verified_sources": 64,
+      "kernel_s_total": 3.0071949170087464,
+      "kernel_s_mean_block": 1.5035974585043732,
+      "extrapolated_all_blocks_s": 956.2879836087814,
+      "blocks": [
+        {
+          "start": 0,
+          "width": 4096,
+          "kernel_s": 1.493258542031981,
+          "pairs": 8955830833
+        },
+        {
+          "start": 4096,
+          "width": 4096,
+          "kernel_s": 1.5139363749767654,
+          "pairs": 8806754782
+        }
+      ]
+    }
+  ]
+}

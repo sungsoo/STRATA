@@ -1,0 +1,7 @@
+t_d,edge,regime,inplace_ok,exact_pairs,agree
+0,435->326,fallback,False,2924,True
+1,299->459,fallback,False,2924,True
+2,318->3,fallback,False,2874,True
+3,119->481,fallback,False,2924,True
+4,241->157,in-place,True,2924,False
+5,111->24,in-place,True,2924,False

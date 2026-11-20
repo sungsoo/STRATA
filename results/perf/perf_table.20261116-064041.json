@@ -1,0 +1,65 @@
+{
+  "rows": [
+    {
+      "label": "synth-PA $n{=}128$",
+      "n": 128,
+      "m": 1500,
+      "packed_ms": 2.8,
+      "exact_ms": 68.8,
+      "speedup": 24.54,
+      "pairs": 15200,
+      "bit_identical": true
+    },
+    {
+      "label": "synth-PA $n{=}256$",
+      "n": 256,
+      "m": 4000,
+      "packed_ms": 7.5,
+      "exact_ms": 319.8,
+      "speedup": 42.53,
+      "pairs": 62282,
+      "bit_identical": true
+    },
+    {
+      "label": "synth-PA $n{=}512$",
+      "n": 512,
+      "m": 12000,
+      "packed_ms": 23.9,
+      "exact_ms": 1850.5,
+      "speedup": 77.34,
+      "pairs": 261028,
+      "bit_identical": true
+    },
+    {
+      "label": "synth-PA $n{=}1024$",
+      "n": 1024,
+      "m": 30000,
+      "packed_ms": 60.9,
+      "exact_ms": 10580.0,
+      "speedup": 173.63,
+      "pairs": 1047566,
+      "bit_identical": true
+    },
+    {
+      "label": "synth-PA $n{=}2048$",
+      "n": 2048,
+      "m": 60000,
+      "packed_ms": 150.9,
+      "exact_ms": 47015.2,
+      "speedup": 311.59,
+      "pairs": 4189470,
+      "bit_identical": true
+    },
+    {
+      "label": "ego-Facebook",
+      "n": 512,
+      "m": 4617,
+      "packed_ms": 12.1,
+      "exact_ms": 2484.7,
+      "speedup": 205.24,
+      "pairs": 30501,
+      "bit_identical": true
+    }
+  ],
+  "geomean_speedup": 98.19
+}

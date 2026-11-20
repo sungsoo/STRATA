@@ -1,0 +1,80 @@
+{
+  "rows": [
+    {
+      "dataset": "adversarial-chain@t0",
+      "n": 4,
+      "m": 3,
+      "strict_snapshot": 7,
+      "closure": 10,
+      "no_snapshot_fwd": 10,
+      "no_snapshot_rev": 7,
+      "order_dependent": true
+    },
+    {
+      "dataset": "CollegeMsg",
+      "n": 1899,
+      "groups": 1679,
+      "strict_snapshot": 1762817,
+      "closure": 1828792,
+      "no_snapshot_fwd": 1798166,
+      "no_snapshot_rev": 1799627,
+      "order_dependent": true,
+      "nosnap_overcount_vs_strict_pct": 2.005
+    },
+    {
+      "dataset": "CollegeMsg",
+      "n": 1899,
+      "groups": 485,
+      "strict_snapshot": 1730862,
+      "closure": 1851518,
+      "no_snapshot_fwd": 1796729,
+      "no_snapshot_rev": 1795819,
+      "order_dependent": true,
+      "nosnap_overcount_vs_strict_pct": 3.805
+    },
+    {
+      "dataset": "CollegeMsg",
+      "n": 1899,
+      "groups": 99,
+      "strict_snapshot": 1611651,
+      "closure": 1899393,
+      "no_snapshot_fwd": 1766854,
+      "no_snapshot_rev": 1784773,
+      "order_dependent": true,
+      "nosnap_overcount_vs_strict_pct": 9.63
+    },
+    {
+      "dataset": "Bitcoin-OTC",
+      "n": 5881,
+      "groups": 1846,
+      "strict_snapshot": 14709309,
+      "closure": 15731284,
+      "no_snapshot_fwd": 15219405,
+      "no_snapshot_rev": 15141494,
+      "order_dependent": true,
+      "nosnap_overcount_vs_strict_pct": 3.468
+    },
+    {
+      "dataset": "Bitcoin-OTC",
+      "n": 5881,
+      "groups": 498,
+      "strict_snapshot": 14107195,
+      "closure": 16052093,
+      "no_snapshot_fwd": 15092158,
+      "no_snapshot_rev": 15037071,
+      "order_dependent": true,
+      "nosnap_overcount_vs_strict_pct": 6.982
+    },
+    {
+      "dataset": "Bitcoin-OTC",
+      "n": 5881,
+      "groups": 100,
+      "strict_snapshot": 12374816,
+      "closure": 16785879,
+      "no_snapshot_fwd": 14571192,
+      "no_snapshot_rev": 14682250,
+      "order_dependent": true,
+      "nosnap_overcount_vs_strict_pct": 17.749
+    }
+  ]
+}

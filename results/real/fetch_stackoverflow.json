@@ -1,0 +1,23 @@
+{
+  "fetched": [
+    {
+      "dataset": "sx-stackoverflow",
+      "url": "https://snap.stanford.edu/data/sx-stackoverflow.txt.gz",
+      "fetched": "2026-11-17T14:26:45",
+      "raw_sha256": "22a717fd1763199c95b10dbea80af4fb658f0b9e71cd9eb8a1fff51462238cdc",
+      "standard_sha256": "89a34257752411249256a60f0ef09c119609513ee8d73ab79a95f01661a91a01",
+      "meta": {
+        "dataset": "sx-stackoverflow",
+        "n": 2601977,
+        "temporal_edges": 63497050,
+        "unique_timestamps": 52423237,
+        "timestamp_min": 1217567877,
+        "timestamp_max": 1457273428,
+        "relabel_compact": true,
+        "max_nodes": null,
+        "max_edges": null
+      }
+    }
+  ],
+  "failed": []
+}

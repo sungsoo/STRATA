@@ -1,0 +1,78 @@
+{
+  "label": "single_thread",
+  "stamped": "2026-11-16T21:04:33",
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.18",
+    "numpy": "2.5.5",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.5, Numba 0.68.1"
+  },
+  "numba_num_threads_env": null,
+  "files": [
+    {
+      "path": "results/perf/perf_table.json",
+      "bytes": 1377,
+      "sha256": "04296177b6c74ab1b163d7082bf7b73829884eebc6d7e6948de18649482b7139",
+      "mtime": "2026-11-16T20:59:06"
+    },
+    {
+      "path": "results/perf/compiled_baselines.json",
+      "bytes": 2715,
+      "sha256": "76e55d63d93957221b1e53da04838930b4cae05d6aa8b2034464e86c09974ce1",
+      "mtime": "2026-11-16T20:59:32"
+    },
+    {
+      "path": "results/real/real_temporal_results.json",
+      "bytes": 2369,
+      "sha256": "1450656f5f323afe769301d3d588289515d6f431ba350be0806e9dfdbde65928",
+      "mtime": "2026-11-16T21:04:05"
+    },
+    {
+      "path": "results/real/snapshot_necessity.json",
+      "bytes": 1974,
+      "sha256": "9d05416c290b9ad320188f44d6d7e93864347a689431a2862cb3981e098d92c4",
+      "mtime": "2026-11-16T21:04:27"
+    },
+    {
+      "path": "results/real/ablation_strict_prune.json",
+      "bytes": 769,
+      "sha256": "7fd9e1e80c7487530645e10a8746e2fcfcd82906ea7e9b08c0aa143d11429c8e",
+      "mtime": "2026-11-16T21:04:28"
+    },
+    {
+      "path": "results/real/index_crossover.json",
+      "bytes": 673,
+      "sha256": "21d580263b832a665a7ecd5054c9cf634aa904a0f1fc86fdf2a6601a2d85e6de",
+      "mtime": "2026-11-16T21:04:31"
+    },
+    {
+      "path": "results/real/real_dynamic_blocking.json",
+      "bytes": 3238,
+      "sha256": "e6c8596dbf45283af5435c38d9f009e56454f8c8a4dcecccb791df1d80dee3b8",
+      "mtime": "2026-11-16T21:04:32"
+    }
+  ]
+}

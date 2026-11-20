@@ -1,0 +1,18 @@
+{
+  "dataset": "Bitcoin-OTC (real timestamps)",
+  "n": 5881,
+  "m": 35592,
+  "temporal_pairs": 15288976,
+  "static_pairs": 27684617,
+  "false_trail_fraction_pct": 44.8,
+  "static_overcount_pct": 81.1,
+  "topk": 20,
+  "topk_overlap_temporal_vs_static": 0,
+  "spearman_out_reach": 0.279,
+  "mean_static_reach_inflation_top_static_pct": 41.3,
+  "recency_window": {
+    "window_days": 90,
+    "window_edges": 121,
+    "window_pairs": 298
+  }
+}

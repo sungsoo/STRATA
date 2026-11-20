@@ -1,0 +1,111 @@
+{
+  "package": {
+    "source": "build",
+    "commit": "e56c3ddb2b665455fb16aacca1044b99a62850f0",
+    "route": "pip"
+  },
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.18",
+    "numpy": "2.5.5",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 1,
+    "numba_threading_layer_config": "workqueue",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.5, Numba 0.68.1"
+  },
+  "rows": [
+    {
+      "dataset": "CollegeMsg",
+      "n": 1899,
+      "m": 59835,
+      "procs": 1,
+      "compute_s_sum": 0.07747709291288629,
+      "critical_path_s": 0.07747709291288629,
+      "wall_s": 0.7949520000256598,
+      "pairs": 1794244,
+      "strata_end_to_end_s_p1": 0.0012221659999340773,
+      "ratio_critical_over_strata": 63.393264840508856
+    },
+    {
+      "dataset": "CollegeMsg",
+      "n": 1899,
+      "m": 59835,
+      "procs": 18,
+      "compute_s_sum": 0.0993835735716857,
+      "critical_path_s": 0.007231585856061429,
+      "wall_s": 0.21957241598283872,
+      "pairs": 1794244,
+      "strata_end_to_end_s_p1": 0.0012221659999340773,
+      "ratio_critical_over_strata": 5.91702424748479
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "n": 5881,
+      "m": 35592,
+      "procs": 1,
+      "compute_s_sum": 0.1889832151355222,
+      "critical_path_s": 0.1889832151355222,
+      "wall_s": 5.92134745803196,
+      "pairs": 15294857,
+      "strata_end_to_end_s_p1": 0.0013154170010238886,
+      "ratio_critical_over_strata": 143.66791290398578
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "n": 5881,
+      "m": 35592,
+      "procs": 18,
+      "compute_s_sum": 0.2410312796710059,
+      "critical_path_s": 0.014266292797401547,
+      "wall_s": 0.5551800840185024,
+      "pairs": 15294857,
+      "strata_end_to_end_s_p1": 0.0013154170010238886,
+      "ratio_critical_over_strata": 10.845452648321416
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "n": 5573,
+      "m": 32029,
+      "procs": 1,
+      "compute_s_sum": 0.1618551752762869,
+      "critical_path_s": 0.1618551752762869,
+      "wall_s": 5.177377791958861,
+      "pairs": 13351977,
+      "strata_end_to_end_s_p1": 0.0011642500176094472,
+      "ratio_critical_over_strata": 139.02097730573703
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "n": 5573,
+      "m": 32029,
+      "procs": 18,
+      "compute_s_sum": 0.2091370988637209,
+      "critical_path_s": 0.012149963527917862,
+      "wall_s": 0.5114865420036949,
+      "pairs": 13351977,
+      "strata_end_to_end_s_p1": 0.0011642500176094472,
+      "ratio_critical_over_strata": 10.435871457288327
+    }
+  ],
+  "note": "compute = library calls only (graph loading excluded); critical path = slowest of p processes over interleaved source slices; STRATA = end-to-end strict, one thread, best of 5"
+}

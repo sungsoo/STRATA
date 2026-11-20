@@ -1,0 +1,126 @@
+{
+  "url": "https://gitlab.com/tgpublic/tglib.git",
+  "commit_pinned": "e56c3ddb2b665455fb16aacca1044b99a62850f0",
+  "route": null,
+  "ok": false,
+  "steps": [
+    {
+      "stage": "pin",
+      "cmd": [
+        "git",
+        "-C",
+        "external/tglib",
+        "fetch",
+        "--quiet",
+        "origin",
+        "e56c3ddb2b665455fb16aacca1044b99a62850f0"
+      ],
+      "rc": 0,
+      "tail": ""
+    },
+    {
+      "stage": "pin",
+      "cmd": [
+        "git",
+        "-C",
+        "external/tglib",
+        "checkout",
+        "--quiet",
+        "e56c3ddb2b665455fb16aacca1044b99a62850f0"
+      ],
+      "rc": 0,
+      "tail": ""
+    },
+    {
+      "stage": "pin",
+      "cmd": [
+        "git",
+        "-C",
+        "external/tglib",
+        "submodule",
+        "update",
+        "--init",
+        "--recursive",
+        "--quiet"
+      ],
+      "rc": 0,
+      "tail": ""
+    },
+    {
+      "stage": "pip",
+      "cmd": [
+        "~/Research/STRATA/STRATA-v24/STRATA-code/05_Temporal_STRATA/.venv313/bin/python3",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "external/tglib"
+      ],
+      "rc": 1,
+      "tail": "e>(tglib::OrderedEdgeList<tglib::TemporalEdge> const&, std::__1::pair<long long, long long>) in test-burstiness.cpp.o\n            std::__1::vector<double, std::__1::allocator<double>> tglib::node_burstiness<tglib::TemporalEdge>(tglib::OrderedEdgeList<tglib::TemporalEdge> const&, std::__1::pair<long long, long long>) in test-burstiness.cpp.o\n            CATCH2_INTERNAL_TEST_0() in test-topkTemporalCloseness.cpp.o\n            CATCH2_INTERNAL_TEST_0() in test-topkTemporalCloseness.cpp.o\n            CATCH2_INTERNAL_TEST_2() in test-topkTemporalCloseness.cpp.o\n            CATCH2_INTERNAL_TEST_2() in test-topkTemporalCloseness.cpp.o\n            ...\n      ld: symbol(s) not found for architecture arm64\n      clang++: error: linker command failed with exit code 1 (use -v to see invocation)\n      [156/157] Building CXX object src/python_binding/CMakeFiles/_pytglib.dir/core_binding/BasicTypes_binding.cpp.o\n      ninja: build stopped: subcommand failed.\n      \n      *** CMake build failed\n      [end of output]\n  \n  note: This error originates from a subprocess, and is likely not a problem with pip.\n  ERROR: Failed building wheel for temporalgraphlib\n\n[notice] A new release of pip is available: 26.2.2 -> 26.3\n[notice] To update, run: ~/Research/STRATA/STRATA-v24/STRATA-code/05_Temporal_STRATA/.venv313/bin/python3 -m pip install --upgrade pip\nerror: failed-wheel-build-for-install\n\n\u00d7 Failed to build installable wheels for some pyproject.toml based projects\n\u2570\u2500> temporalgraphlib\n",
+      "env": {
+        "CMAKE_ARGS": "-DOpenMP_ROOT=/opt/homebrew/opt/libomp \"-DOpenMP_C_FLAGS=-Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include\" \"-DOpenMP_CXX_FLAGS=-Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include\" -DOpenMP_C_LIB_NAMES=omp -DOpenMP_CXX_LIB_NAMES=omp -DOpenMP_omp_LIBRARY=/opt/homebrew/opt/libomp/lib/libomp.dylib"
+      }
+    },
+    {
+      "stage": "cmake",
+      "cmd": [
+        "/opt/homebrew/bin/cmake",
+        "-S",
+        "external/tglib/tglib_cpp",
+        "-B",
+        "external/tglib/tglib_cpp/build-release",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DPYTHON_EXECUTABLE=~/Research/STRATA/STRATA-v24/STRATA-code/05_Temporal_STRATA/.venv313/bin/python3",
+        "-DPython_EXECUTABLE=~/Research/STRATA/STRATA-v24/STRATA-code/05_Temporal_STRATA/.venv313/bin/python3",
+        "-DOpenMP_ROOT=/opt/homebrew/opt/libomp",
+        "-DOpenMP_C_FLAGS=-Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include",
+        "-DOpenMP_CXX_FLAGS=-Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include",
+        "-DOpenMP_C_LIB_NAMES=omp",
+        "-DOpenMP_CXX_LIB_NAMES=omp",
+        "-DOpenMP_omp_LIBRARY=/opt/homebrew/opt/libomp/lib/libomp.dylib"
+      ],
+      "rc": 1,
+      "tail": "-- Configuring incomplete, errors occurred!\nCMake Error at extern/pybind11/CMakeLists.txt:8 (cmake_minimum_required):\n  Compatibility with CMake < 3.5 has been removed from CMake.\n\n  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax\n  to tell CMake that the project requires at least <min> but has been updated\n  to work with policies introduced by <max> or earlier.\n\n  Or, add -DCMAKE_POLICY_VERSION_MINIMUM=3.5 to try configuring anyway.\n\n\n"
+    },
+    {
+      "stage": "cmake-nowerror",
+      "cmd": [
+        "/opt/homebrew/bin/cmake",
+        "-S",
+        "external/tglib/tglib_cpp",
+        "-B",
+        "external/tglib/tglib_cpp/build-release-nowerror",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DPYTHON_EXECUTABLE=~/Research/STRATA/STRATA-v24/STRATA-code/05_Temporal_STRATA/.venv313/bin/python3",
+        "-DPython_EXECUTABLE=~/Research/STRATA/STRATA-v24/STRATA-code/05_Temporal_STRATA/.venv313/bin/python3",
+        "-DOpenMP_ROOT=/opt/homebrew/opt/libomp",
+        "-DOpenMP_C_FLAGS=-Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include",
+        "-DOpenMP_CXX_FLAGS=-Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include",
+        "-DOpenMP_C_LIB_NAMES=omp",
+        "-DOpenMP_CXX_LIB_NAMES=omp",
+        "-DOpenMP_omp_LIBRARY=/opt/homebrew/opt/libomp/lib/libomp.dylib",
+        "-DCMAKE_PROJECT_INCLUDE=~/Research/STRATA/STRATA-v24/STRATA-code/05_Temporal_STRATA/external/tglib_no_werror.cmake"
+      ],
+      "rc": 1,
+      "tail": "-- Configuring incomplete, errors occurred!\nCMake Error at extern/pybind11/CMakeLists.txt:8 (cmake_minimum_required):\n  Compatibility with CMake < 3.5 has been removed from CMake.\n\n  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax\n  to tell CMake that the project requires at least <min> but has been updated\n  to work with policies introduced by <max> or earlier.\n\n  Or, add -DCMAKE_POLICY_VERSION_MINIMUM=3.5 to try configuring anyway.\n\n\n"
+    }
+  ],
+  "python": "~/Research/STRATA/STRATA-v24/STRATA-code/05_Temporal_STRATA/.venv313/bin/python3",
+  "platform": "darwin",
+  "werror_relaxed": true,
+  "tools": {
+    "cmake": "cmake version 4.5.0",
+    "cxx": "Apple clang version 21.0.0 (clang-2100.4.1.1)",
+    "git": "git version 2.54.0 (Apple Git-157)"
+  },
+  "openmp": {
+    "found": true,
+    "prefix": "/opt/homebrew/opt/libomp"
+  },
+  "commit": "e56c3ddb2b665455fb16aacca1044b99a62850f0",
+  "local_diff": "tglib_cpp/amalgamated/tglib_amalgamated.h | 128 ++++++++++++++++++++++++++++++\n 1 file changed, 128 insertions(+)",
+  "cmake_exe": "/opt/homebrew/bin/cmake",
+  "module": null,
+  "import": "not built"
+}

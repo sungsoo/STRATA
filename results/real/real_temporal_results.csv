@@ -1,0 +1,4 @@
+dataset,n,m,timestamp_groups,timestamp_span_days,bit_identical_strict,bit_identical_closure,temporal_pairs_strict,temporal_pairs_closure,static_pairs,temporal_density_strict_pct,static_density_pct,static_overcount_vs_strict_pct,static_overcount_vs_closure_pct,exact_bfs_strict_s,strata_strict_s,strata_closure_s,speedup_strict,words_per_row,dense_MB,packed_MB,blocked_beta4096_MB
+CollegeMsg,1899,59835,58911,193.7,True,True,1794244,1794349,2464598,49.75,68.34,37.4,37.4,45.331,0.048,0.1098,943.6,30,3.61,0.46,0.456
+Bitcoin-OTC,5881,35592,35427,1903.3,True,True,15294857,15294860,27690498,44.22,80.06,81.0,81.0,101.027,0.0312,0.089,3241.9,92,34.59,4.33,3.011
+Bitcoin-OTC(+),5573,32029,31986,1903.3,True,True,13351977,13351980,25288198,42.99,81.42,89.4,89.4,85.556,0.028,0.0819,3056.8,88,31.06,3.92,2.853

@@ -1,0 +1,99 @@
+{
+  "machine": {
+    "platform": "Linux-6.18.5-fc-v20-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "cpu_count": 1,
+    "numba_max_threads": 2,
+    "python": "3.12.3",
+    "numpy": "2.4.4",
+    "numba": "0.67.0",
+    "repeats": 2,
+    "summary": "x86_64, 1 hardware threads, Python 3.12.3, NumPy 2.4.4, Numba 0.67.0",
+    "tex_summary": "x86\\_64, 1 hardware threads, Python 3.12.3, NumPy 2.4.4, Numba 0.67.0"
+  },
+  "thread_grid": [
+    1,
+    2
+  ],
+  "pending": true,
+  "results": [
+    {
+      "dataset": "CollegeMsg",
+      "n": 1899,
+      "m": 59835,
+      "W": 30,
+      "pairs": 1794244,
+      "seq_interpreted_s": 0.16059630500001276,
+      "prep_s": 0.2882455620000428,
+      "verified_bit_identical": true,
+      "rows": [
+        {
+          "threads": 1,
+          "chunks": 1,
+          "kernel_s": 0.002450897000016994,
+          "end_to_end_s": 0.2906964590000598,
+          "persrc_bfs_s": 0.32627997600002345
+        },
+        {
+          "threads": 2,
+          "chunks": 2,
+          "kernel_s": 0.002948189999983697,
+          "end_to_end_s": 0.2911937520000265,
+          "persrc_bfs_s": 0.3293922120000161
+        }
+      ]
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "n": 5881,
+      "m": 35592,
+      "W": 92,
+      "pairs": 15294857,
+      "seq_interpreted_s": 0.12014686199995595,
+      "prep_s": 0.17507092400001056,
+      "verified_bit_identical": true,
+      "rows": [
+        {
+          "threads": 1,
+          "chunks": 1,
+          "kernel_s": 0.004438361999973495,
+          "end_to_end_s": 0.17950928599998406,
+          "persrc_bfs_s": 0.7856580870000016
+        },
+        {
+          "threads": 2,
+          "chunks": 2,
+          "kernel_s": 0.004848149999929774,
+          "end_to_end_s": 0.17991907399994034,
+          "persrc_bfs_s": 0.8035842829999638
+        }
+      ]
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "n": 5573,
+      "m": 32029,
+      "W": 88,
+      "pairs": 13351977,
+      "seq_interpreted_s": 0.08394787800000358,
+      "prep_s": 0.15410655499999848,
+      "verified_bit_identical": true,
+      "rows": [
+        {
+          "threads": 1,
+          "chunks": 1,
+          "kernel_s": 0.0035359930000140594,
+          "end_to_end_s": 0.15764254800001254,
+          "persrc_bfs_s": 0.647088626000027
+        },
+        {
+          "threads": 2,
+          "chunks": 2,
+          "kernel_s": 0.0038664420000031896,
+          "end_to_end_s": 0.15797299700000167,
+          "persrc_bfs_s": 0.6658952269999645
+        }
+      ]
+    }
+  ]
+}

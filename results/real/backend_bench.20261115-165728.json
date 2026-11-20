@@ -1,0 +1,16 @@
+{
+  "machine": "Linux-6.18.5-fc-v20-x86_64-with-glibc2.39; 1 cores; torch 2.13.0+cu130; device cpu",
+  "requested_device": "cpu",
+  "fallback_reason": null,
+  "rows": [],
+  "verified": [
+    "CollegeMsg/strict/cpu",
+    "CollegeMsg/closure/cpu",
+    "BitcoinOTC/strict/cpu",
+    "BitcoinOTC/closure/cpu"
+  ],
+  "status": "PENDING",
+  "refusal": [
+    "host has 1 < 4 cores"
+  ]
+}

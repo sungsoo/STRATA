@@ -1,0 +1,4 @@
+stream,n,naive_sweeps,dt_mean,dt_max,ordered_sweeps,pairs,agree
+long_chain_t0,512,2,1.0,1,512,131328,True
+random_t0,512,7,6.0,6,24,252523,True
+multi_group,512,139,1.78,2,3691,26024,True

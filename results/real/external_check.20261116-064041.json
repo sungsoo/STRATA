@@ -1,0 +1,4667 @@
+{
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.18",
+    "numpy": "2.5.4",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.4, Numba 0.68.1"
+  },
+  "tool": {
+    "adapter": "raphtory",
+    "version": "0.17.0",
+    "function": "raphtory.algorithms.temporally_reachable_nodes"
+  },
+  "rows": [
+    {
+      "dataset": "CollegeMsg",
+      "n": 1899,
+      "m": 59835,
+      "sources": 64,
+      "all_sources": false,
+      "semantics_check": {
+        "strict": {
+          "match": false,
+          "mismatched_sources": 3,
+          "examples": [
+            960,
+            1515,
+            1723
+          ]
+        },
+        "closure": {
+          "match": false,
+          "mismatched_sources": 2,
+          "examples": [
+            960,
+            1515
+          ]
+        }
+      },
+      "matched_semantics": null,
+      "suspicious_all_reached": false,
+      "diagnosis": [
+        {
+          "source": 3,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 10,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 26,
+          "external_size": 1745,
+          "strict_size": 1745,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1745,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 59,
+          "external_size": 1742,
+          "strict_size": 1742,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1742,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 106,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 147,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 208,
+          "external_size": 1746,
+          "strict_size": 1746,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1746,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 231,
+          "external_size": 1380,
+          "strict_size": 1380,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1380,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 259,
+          "external_size": 1745,
+          "strict_size": 1745,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1745,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 270,
+          "external_size": 1737,
+          "strict_size": 1737,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1737,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 284,
+          "external_size": 1722,
+          "strict_size": 1722,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1722,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 321,
+          "external_size": 1544,
+          "strict_size": 1544,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1544,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 326,
+          "external_size": 1734,
+          "strict_size": 1734,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1734,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 339,
+          "external_size": 1733,
+          "strict_size": 1733,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1733,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 340,
+          "external_size": 1656,
+          "strict_size": 1656,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1656,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 372,
+          "external_size": 1732,
+          "strict_size": 1732,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1732,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 407,
+          "external_size": 1577,
+          "strict_size": 1577,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1577,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 428,
+          "external_size": 1726,
+          "strict_size": 1726,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1726,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 441,
+          "external_size": 1607,
+          "strict_size": 1607,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1607,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 443,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 504,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 510,
+          "external_size": 1417,
+          "strict_size": 1417,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1417,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 523,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 572,
+          "external_size": 1690,
+          "strict_size": 1690,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1690,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 592,
+          "external_size": 1703,
+          "strict_size": 1703,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1703,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 642,
+          "external_size": 1690,
+          "strict_size": 1690,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1690,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 734,
+          "external_size": 1441,
+          "strict_size": 1441,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1441,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 761,
+          "external_size": 1667,
+          "strict_size": 1667,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1667,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 779,
+          "external_size": 1667,
+          "strict_size": 1667,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1667,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 797,
+          "external_size": 1645,
+          "strict_size": 1645,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1645,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 835,
+          "external_size": 1602,
+          "strict_size": 1602,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1602,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 911,
+          "external_size": 1364,
+          "strict_size": 1364,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1364,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 953,
+          "external_size": 1444,
+          "strict_size": 1444,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1444,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 960,
+          "external_size": 1545,
+          "strict_size": 1546,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 1,
+            "examples": [
+              283
+            ]
+          },
+          "closure_size": 1546,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 1,
+            "examples": [
+              283
+            ]
+          }
+        },
+        {
+          "source": 1085,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1104,
+          "external_size": 1466,
+          "strict_size": 1466,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1466,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1113,
+          "external_size": 1437,
+          "strict_size": 1437,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1437,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1175,
+          "external_size": 1301,
+          "strict_size": 1301,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1301,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1264,
+          "external_size": 574,
+          "strict_size": 574,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 574,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1265,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1275,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1329,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1335,
+          "external_size": 1301,
+          "strict_size": 1301,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1301,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1388,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1414,
+          "external_size": 1138,
+          "strict_size": 1138,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1138,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1497,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1515,
+          "external_size": 746,
+          "strict_size": 745,
+          "only_external_vs_strict": {
+            "count": 2,
+            "examples": [
+              287,
+              373
+            ]
+          },
+          "only_strata_strict": {
+            "count": 1,
+            "examples": [
+              296
+            ]
+          },
+          "closure_size": 747,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 1,
+            "examples": [
+              296
+            ]
+          }
+        },
+        {
+          "source": 1519,
+          "external_size": 956,
+          "strict_size": 956,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 956,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1560,
+          "external_size": 930,
+          "strict_size": 930,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 930,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1568,
+          "external_size": 943,
+          "strict_size": 943,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 943,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1584,
+          "external_size": 949,
+          "strict_size": 949,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 949,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1589,
+          "external_size": 957,
+          "strict_size": 957,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 957,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1628,
+          "external_size": 891,
+          "strict_size": 891,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 891,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1632,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1721,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1723,
+          "external_size": 678,
+          "strict_size": 673,
+          "only_external_vs_strict": {
+            "count": 5,
+            "examples": [
+              251,
+              287,
+              373,
+              861,
+              1756
+            ]
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 678,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1776,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1778,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1784,
+          "external_size": 504,
+          "strict_size": 504,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 504,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1786,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1794,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1845,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1876,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1888,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        }
+      ],
+      "raw_sample": {
+        "type": "OutputNodeState",
+        "attrs": [
+          "from_parquet",
+          "get",
+          "groups",
+          "items",
+          "merge",
+          "nodes",
+          "sort_by",
+          "to_parquet",
+          "top_k",
+          "values"
+        ],
+        "accessor": "items",
+        "first_items": [
+          [
+            "Node(name=0, earliest_time=EventTime(timestamp=1082040961, event_id=0), latest_t",
+            "Node",
+            "{'reachable_nodes': []}",
+            "dict"
+          ],
+          [
+            "Node(name=1, earliest_time=EventTime(timestamp=1082040961, event_id=0), latest_t",
+            "Node",
+            "{'reachable_nodes': []}",
+            "dict"
+          ],
+          [
+            "Node(name=2, earliest_time=EventTime(timestamp=1082155839, event_id=1), latest_t",
+            "Node",
+            "{'reachable_nodes': []}",
+            "dict"
+          ],
+          [
+            "Node(name=3, earliest_time=EventTime(timestamp=1082155839, event_id=1), latest_t",
+            "Node",
+            "{'reachable_nodes': [{'0': 1082040961, '1': 'start'}]}",
+            "dict"
+          ],
+          [
+            "Node(name=4, earliest_time=EventTime(timestamp=1082414391, event_id=2), latest_t",
+            "Node",
+            "{'reachable_nodes': []}",
+            "dict"
+          ],
+          [
+            "Node(name=5, earliest_time=EventTime(timestamp=1082439619, event_id=3), latest_t",
+            "Node",
+            "{'reachable_nodes': []}",
+            "dict"
+          ],
+          [
+            "Node(name=6, earliest_time=EventTime(timestamp=1082439619, event_id=3), latest_t",
+            "Node",
+            "{'reachable_nodes': []}",
+            "dict"
+          ],
+          [
+            "Node(name=7, earliest_time=EventTime(timestamp=1082439756, event_id=4), latest_t",
+            "Node",
+            "{'reachable_nodes': []}",
+            "dict"
+          ]
+        ]
+      },
+      "timed": false,
+      "reason": "external relation matches neither semantics; not a same-problem run"
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "n": 5881,
+      "m": 35592,
+      "sources": 64,
+      "all_sources": false,
+      "semantics_check": {
+        "strict": {
+          "match": true,
+          "mismatched_sources": 0,
+          "examples": []
+        },
+        "closure": {
+          "match": true,
+          "mismatched_sources": 0,
+          "examples": []
+        }
+      },
+      "matched_semantics": "strict",
+      "suspicious_all_reached": false,
+      "diagnosis": [
+        {
+          "source": 14,
+          "external_size": 5768,
+          "strict_size": 5768,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5768,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 43,
+          "external_size": 5758,
+          "strict_size": 5758,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5758,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 107,
+          "external_size": 5726,
+          "strict_size": 5726,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5726,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 176,
+          "external_size": 5712,
+          "strict_size": 5712,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5712,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 237,
+          "external_size": 5577,
+          "strict_size": 5577,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5577,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 424,
+          "external_size": 5492,
+          "strict_size": 5492,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5492,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 533,
+          "external_size": 5426,
+          "strict_size": 5426,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5426,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 589,
+          "external_size": 4979,
+          "strict_size": 4979,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4979,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 835,
+          "external_size": 4974,
+          "strict_size": 4974,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4974,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 927,
+          "external_size": 5119,
+          "strict_size": 5119,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5119,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1037,
+          "external_size": 5,
+          "strict_size": 5,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1083,
+          "external_size": 4954,
+          "strict_size": 4954,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4954,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1136,
+          "external_size": 7,
+          "strict_size": 7,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 7,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1193,
+          "external_size": 4893,
+          "strict_size": 4893,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4893,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1284,
+          "external_size": 2,
+          "strict_size": 2,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1307,
+          "external_size": 4828,
+          "strict_size": 4828,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4828,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1358,
+          "external_size": 4803,
+          "strict_size": 4803,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4803,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1359,
+          "external_size": 4802,
+          "strict_size": 4802,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4802,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1363,
+          "external_size": 4705,
+          "strict_size": 4705,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4705,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1488,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1491,
+          "external_size": 4533,
+          "strict_size": 4533,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4533,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1612,
+          "external_size": 4622,
+          "strict_size": 4622,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4622,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1629,
+          "external_size": 4551,
+          "strict_size": 4551,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4551,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1677,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1715,
+          "external_size": 4533,
+          "strict_size": 4533,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4533,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1765,
+          "external_size": 4503,
+          "strict_size": 4503,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4503,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1775,
+          "external_size": 4462,
+          "strict_size": 4462,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4462,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2019,
+          "external_size": 3197,
+          "strict_size": 3197,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3197,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2040,
+          "external_size": 4249,
+          "strict_size": 4249,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4249,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2042,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2092,
+          "external_size": 4218,
+          "strict_size": 4218,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4218,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2161,
+          "external_size": 4174,
+          "strict_size": 4174,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4174,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2289,
+          "external_size": 3970,
+          "strict_size": 3970,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3970,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2369,
+          "external_size": 3964,
+          "strict_size": 3964,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3964,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2447,
+          "external_size": 3880,
+          "strict_size": 3880,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3880,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2468,
+          "external_size": 3880,
+          "strict_size": 3880,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3880,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2569,
+          "external_size": 3546,
+          "strict_size": 3546,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3546,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2718,
+          "external_size": 3531,
+          "strict_size": 3531,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3531,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2937,
+          "external_size": 3410,
+          "strict_size": 3410,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3410,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2958,
+          "external_size": 2522,
+          "strict_size": 2522,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2522,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3045,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3119,
+          "external_size": 3202,
+          "strict_size": 3202,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3202,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3139,
+          "external_size": 3109,
+          "strict_size": 3109,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3109,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3190,
+          "external_size": 3141,
+          "strict_size": 3141,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3141,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3343,
+          "external_size": 3014,
+          "strict_size": 3014,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3014,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3398,
+          "external_size": 2876,
+          "strict_size": 2876,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2876,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3644,
+          "external_size": 2737,
+          "strict_size": 2737,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2737,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3814,
+          "external_size": 2554,
+          "strict_size": 2554,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2554,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3842,
+          "external_size": 2555,
+          "strict_size": 2555,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2555,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 4342,
+          "external_size": 2059,
+          "strict_size": 2059,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2059,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 4417,
+          "external_size": 1972,
+          "strict_size": 1972,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1972,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 4454,
+          "external_size": 1904,
+          "strict_size": 1904,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1904,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 4701,
+          "external_size": 1560,
+          "strict_size": 1560,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1560,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 4801,
+          "external_size": 1413,
+          "strict_size": 1413,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1413,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 4940,
+          "external_size": 1180,
+          "strict_size": 1180,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1180,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5058,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5062,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5102,
+          "external_size": 1083,
+          "strict_size": 1083,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1083,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5125,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5316,
+          "external_size": 6,
+          "strict_size": 6,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 6,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5341,
+          "external_size": 815,
+          "strict_size": 815,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 815,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5552,
+          "external_size": 5,
+          "strict_size": 5,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5656,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5657,
+          "external_size": 372,
+          "strict_size": 372,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 372,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        }
+      ],
+      "raw_sample": {
+        "type": "OutputNodeState",
+        "attrs": [
+          "from_parquet",
+          "get",
+          "groups",
+          "items",
+          "merge",
+          "nodes",
+          "sort_by",
+          "to_parquet",
+          "top_k",
+          "values"
+        ],
+        "accessor": "items",
+        "first_items": [
+          [
+            "Node(name=0, earliest_time=EventTime(timestamp=1289241911, event_id=0), latest_t",
+            "Node",
+            "{'reachable_nodes': [{'0': 1304194336, '1': '176'}, {'0': 1308242030, '1': '3'}, {'0': 1311312446, '1': '613'}, {'0': 1311396960, '1': '884'}, {'0': 1312392323,",
+            "dict"
+          ],
+          [
+            "Node(name=1, earliest_time=EventTime(timestamp=1289241911, event_id=0), latest_t",
+            "Node",
+            "{'reachable_nodes': [{'0': 1296629343, '1': '3'}, {'0': 1296769471, '1': '35'}, {'0': 1297102585, '1': '89'}, {'0': 1297647979, '1': '100'}, {'0': 1297878338, '",
+            "dict"
+          ],
+          [
+            "Node(name=2, earliest_time=EventTime(timestamp=1289241941, event_id=1), latest_t",
+            "Node",
+            "{'reachable_nodes': []}",
+            "dict"
+          ],
+          [
+            "Node(name=3, earliest_time=EventTime(timestamp=1289243140, event_id=2), latest_t",
+            "Node",
+            "{'reachable_nodes': [{'0': 1290520563, '1': '7'}, {'0': 1290752776, '1': '22'}, {'0': 1291055972, '1': '20'}, {'0': 1291217882, '1': '14'}, {'0': 1292196407, '1",
+            "dict"
+          ],
+          [
+            "Node(name=4, earliest_time=EventTime(timestamp=1289243140, event_id=2), latest_t",
+            "Node",
+            "{'reachable_nodes': [{'0': 1297187359, '1': '66'}, {'0': 1303416561, '1': '123'}, {'0': 1304449745, '1': '194'}, {'0': 1304589412, '1': '253'}, {'0': 1305028595",
+            "dict"
+          ],
+          [
+            "Node(name=5, earliest_time=EventTime(timestamp=1289245277, event_id=3), latest_t",
+            "Node",
+            "{'reachable_nodes': [{'0': 1295416559, '1': '27'}, {'0': 1303175839, '1': '239'}, {'0': 1303848523, '1': '10'}, {'0': 1304034294, '1': '159'}, {'0': 1304277510,",
+            "dict"
+          ],
+          [
+            "Node(name=6, earliest_time=EventTime(timestamp=1289245277, event_id=3), latest_t",
+            "Node",
+            "{'reachable_nodes': [{'0': 1289442313, '1': '14'}, {'0': 1292200462, '1': '10'}, {'0': 1297570107, '1': '1'}, {'0': 1298665050, '1': '50'}, {'0': 1301168216, '1",
+            "dict"
+          ],
+          [
+            "Node(name=7, earliest_time=EventTime(timestamp=1289254254, event_id=4), latest_t",
+            "Node",
+            "{'reachable_nodes': [{'0': 1289873367, '1': '14'}, {'0': 1290090118, '1': '19'}, {'0': 1290758643, '1': '22'}, {'0': 1291090930, '1': '3'}, {'0': 1291757031, '1",
+            "dict"
+          ]
+        ]
+      },
+      "timed": false,
+      "reason": "--check-only"
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "n": 5573,
+      "m": 32029,
+      "sources": 64,
+      "all_sources": false,
+      "semantics_check": {
+        "strict": {
+          "match": false,
+          "mismatched_sources": 1,
+          "examples": [
+            1284
+          ]
+        },
+        "closure": {
+          "match": false,
+          "mismatched_sources": 1,
+          "examples": [
+            1284
+          ]
+        }
+      },
+      "matched_semantics": null,
+      "suspicious_all_reached": false,
+      "diagnosis": [
+        {
+          "source": 14,
+          "external_size": 5332,
+          "strict_size": 5332,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5332,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 27,
+          "external_size": 5332,
+          "strict_size": 5332,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5332,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 43,
+          "external_size": 5322,
+          "strict_size": 5322,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5322,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 107,
+          "external_size": 5289,
+          "strict_size": 5289,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5289,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 176,
+          "external_size": 5274,
+          "strict_size": 5274,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5274,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 237,
+          "external_size": 5137,
+          "strict_size": 5137,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5137,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 424,
+          "external_size": 5044,
+          "strict_size": 5044,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 5044,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 533,
+          "external_size": 4978,
+          "strict_size": 4978,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4978,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 589,
+          "external_size": 4465,
+          "strict_size": 4465,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4465,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 835,
+          "external_size": 4485,
+          "strict_size": 4485,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4485,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 927,
+          "external_size": 4573,
+          "strict_size": 4573,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4573,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1037,
+          "external_size": 4,
+          "strict_size": 4,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1083,
+          "external_size": 4484,
+          "strict_size": 4484,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4484,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1136,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1193,
+          "external_size": 4460,
+          "strict_size": 4460,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4460,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1284,
+          "external_size": 4390,
+          "strict_size": 4391,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 1,
+            "examples": [
+              321
+            ]
+          },
+          "closure_size": 4391,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 1,
+            "examples": [
+              321
+            ]
+          }
+        },
+        {
+          "source": 1307,
+          "external_size": 2,
+          "strict_size": 2,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1358,
+          "external_size": 4297,
+          "strict_size": 4297,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4297,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1359,
+          "external_size": 4274,
+          "strict_size": 4274,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4274,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1363,
+          "external_size": 4296,
+          "strict_size": 4296,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4296,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1488,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1491,
+          "external_size": 4199,
+          "strict_size": 4199,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4199,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1612,
+          "external_size": 4082,
+          "strict_size": 4082,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4082,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1629,
+          "external_size": 4052,
+          "strict_size": 4052,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4052,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1677,
+          "external_size": 4019,
+          "strict_size": 4019,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4019,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1715,
+          "external_size": 4007,
+          "strict_size": 4007,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 4007,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1765,
+          "external_size": 3961,
+          "strict_size": 3961,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3961,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 1775,
+          "external_size": 3956,
+          "strict_size": 3956,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3956,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2019,
+          "external_size": 3714,
+          "strict_size": 3714,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3714,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2040,
+          "external_size": 3760,
+          "strict_size": 3760,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3760,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2042,
+          "external_size": 3620,
+          "strict_size": 3620,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3620,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2092,
+          "external_size": 3661,
+          "strict_size": 3661,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3661,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2161,
+          "external_size": 3632,
+          "strict_size": 3632,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3632,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2289,
+          "external_size": 3433,
+          "strict_size": 3433,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3433,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2369,
+          "external_size": 3299,
+          "strict_size": 3299,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3299,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2447,
+          "external_size": 3346,
+          "strict_size": 3346,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3346,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2468,
+          "external_size": 3299,
+          "strict_size": 3299,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3299,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2569,
+          "external_size": 3189,
+          "strict_size": 3189,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3189,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2718,
+          "external_size": 2553,
+          "strict_size": 2553,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2553,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2937,
+          "external_size": 2979,
+          "strict_size": 2979,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2979,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 2958,
+          "external_size": 2924,
+          "strict_size": 2924,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2924,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3045,
+          "external_size": 2755,
+          "strict_size": 2755,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2755,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3119,
+          "external_size": 2723,
+          "strict_size": 2723,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2723,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3139,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3190,
+          "external_size": 2678,
+          "strict_size": 2678,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2678,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3343,
+          "external_size": 2488,
+          "strict_size": 2488,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2488,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3398,
+          "external_size": 2,
+          "strict_size": 2,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3644,
+          "external_size": 2255,
+          "strict_size": 2255,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2255,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3814,
+          "external_size": 2139,
+          "strict_size": 2139,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2139,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 3842,
+          "external_size": 2139,
+          "strict_size": 2139,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 2139,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 4342,
+          "external_size": 1619,
+          "strict_size": 1619,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1619,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 4417,
+          "external_size": 1481,
+          "strict_size": 1481,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1481,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 4454,
+          "external_size": 8,
+          "strict_size": 8,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 8,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 4701,
+          "external_size": 956,
+          "strict_size": 956,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 956,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 4801,
+          "external_size": 1037,
+          "strict_size": 1037,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1037,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 4882,
+          "external_size": 410,
+          "strict_size": 410,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 410,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 4940,
+          "external_size": 863,
+          "strict_size": 863,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 863,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5058,
+          "external_size": 750,
+          "strict_size": 750,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 750,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5062,
+          "external_size": 722,
+          "strict_size": 722,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 722,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5102,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5125,
+          "external_size": 651,
+          "strict_size": 651,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 651,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5316,
+          "external_size": 3,
+          "strict_size": 3,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 3,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5341,
+          "external_size": 1,
+          "strict_size": 1,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 1,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        },
+        {
+          "source": 5552,
+          "external_size": 45,
+          "strict_size": 45,
+          "only_external_vs_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_strict": {
+            "count": 0,
+            "examples": []
+          },
+          "closure_size": 45,
+          "only_external_vs_closure": {
+            "count": 0,
+            "examples": []
+          },
+          "only_strata_closure": {
+            "count": 0,
+            "examples": []
+          }
+        }
+      ],
+      "raw_sample": {
+        "type": "OutputNodeState",
+        "attrs": [
+          "from_parquet",
+          "get",
+          "groups",
+          "items",
+          "merge",
+          "nodes",
+          "sort_by",
+          "to_parquet",
+          "top_k",
+          "values"
+        ],
+        "accessor": "items",
+        "first_items": [
+          [
+            "Node(name=0, earliest_time=EventTime(timestamp=1289241911, event_id=0), latest_t",
+            "Node",
+            "{'reachable_nodes': [{'0': 1304194336, '1': '176'}, {'0': 1308242030, '1': '3'}, {'0': 1311312446, '1': '613'}, {'0': 1311396960, '1': '883'}, {'0': 1312392323,",
+            "dict"
+          ],
+          [
+            "Node(name=1, earliest_time=EventTime(timestamp=1289241911, event_id=0), latest_t",
+            "Node",
+            "{'reachable_nodes': [{'0': 1296629343, '1': '3'}, {'0': 1296769471, '1': '35'}, {'0': 1297102585, '1': '89'}, {'0': 1297647979, '1': '100'}, {'0': 1297878338, '",
+            "dict"
+          ],
+          [
+            "Node(name=2, earliest_time=EventTime(timestamp=1289241941, event_id=1), latest_t",
+            "Node",
+            "{'reachable_nodes': []}",
+            "dict"
+          ],
+          [
+            "Node(name=3, earliest_time=EventTime(timestamp=1289243140, event_id=2), latest_t",
+            "Node",
+            "{'reachable_nodes': [{'0': 1290520563, '1': '7'}, {'0': 1290752776, '1': '22'}, {'0': 1291055972, '1': '20'}, {'0': 1291217882, '1': '14'}, {'0': 1292196407, '1",
+            "dict"
+          ],
+          [
+            "Node(name=4, earliest_time=EventTime(timestamp=1289243140, event_id=2), latest_t",
+            "Node",
+            "{'reachable_nodes': [{'0': 1297187359, '1': '66'}, {'0': 1303416561, '1': '123'}, {'0': 1304449745, '1': '194'}, {'0': 1304589412, '1': '253'}, {'0': 1305028595",
+            "dict"
+          ],
+          [
+            "Node(name=5, earliest_time=EventTime(timestamp=1289245277, event_id=3), latest_t",
+            "Node",
+            "{'reachable_nodes': [{'0': 1295416559, '1': '27'}, {'0': 1303175839, '1': '239'}, {'0': 1303848523, '1': '10'}, {'0': 1304034294, '1': '159'}, {'0': 1304277510,",
+            "dict"
+          ],
+          [
+            "Node(name=6, earliest_time=EventTime(timestamp=1289245277, event_id=3), latest_t",
+            "Node",
+            "{'reachable_nodes': [{'0': 1289442313, '1': '14'}, {'0': 1292200462, '1': '10'}, {'0': 1297570107, '1': '1'}, {'0': 1298665050, '1': '50'}, {'0': 1301168216, '1",
+            "dict"
+          ],
+          [
+            "Node(name=7, earliest_time=EventTime(timestamp=1289254254, event_id=4), latest_t",
+            "Node",
+            "{'reachable_nodes': [{'0': 1289873367, '1': '14'}, {'0': 1290090118, '1': '19'}, {'0': 1290758643, '1': '22'}, {'0': 1291090930, '1': '3'}, {'0': 1291757031, '1",
+            "dict"
+          ]
+        ]
+      },
+      "timed": false,
+      "reason": "external relation matches neither semantics; not a same-problem run"
+    }
+  ],
+  "toy_diagnosis": [
+    {
+      "toy": "same_time_chain",
+      "source": 0,
+      "external": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "strict": [
+        0,
+        1
+      ],
+      "closure": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "matches_strict": false,
+      "matches_closure": true
+    },
+    {
+      "toy": "time_reversed",
+      "source": 0,
+      "external": [
+        0,
+        1
+      ],
+      "strict": [
+        0,
+        1
+      ],
+      "closure": [
+        0,
+        1
+      ],
+      "matches_strict": true,
+      "matches_closure": true
+    },
+    {
+      "toy": "waiting_path",
+      "source": 0,
+      "external": [
+        0,
+        1,
+        2
+      ],
+      "strict": [
+        0,
+        1,
+        2
+      ],
+      "closure": [
+        0,
+        1,
+        2
+      ],
+      "matches_strict": true,
+      "matches_closure": true
+    },
+    {
+      "toy": "self_contact",
+      "source": 0,
+      "external": [
+        0,
+        1,
+        2
+      ],
+      "strict": [
+        0,
+        1,
+        2
+      ],
+      "closure": [
+        0,
+        1,
+        2
+      ],
+      "matches_strict": true,
+      "matches_closure": true
+    },
+    {
+      "toy": "isolated_source",
+      "source": 0,
+      "external": [
+        0
+      ],
+      "strict": [
+        0
+      ],
+      "closure": [
+        0
+      ],
+      "matches_strict": true,
+      "matches_closure": true
+    }
+  ],
+  "note": "timed only when the external relation equals STRATA's exact relation under the stated semantics; sampled-source times cover the sample only"
+}

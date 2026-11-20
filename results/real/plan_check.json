@@ -1,0 +1,5219 @@
+{
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.18",
+    "numpy": "2.5.5",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.5, Numba 0.68.1",
+    "repeats": 3,
+    "tex_summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.5, Numba 0.68.1"
+  },
+  "plans": [
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 1,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=1, W=30)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=4, W=30)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 1,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=1, W=30)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=4, W=30)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 1,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 >= p=1 -> rowmajor; chunks=min(p=1, W=30)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 >= p=1 -> rowmajor; chunks=min(oversub*p=4, W=30)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 2,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=2, W=30)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=8, W=30)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 2,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=2, W=30)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=8, W=30)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 2,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 < p=2 -> tiled; chunks=min(p=2, W=30)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 < p=2 -> tiled; chunks=min(oversub*p=8, W=30)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 4,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=4, W=30)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=16, W=30)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 4,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=4, W=30)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=16, W=30)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 4,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 < p=4 -> tiled; chunks=min(p=4, W=30)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 < p=4 -> tiled; chunks=min(oversub*p=16, W=30)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 6,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=6, W=30)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=24, W=30)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 6,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=6, W=30)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=24, W=30)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 6,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 < p=6 -> tiled; chunks=min(p=6, W=30)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 < p=6 -> tiled; chunks=min(oversub*p=24, W=30)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 8,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=8, W=30)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 30,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=32, W=30)=30 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 8,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=8, W=30)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 30,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=32, W=30)=30 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 8,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 < p=8 -> tiled; chunks=min(p=8, W=30)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 30,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 < p=8 -> tiled; chunks=min(oversub*p=32, W=30)=30 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 12,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=12, W=30)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 30,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=48, W=30)=30 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 12,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=12, W=30)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 30,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=48, W=30)=30 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 12,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 < p=12 -> tiled; chunks=min(p=12, W=30)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 30,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 < p=12 -> tiled; chunks=min(oversub*p=48, W=30)=30 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 16,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=16, W=30)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 30,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=64, W=30)=30 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 16,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=16, W=30)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 30,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=64, W=30)=30 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 16,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 < p=16 -> tiled; chunks=min(p=16, W=30)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 30,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 < p=16 -> tiled; chunks=min(oversub*p=64, W=30)=30 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 18,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=18, W=30)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 30,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=72, W=30)=30 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 18,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=18, W=30)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 30,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=72, W=30)=30 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 18,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 < p=18 -> tiled; chunks=min(p=18, W=30)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "CollegeMsg",
+      "W": 30,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 30,
+        "line_words": 16,
+        "nchunks": 30,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=1 < p=18 -> tiled; chunks=min(oversub*p=72, W=30)=30 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 1,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=1, W=92)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=4, W=92)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 1,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=1, W=92)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=4, W=92)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 1,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 >= p=1 -> rowmajor; chunks=min(p=1, W=92)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 >= p=1 -> rowmajor; chunks=min(oversub*p=4, W=92)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 2,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=2, W=92)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=8, W=92)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 2,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=2, W=92)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=8, W=92)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 2,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 >= p=2 -> rowmajor; chunks=min(p=2, W=92)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 >= p=2 -> rowmajor; chunks=min(oversub*p=8, W=92)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 4,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=4, W=92)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=16, W=92)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 4,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=4, W=92)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=16, W=92)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 4,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 >= p=4 -> rowmajor; chunks=min(p=4, W=92)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 >= p=4 -> rowmajor; chunks=min(oversub*p=16, W=92)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 6,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=6, W=92)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=24, W=92)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 6,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=6, W=92)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=24, W=92)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 6,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=6 -> tiled; chunks=min(p=6, W=92)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=6 -> tiled; chunks=min(oversub*p=24, W=92)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 8,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=8, W=92)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 32,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=32, W=92)=32 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 8,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=8, W=92)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 32,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=32, W=92)=32 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 8,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=8 -> tiled; chunks=min(p=8, W=92)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 32,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=8 -> tiled; chunks=min(oversub*p=32, W=92)=32 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 12,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=12, W=92)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 48,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=48, W=92)=48 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 12,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=12, W=92)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 48,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=48, W=92)=48 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 12,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=12 -> tiled; chunks=min(p=12, W=92)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 48,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=12 -> tiled; chunks=min(oversub*p=48, W=92)=48 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 16,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=16, W=92)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 64,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=64, W=92)=64 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 16,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=16, W=92)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 64,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=64, W=92)=64 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 16,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=16 -> tiled; chunks=min(p=16, W=92)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 64,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=16 -> tiled; chunks=min(oversub*p=64, W=92)=64 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 18,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=18, W=92)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 72,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=72, W=92)=72 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 18,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=18, W=92)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 72,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=72, W=92)=72 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 18,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=18 -> tiled; chunks=min(p=18, W=92)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "W": 92,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 92,
+        "line_words": 16,
+        "nchunks": 72,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=18 -> tiled; chunks=min(oversub*p=72, W=92)=72 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 1,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=1, W=88)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=4, W=88)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 1,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=1, W=88)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=4, W=88)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 1,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 >= p=1 -> rowmajor; chunks=min(p=1, W=88)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 >= p=1 -> rowmajor; chunks=min(oversub*p=4, W=88)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 2,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=2, W=88)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=8, W=88)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 2,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=2, W=88)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=8, W=88)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 2,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 >= p=2 -> rowmajor; chunks=min(p=2, W=88)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 >= p=2 -> rowmajor; chunks=min(oversub*p=8, W=88)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 4,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=4, W=88)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=16, W=88)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 4,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=4, W=88)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=16, W=88)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 4,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 >= p=4 -> rowmajor; chunks=min(p=4, W=88)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 >= p=4 -> rowmajor; chunks=min(oversub*p=16, W=88)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 6,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=6, W=88)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=24, W=88)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 6,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=6, W=88)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=24, W=88)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 6,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=6 -> tiled; chunks=min(p=6, W=88)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=6 -> tiled; chunks=min(oversub*p=24, W=88)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 8,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=8, W=88)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 32,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=32, W=88)=32 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 8,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=8, W=88)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 32,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=32, W=88)=32 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 8,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=8 -> tiled; chunks=min(p=8, W=88)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 32,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=8 -> tiled; chunks=min(oversub*p=32, W=88)=32 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 12,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=12, W=88)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 48,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=48, W=88)=48 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 12,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=12, W=88)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 48,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=48, W=88)=48 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 12,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=12 -> tiled; chunks=min(p=12, W=88)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 48,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=12 -> tiled; chunks=min(oversub*p=48, W=88)=48 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 16,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=16, W=88)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 64,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=64, W=88)=64 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 16,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=16, W=88)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 64,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=64, W=88)=64 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 16,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=16 -> tiled; chunks=min(p=16, W=88)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 64,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=16 -> tiled; chunks=min(oversub*p=64, W=88)=64 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 18,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=18, W=88)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 72,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=72, W=88)=72 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 18,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=18, W=88)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 72,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=72, W=88)=72 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 18,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=18 -> tiled; chunks=min(p=18, W=88)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "W": 88,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 88,
+        "line_words": 16,
+        "nchunks": 72,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=5 < p=18 -> tiled; chunks=min(oversub*p=72, W=88)=72 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 1,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=1, W=125)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=4, W=125)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 1,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=1, W=125)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=4, W=125)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 1,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 >= p=1 -> rowmajor; chunks=min(p=1, W=125)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 >= p=1 -> rowmajor; chunks=min(oversub*p=4, W=125)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 2,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=2, W=125)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=8, W=125)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 2,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=2, W=125)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=8, W=125)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 2,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 >= p=2 -> rowmajor; chunks=min(p=2, W=125)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 >= p=2 -> rowmajor; chunks=min(oversub*p=8, W=125)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 4,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=4, W=125)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=16, W=125)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 4,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=4, W=125)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=16, W=125)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 4,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 >= p=4 -> rowmajor; chunks=min(p=4, W=125)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 >= p=4 -> rowmajor; chunks=min(oversub*p=16, W=125)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 6,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=6, W=125)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=24, W=125)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 6,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=6, W=125)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=24, W=125)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 6,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 >= p=6 -> rowmajor; chunks=min(p=6, W=125)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 >= p=6 -> rowmajor; chunks=min(oversub*p=24, W=125)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 8,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=8, W=125)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 32,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=32, W=125)=32 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 8,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=8, W=125)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 32,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=32, W=125)=32 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 8,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 < p=8 -> tiled; chunks=min(p=8, W=125)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 32,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 < p=8 -> tiled; chunks=min(oversub*p=32, W=125)=32 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 12,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=12, W=125)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 48,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=48, W=125)=48 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 12,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=12, W=125)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 48,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=48, W=125)=48 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 12,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 < p=12 -> tiled; chunks=min(p=12, W=125)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 48,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 < p=12 -> tiled; chunks=min(oversub*p=48, W=125)=48 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 16,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=16, W=125)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 64,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=64, W=125)=64 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 16,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=16, W=125)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 64,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=64, W=125)=64 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 16,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 < p=16 -> tiled; chunks=min(p=16, W=125)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 64,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 < p=16 -> tiled; chunks=min(oversub*p=64, W=125)=64 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 18,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=18, W=125)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 72,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=72, W=125)=72 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 18,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=18, W=125)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 72,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=72, W=125)=72 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 18,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 < p=18 -> tiled; chunks=min(p=18, W=125)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "W": 125,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 125,
+        "line_words": 16,
+        "nchunks": 72,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=7 < p=18 -> tiled; chunks=min(oversub*p=72, W=125)=72 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 1,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=1, W=782)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=4, W=782)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 1,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=1, W=782)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=4, W=782)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 1,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=1 -> rowmajor; chunks=min(p=1, W=782)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=1 -> rowmajor; chunks=min(oversub*p=4, W=782)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 2,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=2, W=782)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=8, W=782)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 2,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=2, W=782)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=8, W=782)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 2,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=2 -> rowmajor; chunks=min(p=2, W=782)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=2 -> rowmajor; chunks=min(oversub*p=8, W=782)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 4,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=4, W=782)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=16, W=782)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 4,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=4, W=782)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=16, W=782)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 4,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=4 -> rowmajor; chunks=min(p=4, W=782)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=4 -> rowmajor; chunks=min(oversub*p=16, W=782)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 6,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=6, W=782)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=24, W=782)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 6,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=6, W=782)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=24, W=782)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 6,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=6 -> rowmajor; chunks=min(p=6, W=782)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=6 -> rowmajor; chunks=min(oversub*p=24, W=782)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 8,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=8, W=782)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 32,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=32, W=782)=32 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 8,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=8, W=782)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 32,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=32, W=782)=32 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 8,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=8 -> rowmajor; chunks=min(p=8, W=782)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 32,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=8 -> rowmajor; chunks=min(oversub*p=32, W=782)=32 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 12,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=12, W=782)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 48,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=48, W=782)=48 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 12,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=12, W=782)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 48,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=48, W=782)=48 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 12,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=12 -> rowmajor; chunks=min(p=12, W=782)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 48,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=12 -> rowmajor; chunks=min(oversub*p=48, W=782)=48 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 16,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=16, W=782)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 64,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=64, W=782)=64 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 16,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=16, W=782)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 64,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=64, W=782)=64 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 16,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=16 -> rowmajor; chunks=min(p=16, W=782)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 64,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=16 -> rowmajor; chunks=min(oversub*p=64, W=782)=64 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 18,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=18, W=782)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 72,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=72, W=782)=72 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 18,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=18, W=782)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 72,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=72, W=782)=72 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 18,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=18 -> rowmajor; chunks=min(p=18, W=782)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "W": 782,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 782,
+        "line_words": 16,
+        "nchunks": 72,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=48 >= p=18 -> rowmajor; chunks=min(oversub*p=72, W=782)=72 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 1,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=1, W=1024)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=4, W=1024)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 1,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=1, W=1024)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=4, W=1024)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 1,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 1,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=1 -> rowmajor; chunks=min(p=1, W=1024)=1 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 1,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 1,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=1 -> rowmajor; chunks=min(oversub*p=4, W=1024)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 2,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=2, W=1024)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=8, W=1024)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 2,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=2, W=1024)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=8, W=1024)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 2,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 2,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=2 -> rowmajor; chunks=min(p=2, W=1024)=2 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 2,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 2,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=2 -> rowmajor; chunks=min(oversub*p=8, W=1024)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 4,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=4, W=1024)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=16, W=1024)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 4,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=4, W=1024)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=16, W=1024)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 4,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 4,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=4 -> rowmajor; chunks=min(p=4, W=1024)=4 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 4,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 4,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=4 -> rowmajor; chunks=min(oversub*p=16, W=1024)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 6,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=6, W=1024)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=24, W=1024)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 6,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=6, W=1024)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=24, W=1024)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 6,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=6 -> rowmajor; chunks=min(p=6, W=1024)=6 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 6,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 6,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 24,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=6 -> rowmajor; chunks=min(oversub*p=24, W=1024)=24 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 8,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=8, W=1024)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 32,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=32, W=1024)=32 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 8,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=8, W=1024)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 32,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=32, W=1024)=32 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 8,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 8,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=8 -> rowmajor; chunks=min(p=8, W=1024)=8 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 8,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 8,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 32,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=8 -> rowmajor; chunks=min(oversub*p=32, W=1024)=32 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 12,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=12, W=1024)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 48,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=48, W=1024)=48 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 12,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=12, W=1024)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 48,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=48, W=1024)=48 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 12,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=12 -> rowmajor; chunks=min(p=12, W=1024)=12 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 12,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 12,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 48,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=12 -> rowmajor; chunks=min(oversub*p=48, W=1024)=48 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 16,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=16, W=1024)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 64,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=64, W=1024)=64 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 16,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=16, W=1024)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 64,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=64, W=1024)=64 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 16,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 16,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=16 -> rowmajor; chunks=min(p=16, W=1024)=16 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 16,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 16,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 64,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=16 -> rowmajor; chunks=min(oversub*p=64, W=1024)=64 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 18,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(p=18, W=1024)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "rowmajor",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 72,
+        "oversub": 4,
+        "rule": "explicit layout=rowmajor; chunks=min(oversub*p=72, W=1024)=72 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 18,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(p=18, W=1024)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 72,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; chunks=min(oversub*p=72, W=1024)=72 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "static",
+        "threads": 18,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=18 -> rowmajor; chunks=min(p=18, W=1024)=18 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "W": 1024,
+      "threads": 18,
+      "idle_workers": 0,
+      "plan": {
+        "layout": "auto",
+        "resolved_layout": "rowmajor",
+        "schedule": "dynamic",
+        "threads": 18,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 72,
+        "oversub": 4,
+        "rule": "auto: floor(W/L)=64 >= p=18 -> rowmajor; chunks=min(oversub*p=72, W=1024)=72 [chunk_policy=threads]",
+        "chunk_policy": "threads"
+      }
+    }
+  ]
+}

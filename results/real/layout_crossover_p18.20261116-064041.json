@@ -1,0 +1,132 @@
+{
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.15.2",
+    "numpy": "2.5.4",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.15.2, NumPy 2.5.4, Numba 0.68.1"
+  },
+  "threads": 18,
+  "line_words": 16,
+  "boundary_W": 288,
+  "pending": false,
+  "points": [
+    {
+      "W": 72,
+      "n": 4608,
+      "m": 552960,
+      "lines": 4,
+      "rule_choice": "tiled",
+      "faster": "tiled",
+      "rowmajor_s": 0.008467375009786338,
+      "tiled_s": 0.003344041993841529
+    },
+    {
+      "W": 102,
+      "n": 6528,
+      "m": 783360,
+      "lines": 6,
+      "rule_choice": "tiled",
+      "faster": "tiled",
+      "rowmajor_s": 0.015594583994243294,
+      "tiled_s": 0.0057435419876128435
+    },
+    {
+      "W": 144,
+      "n": 9216,
+      "m": 1105920,
+      "lines": 9,
+      "rule_choice": "tiled",
+      "faster": "tiled",
+      "rowmajor_s": 0.018648124998435378,
+      "tiled_s": 0.006102082988945767
+    },
+    {
+      "W": 204,
+      "n": 13056,
+      "m": 1566720,
+      "lines": 12,
+      "rule_choice": "tiled",
+      "faster": "tiled",
+      "rowmajor_s": 0.03906304098200053,
+      "tiled_s": 0.015046290995087475
+    },
+    {
+      "W": 288,
+      "n": 18432,
+      "m": 2211840,
+      "lines": 18,
+      "rule_choice": "rowmajor",
+      "faster": "tiled",
+      "rowmajor_s": 0.05413145798956975,
+      "tiled_s": 0.02609983299043961
+    },
+    {
+      "W": 407,
+      "n": 26048,
+      "m": 3125760,
+      "lines": 25,
+      "rule_choice": "rowmajor",
+      "faster": "tiled",
+      "rowmajor_s": 0.18436979100806639,
+      "tiled_s": 0.10209399997256696
+    },
+    {
+      "W": 576,
+      "n": 36864,
+      "m": 4423680,
+      "lines": 36,
+      "rule_choice": "rowmajor",
+      "faster": "tiled",
+      "rowmajor_s": 0.40928100000019185,
+      "tiled_s": 0.2566288340021856
+    },
+    {
+      "W": 815,
+      "n": 52160,
+      "m": 6259200,
+      "lines": 50,
+      "rule_choice": "rowmajor",
+      "faster": "tiled",
+      "rowmajor_s": 1.0328894169942942,
+      "tiled_s": 0.6459679170220625
+    },
+    {
+      "W": 1152,
+      "n": 73728,
+      "m": 8847360,
+      "lines": 72,
+      "rule_choice": "rowmajor",
+      "faster": "tiled",
+      "rowmajor_s": 2.088073874998372,
+      "tiled_s": 1.2931548750202637
+    }
+  ],
+  "summary": {
+    "agreement": 0.4444444444444444,
+    "measured_crossover_lines": null,
+    "suggested_rule": null
+  }
+}

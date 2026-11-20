@@ -1,0 +1,337 @@
+{
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.18",
+    "numpy": "2.5.5",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.5, Numba 0.68.1"
+  },
+  "threads_record": {
+    "numba": 18,
+    "graphblas": null,
+    "threadpools": []
+  },
+  "repeats": 3,
+  "variants": [
+    "shared",
+    "prewritten",
+    "tiles"
+  ],
+  "results": [
+    {
+      "dataset": "synthetic-PA(n=50000,m=1000000,G=400,seed=7)",
+      "n": 50000,
+      "m": 1000000,
+      "pairs": 2424322371,
+      "sampled_sources": [
+        1434,
+        3520,
+        6426,
+        6488,
+        6688,
+        7395,
+        20072,
+        24271,
+        24957,
+        27136,
+        27386,
+        29495,
+        30068,
+        35602,
+        39843,
+        46406
+      ],
+      "rows": [
+        {
+          "variant": "shared",
+          "threads": 1,
+          "seconds_samples": [
+            0.4428791250102222,
+            0.4426460840040818,
+            0.44342020904878154
+          ],
+          "seconds_median": 0.4428791250102222
+        },
+        {
+          "variant": "prewritten",
+          "threads": 1,
+          "seconds_samples": [
+            0.4443075000308454,
+            0.4527757500181906,
+            0.44480720901628956
+          ],
+          "seconds_median": 0.44480720901628956
+        },
+        {
+          "variant": "tiles",
+          "threads": 1,
+          "seconds_samples": [
+            0.4340944580035284,
+            0.43510587501805276,
+            0.4330983340041712
+          ],
+          "seconds_median": 0.4340944580035284
+        },
+        {
+          "variant": "shared",
+          "threads": 6,
+          "seconds_samples": [
+            0.1996425410034135,
+            0.19941800000378862,
+            0.2000173749984242
+          ],
+          "seconds_median": 0.1996425410034135
+        },
+        {
+          "variant": "prewritten",
+          "threads": 6,
+          "seconds_samples": [
+            0.20003833301598206,
+            0.19972137501463294,
+            0.199958625016734
+          ],
+          "seconds_median": 0.199958625016734
+        },
+        {
+          "variant": "tiles",
+          "threads": 6,
+          "seconds_samples": [
+            0.1860792079824023,
+            0.18658587499521673,
+            0.1863083749776706
+          ],
+          "seconds_median": 0.1863083749776706
+        },
+        {
+          "variant": "shared",
+          "threads": 12,
+          "seconds_samples": [
+            0.1205110420123674,
+            0.11987895896891132,
+            0.12237954197917134
+          ],
+          "seconds_median": 0.1205110420123674
+        },
+        {
+          "variant": "prewritten",
+          "threads": 12,
+          "seconds_samples": [
+            0.12286649999441579,
+            0.12177266698563471,
+            0.12093833298422396
+          ],
+          "seconds_median": 0.12177266698563471
+        },
+        {
+          "variant": "tiles",
+          "threads": 12,
+          "seconds_samples": [
+            0.11015833402052522,
+            0.11129579204134643,
+            0.11244587501278147
+          ],
+          "seconds_median": 0.11129579204134643
+        },
+        {
+          "variant": "shared",
+          "threads": 18,
+          "seconds_samples": [
+            0.0940522089949809,
+            0.09109491697745398,
+            0.09434279100969434
+          ],
+          "seconds_median": 0.0940522089949809
+        },
+        {
+          "variant": "prewritten",
+          "threads": 18,
+          "seconds_samples": [
+            0.09033229196211323,
+            0.09182370797498152,
+            0.09110749996034428
+          ],
+          "seconds_median": 0.09110749996034428
+        },
+        {
+          "variant": "tiles",
+          "threads": 18,
+          "seconds_samples": [
+            0.08379037497797981,
+            0.0840338749694638,
+            0.08429220801917836
+          ],
+          "seconds_median": 0.0840338749694638
+        }
+      ]
+    },
+    {
+      "dataset": "synthetic-PA(n=100000,m=2000000,G=400,seed=7)",
+      "n": 100000,
+      "m": 2000000,
+      "pairs": 9676119808,
+      "sampled_sources": [
+        2868,
+        7041,
+        12855,
+        12977,
+        13378,
+        14791,
+        40147,
+        48546,
+        49921,
+        54273,
+        54773,
+        58996,
+        60143,
+        71210,
+        79697,
+        92817
+      ],
+      "rows": [
+        {
+          "variant": "shared",
+          "threads": 1,
+          "seconds_samples": [
+            1.6760770839755423,
+            1.6966749579878524,
+            1.674114625027869
+          ],
+          "seconds_median": 1.6760770839755423
+        },
+        {
+          "variant": "prewritten",
+          "threads": 1,
+          "seconds_samples": [
+            1.6761434170184657,
+            1.6765173330204561,
+            1.6759413330000825
+          ],
+          "seconds_median": 1.6761434170184657
+        },
+        {
+          "variant": "tiles",
+          "threads": 1,
+          "seconds_samples": [
+            1.6317754589836113,
+            1.6375426659942605,
+            1.6306731660151854
+          ],
+          "seconds_median": 1.6317754589836113
+        },
+        {
+          "variant": "shared",
+          "threads": 6,
+          "seconds_samples": [
+            0.8625204169657081,
+            0.8772725830203854,
+            0.8873934999573976
+          ],
+          "seconds_median": 0.8772725830203854
+        },
+        {
+          "variant": "prewritten",
+          "threads": 6,
+          "seconds_samples": [
+            0.9198837499716319,
+            0.855923667026218,
+            0.9043241249746643
+          ],
+          "seconds_median": 0.9043241249746643
+        },
+        {
+          "variant": "tiles",
+          "threads": 6,
+          "seconds_samples": [
+            0.9287812920520082,
+            0.9042248330079019,
+            0.8983765000011772
+          ],
+          "seconds_median": 0.9042248330079019
+        },
+        {
+          "variant": "shared",
+          "threads": 12,
+          "seconds_samples": [
+            0.6863511250121519,
+            0.6951379170059226,
+            0.6945723340031691
+          ],
+          "seconds_median": 0.6945723340031691
+        },
+        {
+          "variant": "prewritten",
+          "threads": 12,
+          "seconds_samples": [
+            0.6809069589944556,
+            0.6768119159969501,
+            0.6767850000178441
+          ],
+          "seconds_median": 0.6768119159969501
+        },
+        {
+          "variant": "tiles",
+          "threads": 12,
+          "seconds_samples": [
+            0.6224876250489615,
+            0.6247738749952987,
+            0.6204814999946393
+          ],
+          "seconds_median": 0.6224876250489615
+        },
+        {
+          "variant": "shared",
+          "threads": 18,
+          "seconds_samples": [
+            0.5612557500135154,
+            0.5599291659891605,
+            0.5630414999905042
+          ],
+          "seconds_median": 0.5612557500135154
+        },
+        {
+          "variant": "prewritten",
+          "threads": 18,
+          "seconds_samples": [
+            0.5627737080212682,
+            0.5656345000024885,
+            0.5455096249934286
+          ],
+          "seconds_median": 0.5627737080212682
+        },
+        {
+          "variant": "tiles",
+          "threads": 18,
+          "seconds_samples": [
+            0.5237307090428658,
+            0.5173788749962114,
+            0.5385353330057114
+          ],
+          "seconds_median": 0.5237307090428658
+        }
+      ]
+    }
+  ],
+  "note": "prewritten is diagnostic (page writes outside the clock); tiles includes identity setup inside the clock"
+}

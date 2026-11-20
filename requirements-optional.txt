@@ -1,0 +1,6 @@
+# Optional backends/consumers (TPDS v2 loop)
+# Verified in container with these versions; re-verify on the Apple M5 Max (mps) before benching.
+torch>=2.2,<3
+torch-geometric>=2.5
+# STRATA-v10 (R32): installed in session step 1 so step 8 (compiled_baselines) and step 11 both see it
+python-graphblas>=2023.1

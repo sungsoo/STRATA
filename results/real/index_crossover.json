@@ -1,0 +1,31 @@
+{
+  "rows": [
+    {
+      "dataset": "CollegeMsg",
+      "n": 1899,
+      "m": 59835,
+      "build_index_s": 0.0512,
+      "per_source_bfs_s": 0.0245,
+      "point_query_us": 0.165,
+      "crossover_sources": 2.1,
+      "crossover_fraction_of_n": 0.0011,
+      "allpairs_index_speedup": 906.9
+    },
+    {
+      "dataset": "Bitcoin-OTC",
+      "n": 5881,
+      "m": 35592,
+      "build_index_s": 0.0319,
+      "per_source_bfs_s": 0.0171,
+      "point_query_us": 0.164,
+      "crossover_sources": 1.9,
+      "crossover_fraction_of_n": 0.0003,
+      "allpairs_index_speedup": 3158.6
+    }
+  ],
+  "threads": {
+    "numba": 1,
+    "graphblas": null,
+    "threadpools": []
+  }
+}

@@ -1,0 +1,18 @@
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+scipy>=1.10
+pytest>=7.0
+requests>=2.31
+numba>=0.58
+# Optional CUDA array backend; install the package matching your CUDA runtime.
+# cupy-cuda12x>=13.0
+# Optional TGB datasets.
+# tgb>=1.1.0
+# representative benchmark extensions
+matplotlib>=3.7
+pandas>=2.0
+psutil>=5.9
+# Optional, install one matching your CUDA version if native GPU experiments are desired:
+# cupy-cuda12x>=12.0
+# tgb>=2.0

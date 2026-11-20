@@ -1,0 +1,3 @@
+method,reachable_pairs,matches_ref,best_time_s
+strata_compiled_prune,29172815,True,1.869718
+bitset_compiled_noprune,29172815,True,1.87583

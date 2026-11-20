@@ -1,0 +1,248 @@
+{
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.18",
+    "numpy": "2.5.5",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.5, Numba 0.68.1"
+  },
+  "threads": {
+    "numba": 18,
+    "graphblas": null,
+    "threadpools": []
+  },
+  "repeats": 5,
+  "note": "MS-BFS = 64 sources per word, empty source words skipped, batches over threads; STRATA = tiled/static kernel on the same prepared stream",
+  "rows": [
+    {
+      "dataset": "CollegeMsg",
+      "mode": "strict",
+      "n": 1899,
+      "m": 59835,
+      "W": 30,
+      "threads": 1,
+      "verified_bit_identical": true,
+      "strata_kernel_s": 0.0006446660263463855,
+      "strata_samples_s": [
+        0.0006832910003140569,
+        0.0006461250013671815,
+        0.0006446660263463855,
+        0.0006538750021718442,
+        0.0006487079663202167
+      ],
+      "msbfs_s": 0.003562208032235503,
+      "msbfs_samples_s": [
+        0.0036235000006854534,
+        0.0036435829824768007,
+        0.003615249996073544,
+        0.00360270804958418,
+        0.003562208032235503
+      ],
+      "ratio_msbfs_over_strata": 5.525664276779327
+    },
+    {
+      "dataset": "CollegeMsg",
+      "mode": "strict",
+      "n": 1899,
+      "m": 59835,
+      "W": 30,
+      "threads": 18,
+      "verified_bit_identical": true,
+      "strata_kernel_s": 0.00042679201578721404,
+      "strata_samples_s": [
+        0.0004386669606901705,
+        0.00044545799028128386,
+        0.00042679201578721404,
+        0.00045266596134752035,
+        0.0004410410183481872
+      ],
+      "msbfs_s": 0.000578083039727062,
+      "msbfs_samples_s": [
+        0.0005959580303169787,
+        0.0005876250215806067,
+        0.0005872910260222852,
+        0.000578083039727062,
+        0.0005950420163571835
+      ],
+      "ratio_msbfs_over_strata": 1.3544841945105113
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "mode": "strict",
+      "n": 5881,
+      "m": 35592,
+      "W": 92,
+      "threads": 1,
+      "verified_bit_identical": true,
+      "strata_kernel_s": 0.0011222499888390303,
+      "strata_samples_s": [
+        0.0011441250098869205,
+        0.0011405840050429106,
+        0.0011456669890321791,
+        0.001145250047557056,
+        0.0011222499888390303
+      ],
+      "msbfs_s": 0.006482833006884903,
+      "msbfs_samples_s": [
+        0.006482833006884903,
+        0.006535749998874962,
+        0.006491124979220331,
+        0.006508500024210662,
+        0.0064884579624049366
+      ],
+      "ratio_msbfs_over_strata": 5.776638958661435
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "mode": "strict",
+      "n": 5881,
+      "m": 35592,
+      "W": 92,
+      "threads": 18,
+      "verified_bit_identical": true,
+      "strata_kernel_s": 0.000550124968867749,
+      "strata_samples_s": [
+        0.0005709999823011458,
+        0.000550124968867749,
+        0.0005703750066459179,
+        0.0005588329513557255,
+        0.0005691670230589807
+      ],
+      "msbfs_s": 0.0008265830110758543,
+      "msbfs_samples_s": [
+        0.0008369159768335521,
+        0.0008265830110758543,
+        0.0008280419860966504,
+        0.0008300829795189202,
+        0.000827791984193027
+      ],
+      "ratio_msbfs_over_strata": 1.5025368013691565
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "mode": "strict",
+      "n": 5573,
+      "m": 32029,
+      "W": 88,
+      "threads": 1,
+      "verified_bit_identical": true,
+      "strata_kernel_s": 0.0009849999914877117,
+      "strata_samples_s": [
+        0.0010060830391012132,
+        0.0009910830412991345,
+        0.0009972919942811131,
+        0.0009849999914877117,
+        0.0009870000067166984
+      ],
+      "msbfs_s": 0.005679249996319413,
+      "msbfs_samples_s": [
+        0.005702833004761487,
+        0.005679249996319413,
+        0.005709291959647089,
+        0.005694208026397973,
+        0.005680624977685511
+      ],
+      "ratio_msbfs_over_strata": 5.765736086699514
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "mode": "strict",
+      "n": 5573,
+      "m": 32029,
+      "W": 88,
+      "threads": 18,
+      "verified_bit_identical": true,
+      "strata_kernel_s": 0.0004924159729853272,
+      "strata_samples_s": [
+        0.0004967919667251408,
+        0.0004967499990016222,
+        0.0004952499875798821,
+        0.0004924159729853272,
+        0.0004955419572070241
+      ],
+      "msbfs_s": 0.0007601670222356915,
+      "msbfs_samples_s": [
+        0.0007674999651499093,
+        0.000773542036768049,
+        0.0007679160335101187,
+        0.0007737089763395488,
+        0.0007601670222356915
+      ],
+      "ratio_msbfs_over_strata": 1.543749723688071
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "mode": "strict",
+      "n": 8000,
+      "m": 1000000,
+      "W": 125,
+      "threads": 1,
+      "verified_bit_identical": true,
+      "strata_kernel_s": 0.03193204099079594,
+      "strata_samples_s": [
+        0.03213833400513977,
+        0.0328784579760395,
+        0.03247433400247246,
+        0.03193204099079594,
+        0.032016957993619144
+      ],
+      "msbfs_s": 0.14619462500559166,
+      "msbfs_samples_s": [
+        0.14660083298804238,
+        0.14649083401309326,
+        0.14638200000626966,
+        0.14638954098336399,
+        0.14619462500559166
+      ],
+      "ratio_msbfs_over_strata": 4.5783050650514525
+    },
+    {
+      "dataset": "synthetic-PA(n=8000,m=1000000,G=200,seed=7)",
+      "mode": "strict",
+      "n": 8000,
+      "m": 1000000,
+      "W": 125,
+      "threads": 18,
+      "verified_bit_identical": true,
+      "strata_kernel_s": 0.007485417008865625,
+      "strata_samples_s": [
+        0.007601749966852367,
+        0.007535875018220395,
+        0.007521540974266827,
+        0.007527874957304448,
+        0.007485417008865625
+      ],
+      "msbfs_s": 0.01394666702253744,
+      "msbfs_samples_s": [
+        0.014168166962917894,
+        0.01417541695991531,
+        0.014032165985554457,
+        0.01394666702253744,
+        0.014326290984172374
+      ],
+      "ratio_msbfs_over_strata": 1.8631783648151066
+    }
+  ]
+}

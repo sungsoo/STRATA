@@ -1,0 +1,81 @@
+{
+  "url": "https://gitlab.com/tgpublic/tglib.git",
+  "commit_pinned": "e56c3ddb2b665455fb16aacca1044b99a62850f0",
+  "route": "pip",
+  "ok": true,
+  "steps": [
+    {
+      "stage": "pin",
+      "cmd": [
+        "git",
+        "-C",
+        "external/tglib",
+        "fetch",
+        "--quiet",
+        "origin",
+        "e56c3ddb2b665455fb16aacca1044b99a62850f0"
+      ],
+      "rc": 0,
+      "tail": ""
+    },
+    {
+      "stage": "pin",
+      "cmd": [
+        "git",
+        "-C",
+        "external/tglib",
+        "checkout",
+        "--quiet",
+        "e56c3ddb2b665455fb16aacca1044b99a62850f0"
+      ],
+      "rc": 0,
+      "tail": ""
+    },
+    {
+      "stage": "pin",
+      "cmd": [
+        "git",
+        "-C",
+        "external/tglib",
+        "submodule",
+        "update",
+        "--init",
+        "--recursive",
+        "--quiet"
+      ],
+      "rc": 0,
+      "tail": ""
+    },
+    {
+      "stage": "pip",
+      "cmd": [
+        "~/Research/STRATA/STRATA-v25/STRATA-code/05_Temporal_STRATA/.venv313/bin/python3",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "external/tglib"
+      ],
+      "rc": 0,
+      "tail": "stalling build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Getting requirements to build wheel: started\n  Getting requirements to build wheel: finished with status 'done'\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: temporalgraphlib\n  Building wheel for temporalgraphlib (pyproject.toml): started\n  Building wheel for temporalgraphlib (pyproject.toml): still running...\n  Building wheel for temporalgraphlib (pyproject.toml): finished with status 'done'\n  Created wheel for temporalgraphlib: filename=temporalgraphlib-1.7.1-cp313-cp313-macosx_27_0_arm64.whl size=240764 sha256=136343e64827192adb19b6a1c51c82a746f2c79941b8e8c9a68363bc916aa091\n  Stored in directory: /private/var/folders/pr/sll6dnqx1bv8gkdwn26g460c0000gn/T/pip-ephem-wheel-cache-5cm5zxew/wheels/eb/0a/98/7f4bd252a0e2eaf9f3624250729c2aae26c4a19a0b703358c6\nSuccessfully built temporalgraphlib\nInstalling collected packages: temporalgraphlib\n  Attempting uninstall: temporalgraphlib\n    Found existing installation: temporalgraphlib 1.7.1\n    Uninstalling temporalgraphlib-1.7.1:\n      Successfully uninstalled temporalgraphlib-1.7.1\nSuccessfully installed temporalgraphlib-1.7.1\n\n[notice] A new release of pip is available: 26.2.2 -> 26.3\n[notice] To update, run: ~/Research/STRATA/STRATA-v25/STRATA-code/05_Temporal_STRATA/.venv313/bin/python3 -m pip install --upgrade pip\n",
+      "env": {
+        "CMAKE_ARGS": "-DOpenMP_ROOT=/opt/homebrew/opt/libomp \"-DOpenMP_C_FLAGS=-Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include\" \"-DOpenMP_CXX_FLAGS=-Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include\" -DOpenMP_C_LIB_NAMES=omp -DOpenMP_CXX_LIB_NAMES=omp -DOpenMP_omp_LIBRARY=/opt/homebrew/opt/libomp/lib/libomp.dylib \"-DCMAKE_EXE_LINKER_FLAGS=-L/opt/homebrew/opt/libomp/lib -lomp\" \"-DCMAKE_SHARED_LINKER_FLAGS=-L/opt/homebrew/opt/libomp/lib -lomp\" \"-DCMAKE_MODULE_LINKER_FLAGS=-L/opt/homebrew/opt/libomp/lib -lomp\""
+      }
+    }
+  ],
+  "python": "~/Research/STRATA/STRATA-v25/STRATA-code/05_Temporal_STRATA/.venv313/bin/python3",
+  "platform": "darwin",
+  "werror_relaxed": false,
+  "tools": {
+    "cmake": "cmake version 4.5.0",
+    "cxx": "Apple clang version 21.0.0 (clang-2100.4.1.1)",
+    "git": "git version 2.54.0 (Apple Git-157)"
+  },
+  "openmp": {
+    "found": true,
+    "prefix": "/opt/homebrew/opt/libomp"
+  },
+  "commit": "e56c3ddb2b665455fb16aacca1044b99a62850f0",
+  "local_diff": "tglib_cpp/amalgamated/tglib_amalgamated.h | 128 ++++++++++++++++++++++++++++++\n 1 file changed, 128 insertions(+)",
+  "import": "1.7.1"
+}

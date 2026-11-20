@@ -1,0 +1,337 @@
+{
+  "dataset": "sx-stackoverflow",
+  "n": 2601977,
+  "m": 63497050,
+  "meta": {
+    "dataset": "sx-stackoverflow",
+    "max_edges": null,
+    "max_nodes": null,
+    "n": 2601977,
+    "relabel_compact": true,
+    "temporal_edges": 63497050,
+    "timestamp_max": 1457273428,
+    "timestamp_min": 1217567877,
+    "unique_timestamps": 52423237
+  },
+  "layout": "tiled",
+  "repeats": 3,
+  "verified_sources_per_width": 16,
+  "reference": "per-source strict BFS",
+  "stream_triad": {
+    "array_mib": 1024,
+    "n_elems": 134217728,
+    "rows": [
+      {
+        "threads": 6,
+        "seconds": 0.01814933301648125,
+        "samples_s": [
+          0.0181910420069471,
+          0.01817570795537904,
+          0.01814933301648125
+        ],
+        "GBps": 177.48450971034765,
+        "GBps_write_allocate": 236.64601294713023
+      },
+      {
+        "threads": 12,
+        "seconds": 0.0120613329927437,
+        "samples_s": [
+          0.012091958022210747,
+          0.0120613329927437,
+          0.012090999982319772
+        ],
+        "GBps": 267.0704369026162,
+        "GBps_write_allocate": 356.09391587015494
+      },
+      {
+        "threads": 18,
+        "seconds": 0.009228124981746078,
+        "samples_s": [
+          0.009253458003513515,
+          0.009228124981746078,
+          0.009247582987882197
+        ],
+        "GBps": 349.0660863796086,
+        "GBps_write_allocate": 465.42144850614477
+      }
+    ]
+  },
+  "rows": [
+    {
+      "block_bits": 65536,
+      "width": 65536,
+      "threads": 6,
+      "schedule": "static",
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 6,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 6,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; explicit chunks=6",
+        "chunk_policy": "auto"
+      },
+      "chunks": 6,
+      "kernel_s_samples": [
+        17.375381624966394,
+        17.421028250013478,
+        17.675613500003237
+      ],
+      "kernel_s_median": 17.421028250013478,
+      "kernel_s_best": 17.375381624966394,
+      "model": {
+        "edge_bytes": 1560503500800,
+        "snapshot_bytes": 1039597797376,
+        "tile_bytes": 85261582336,
+        "total_bytes": 2685362880512
+      },
+      "stream_read_bytes": 17221902720,
+      "achieved_GBps": 155.13348261919666,
+      "triad_GBps": 177.48450971034765,
+      "ratio_to_triad": 0.8740677306001094,
+      "pairs": 135861202069
+    },
+    {
+      "block_bits": 65536,
+      "width": 65536,
+      "threads": 6,
+      "schedule": "static",
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 6,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 12,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; explicit chunks=12",
+        "chunk_policy": "auto"
+      },
+      "chunks": 12,
+      "kernel_s_samples": [
+        18.09678525000345,
+        17.826950624992605,
+        17.91437816695543
+      ],
+      "kernel_s_median": 17.91437816695543,
+      "kernel_s_best": 17.826950624992605,
+      "model": {
+        "edge_bytes": 1560503500800,
+        "snapshot_bytes": 1039597797376,
+        "tile_bytes": 85261582336,
+        "total_bytes": 2685362880512
+      },
+      "stream_read_bytes": 34443805440,
+      "achieved_GBps": 151.82255619505182,
+      "triad_GBps": 177.48450971034765,
+      "ratio_to_triad": 0.855412996000745,
+      "pairs": 135861202069
+    },
+    {
+      "block_bits": 65536,
+      "width": 65536,
+      "threads": 6,
+      "schedule": "static",
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 6,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; explicit chunks=18",
+        "chunk_policy": "auto"
+      },
+      "chunks": 18,
+      "kernel_s_samples": [
+        17.494413000007626,
+        17.339883374981582,
+        17.47516612499021
+      ],
+      "kernel_s_median": 17.47516612499021,
+      "kernel_s_best": 17.339883374981582,
+      "model": {
+        "edge_bytes": 1560503500800,
+        "snapshot_bytes": 1039597797376,
+        "tile_bytes": 85261582336,
+        "total_bytes": 2685362880512
+      },
+      "stream_read_bytes": 51665708160,
+      "achieved_GBps": 156.62389525201343,
+      "triad_GBps": 177.48450971034765,
+      "ratio_to_triad": 0.8824651543259833,
+      "pairs": 135861202069
+    },
+    {
+      "block_bits": 65536,
+      "width": 65536,
+      "threads": 12,
+      "schedule": "static",
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 12,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; explicit chunks=18",
+        "chunk_policy": "auto"
+      },
+      "chunks": 18,
+      "kernel_s_samples": [
+        27.380772417003755,
+        27.778494458994828,
+        27.341717332950793
+      ],
+      "kernel_s_median": 27.380772417003755,
+      "kernel_s_best": 27.341717332950793,
+      "model": {
+        "edge_bytes": 1560503500800,
+        "snapshot_bytes": 1039597797376,
+        "tile_bytes": 85261582336,
+        "total_bytes": 2685362880512
+      },
+      "stream_read_bytes": 51665708160,
+      "achieved_GBps": 99.96170111593622,
+      "triad_GBps": 267.0704369026162,
+      "ratio_to_triad": 0.3742896528543366,
+      "pairs": 135861202069
+    },
+    {
+      "block_bits": 65536,
+      "width": 65536,
+      "threads": 18,
+      "schedule": "static",
+      "plan": {
+        "layout": "tiled",
+        "resolved_layout": "tiled",
+        "schedule": "static",
+        "threads": 18,
+        "words": 1024,
+        "line_words": 16,
+        "nchunks": 18,
+        "oversub": 4,
+        "rule": "explicit layout=tiled; explicit chunks=18",
+        "chunk_policy": "auto"
+      },
+      "chunks": 18,
+      "kernel_s_samples": [
+        35.68471350002801,
+        35.44034487497993,
+        33.793771042022854
+      ],
+      "kernel_s_median": 35.44034487497993,
+      "kernel_s_best": 33.793771042022854,
+      "model": {
+        "edge_bytes": 1560503500800,
+        "snapshot_bytes": 1039597797376,
+        "tile_bytes": 85261582336,
+        "total_bytes": 2685362880512
+      },
+      "stream_read_bytes": 51665708160,
+      "achieved_GBps": 77.22917478165625,
+      "triad_GBps": 349.0660863796086,
+      "ratio_to_triad": 0.22124513894388956,
+      "pairs": 135861202069
+    }
+  ],
+  "summary": {
+    "65536": {
+      "grid": {
+        "6": {
+          "6": 17.421028250013478,
+          "12": 17.91437816695543,
+          "18": 17.47516612499021
+        },
+        "12": {
+          "18": 27.380772417003755
+        },
+        "18": {
+          "18": 35.44034487497993
+        }
+      },
+      "chunks_at_fixed_threads": {
+        "threads": 6,
+        "series": {
+          "6": 17.421028250013478,
+          "12": 17.91437816695543,
+          "18": 17.47516612499021
+        }
+      },
+      "threads_at_fixed_chunks": {
+        "chunks": 18,
+        "series": {
+          "6": 17.47516612499021,
+          "12": 27.380772417003755,
+          "18": 35.44034487497993
+        }
+      }
+    }
+  },
+  "pairs": [
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      12
+    ],
+    [
+      6,
+      18
+    ],
+    [
+      12,
+      18
+    ],
+    [
+      18,
+      18
+    ]
+  ],
+  "note": "touched bytes are an upper bound on DRAM traffic (cache reuse can push the ratio to triad above 1); stream_read_bytes = edge stream walked once per column chunk",
+  "peak_rss_bytes": 56351096832,
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.18",
+    "numpy": "2.5.5",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.5, Numba 0.68.1"
+  },
+  "threads_record": {
+    "numba": 18,
+    "graphblas": null,
+    "threadpools": []
+  }
+}

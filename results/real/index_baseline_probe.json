@@ -1,0 +1,64 @@
+{
+  "fetched": "2026-11-17T14:22:00",
+  "repos": {
+    "tgindex": {
+      "url": "https://gitlab.com/tgpublic/tgindex.git",
+      "commit": "91e5eb7a90f90624e102e281ad96f2a91d188dd0",
+      "license_file": null,
+      "license_head": null,
+      "readme_head": "# TG Index\n\nSource code for the paper: *\"An Index for Single Source All Destinations Distance Queries in Temporal Graphs\"*, \nLutz Oettershagen and Petra Mutzel, 2022.\n\n## Data sets\n\nThe data sets are in the zipped file `datasets.zip`.\nIn the folder `datasets` unzip the data sets with `unzip -j datasets.zip`.\n\n## Folder structure\n\n- `datasets/` contains the data sets (after unzipping)\n- `scripts/` contains scripts for the experiments and plots\n- `tgindex/` contains the C++ source code of our algorithms\n\n## Build\n\nNext, in the folder `tgindex` run:\n```\nmkdir cmake-build-release\ncd cmake-build-release\ncmake -DCMAKE_BUILD_TYPE=Release ..\nmake\n```\n\nAfter running the commands the program `tgindex` can be used. Run it without parameters to get help.\n\n## Running the experiments\n\nIn the folder `scripts/slurm` run the bash script `make_slurm_files.sh`. It will generate the slurm files for the experiments and five scripts to run them.\n\nIn order to schedule the slurm scripts, go to folder `tgindex/cmake-build-release` and run the scripts\n\n```\nschedule_all_exps.sh\nschedule_all_greedy.sh\nschedule_all_closeness.sh\nschedule_all_dynamic.sh\nschedule_all_interval.sh\n```\n\nThe results will be written in the `.out` files.\n\n\nYou can run `parse_result.sh` in the folder `scripts/parser` to generate `.csv` files containing the results.",
+      "build_files": [
+        "tgindex/CMakeLists.txt"
+      ],
+      "sources": 42,
+      "top_level": [
+        "README.md",
+        "datasets",
+        "scripts",
+        "slides.pdf",
+        "tgindex"
+      ]
+    },
+    "tglib": {
+      "url": "https://gitlab.com/tgpublic/tglib.git",
+      "commit": "e56c3ddb2b665455fb16aacca1044b99a62850f0",
+      "license_file": "LICENSE.md",
+      "license_head": "Copyright (c) 2022 Lutz Oettershagen\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \u201cSoftware\u201d), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\n",
+      "readme_head": "[//]: # (/tableofcontents)\n# Introduction to TGLib\n\n**TGLib is an open-source temporal graph library focusing on temporal distance and centrality \ncomputations, and other local and global temporal graph statistics.** \n\nTGLib is designed for performance and usability by an efficient and modular C++ implementation of the \ncore data structures and algorithms and an easy-to-use Python front-end provided by PyBind11. \n\n\n[GitLab Repository](https://gitlab.com/tgpublic/tglib)\n\n\n## Easy Python Usage\n\n**New:** TGLib is now easily installable via [PyPI](https://pypi.org/project/temporalgraphlib/)!\nYou can install it using pip:\n\n```bash\npip install temporalgraphlib\n```\n\nThis installs the precompiled Python bindings for TGLib, allowing you to use it directly in your Python environment without building from source.\n\nAfter installation, TGLib can be used in python as follows:\n\n```\nimport pytglib as tgl\ntgs = tgl.load_ordered_edge_list(\"example_datasets/example_from_paper.tg\")\nstats = tgl.get_statistics(tgs)\nprint(stats)\n```\n\n## Easy C++ Usage\n\nThe C++ part of TGLib is a header-only template library that can be directly used in other C++ projects\nby including the headers in your project.\n\n\n## Compilation and Installation\nThe following describes how to compile the python bindings.\n\n### Building the Python library\nFor compiling the PyBind11 binding and the Doxygen documentation, \nfirst clone the repository recursively to obtain the PyBind11 submodule via\n```\ngit clone --recurse-submodules https://gitlab.com/tgpublic/tglib.git\n```\n\nThen, run the following:\n\n```\ncd tglib/tglib_cpp\nmkdir build-release\ncd build-release\ncmake .. -DCMAKE_BUILD_TYPE=Release\nmake\n```\nAfter the compilation, the Python binding is in the subfolder `build-release/src/python-binding`.\n\n#### Importing the Python library\nRunning the above commands will produce a binary module file \nthat can be imported to Python. \nAssuming that the compiled module is located in the \ncurrent directory, TGLib can be imported in Python with ```import pytglib as tgl```.\n\n\n\n#### Python version\nNote that the CMake will try to automatically detect the installed \nPython version and link against that. \nYou can specify a version by adding `-DPYTHON_EXECUTABLE=$(which python)` \nwhen calling `cmake`, where $(which python) a path to \nPython (see \n[PyBind11 documentation](https://pybind11.readthedocs.io/en/stable/faq.html?highlight=cmake#cmake-doesn-t-detect-the-right-python-version)).\n\n\n### Building the documentation\nIn order to additionally generate the C++ documentation, call `make doxygen`.\nThe documentation can be found in the subfolder `build-release/html`.\nNote that you need Doxygen for generating the documentation.\n\n## Quick Start\n\n### First example\n\nThe following Python code loads a temporal graph from the file with name `temporal_graph_file` \nand computes basic network statistics by calling `get_statistics`.\nThe results is printed using the `print` command.\n\n```python\nimport pytglib as tgl  \ntg = tgl.load_ordered_edge_list(\"temporal_graph_file\")\nstats = tgl.get_statistics(tg)\nprint(stats)\n```\n\nThe folder `tglib_python` contains further examples for\nthe usage of TGLib in Python.\n\n### Temporal graph file format\nTemporal graphs can be read from text files that contain edge lists in\nwhich each line represents the information of the edge.\nEach edge can consists of three or four values:\n`u v t` or  `u v t tt` where `u` is the tail, `v` the head, \n`t` the time stamp (availability time), and `tt` an optional transition time.\n\nThe folder `example_datasets` contains examples.\n\n\n\n## Implemented Data Structures and Algorithms \n\n### Data structures\nTGLib supports the temporal edge stream data structure from \n[Wu et al.](https://dl.acm.org/doi/10.14778/2732939.2732945),\nthe incident lists data structure used in \n[Oettershagen and Mutzel](https://ieeexplore.ieee.org/document/9338392), and the \ntime-respecting static graph representation introduced in \n[Gheibi et al.](https://ieeexplore.ieee.org/abstract/document/9631469).\nFurthermore, TGLib supports further static graph representations, e.g.,\nthe weighted aggregated underlying graph or directed line graph representation.\n\n[//]: # (For further details about the implemented data structures and algorithms, )\n[//]: # (as well as the corresponding references are described in our [paper]&#40;&#41;.)\n\n### Algorithms and network properties\n\nSo far, we implemented the following algorithms and measures, e.g.,\n\n* **Temporal paths and distance algorithms:** Based on \n[Wu et al.](https://dl.acm.org/doi/10.14778/2732939.2732945),\n[Oettershagen and Mutzel](https://ieeexplore.ieee.org/document/9338392),\n[Gheibi et al.](https://ieeexplore.ieee.org/abstract/document/9631469), (and new techniques), for\n  * minimum duration paths\n  * earliest arrival paths\n  * latest departure paths\n  * shortest paths\n  * minimum hops paths\n* **Temporal centrality measures:** \n  * temporal closeness ([Oettershagen and Mutzel](https://ieeexplore.ieee.org/document/9338392) and new variants)\n  * temporal edge betweenness (new)\n  * temporal Katz ([B\u00e9res et al.](https://doi.org/10.1007/s41109-018-0080-5))\n  * temporal PageRank ([Rozenshtein and Gionis](https://doi.org/10.1007/978-3-319-46227-1_42))\n  * temproal walk centrality ([Oettershagen et al.](https://dl.acm.org/doi/fullHtml/10.1145/3485447.3512210))\n* **Temporal graph properties:** \n  * edge/node burstiness ([Goh and Barab\u00e1si](https://arxiv.org/abs/physics/0610233))\n  * topological overlap ([Tang et al.](https://arxiv.org/abs/0909.1712))\n  * temporal clustering coefficient ([Tang et al.](https://dl.acm.org/doi/10.1145/1592665.1592674))\n  * temporal eccentricity and diameter\n  * temporal efficiency ([Tang et al.](https://dl.acm.org/doi/10.1145/1592665.1592674))\n  * temporal (k,h)-core decomposition ([Wu et al.](https://ieeexplore.ieee.org/abstract/document/7363809))\n  * temporal (L,K)-lasting core ([Hung and Tseng](https://link.springer.com/chapter/10.1007/978-3-030-73216-5_23))\n\n## C++ Documentation\nThe C",
+      "build_files": [
+        "pyproject.toml",
+        "tglib_cpp/CMakeLists.txt",
+        "tglib_cpp/extern/pybind11/CMakeLists.txt",
+        "tglib_cpp/extern/pybind11/pyproject.toml",
+        "tglib_cpp/extern/pybind11/setup.py",
+        "tglib_cpp/extern/pybind11/tests/CMakeLists.txt",
+        "tglib_cpp/extern/pybind11/tests/test_cmake_build/CMakeLists.txt",
+        "tglib_cpp/extern/pybind11/tests/test_cmake_build/installed_embed/CMakeLists.txt",
+        "tglib_cpp/extern/pybind11/tests/test_cmake_build/installed_function/CMakeLists.txt",
+        "tglib_cpp/extern/pybind11/tests/test_cmake_build/installed_target/CMakeLists.txt",
+        "tglib_cpp/extern/pybind11/tests/test_cmake_build/subdirectory_embed/CMakeLists.txt",
+        "tglib_cpp/extern/pybind11/tests/test_cmake_build/subdirectory_function/CMakeLists.txt",
+        "tglib_cpp/extern/pybind11/tests/test_cmake_build/subdirectory_target/CMakeLists.txt",
+        "tglib_cpp/extern/pybind11/tests/test_embed/CMakeLists.txt",
+        "tglib_cpp/extern/pybind11/tools/pyproject.toml",
+        "tglib_cpp/src/CMakeLists.txt",
+        "tglib_cpp/src/python_binding/CMakeLists.txt",
+        "tglib_cpp/test/CMakeLists.txt",
+        "tglib_cpp/test/test-algorithms/CMakeLists.txt",
+        "tglib_cpp/test/test-core/CMakeLists.txt",
+        "tglib_cpp/test/test-util/CMakeLists.txt"
+      ],
+      "sources": 240,
+      "top_level": [
+        "CHANGELOG.md",
+        "LICENSE.md",
+        "README.md",
+        "example_datasets",
+        "pyproject.toml",
+        "pytglib",
+        "tglib_cpp",
+        "tglib_python"
+      ]
+    }
+  }
+}

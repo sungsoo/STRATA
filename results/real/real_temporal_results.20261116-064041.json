@@ -1,0 +1,83 @@
+{
+  "datasets": [
+    {
+      "dataset": "CollegeMsg",
+      "n": 1899,
+      "m": {
+        "dataset": "CollegeMsg",
+        "max_edges": null,
+        "max_nodes": null,
+        "n": 1899,
+        "relabel_compact": true,
+        "temporal_edges": 59835,
+        "timestamp_max": 1098777142,
+        "timestamp_min": 1082040961,
+        "unique_timestamps": 58911
+      },
+      "timestamp_groups": null,
+      "temporal_pairs_strict": 1794244,
+      "temporal_pairs_closure": 1794349,
+      "static_pairs": 2464598,
+      "temporal_density_strict_pct": 49.75,
+      "static_density_pct": 68.34,
+      "static_overcount_vs_strict_pct": 37.4,
+      "exact_bfs_strict_s": 140.69,
+      "strata_strict_s": 0.1574,
+      "speedup_strict": 894.0,
+      "touched_vs_fullcopy_x": 7.1
+    },
+    {
+      "dataset": "Bitcoin-OTC",
+      "n": 5881,
+      "m": {
+        "dataset": "Bitcoin-OTC",
+        "max_edges": null,
+        "max_nodes": null,
+        "n": 5881,
+        "relabel_compact": true,
+        "temporal_edges": 35592,
+        "timestamp_max": 1453684323,
+        "timestamp_min": 1289241911,
+        "unique_timestamps": 35427
+      },
+      "timestamp_groups": null,
+      "temporal_pairs_strict": 15294857,
+      "temporal_pairs_closure": 15294860,
+      "static_pairs": 27690498,
+      "temporal_density_strict_pct": 44.22,
+      "static_density_pct": 80.06,
+      "static_overcount_vs_strict_pct": 81.0,
+      "exact_bfs_strict_s": 270.49,
+      "strata_strict_s": 0.0972,
+      "speedup_strict": 2782.4,
+      "touched_vs_fullcopy_x": 108.8
+    },
+    {
+      "dataset": "Bitcoin-OTC(+)",
+      "n": 5573,
+      "m": {
+        "dataset": "Bitcoin-OTC-positive",
+        "max_edges": null,
+        "max_nodes": null,
+        "n": 5573,
+        "relabel_compact": true,
+        "temporal_edges": 32029,
+        "timestamp_max": 1453684323,
+        "timestamp_min": 1289241911,
+        "unique_timestamps": 31986
+      },
+      "timestamp_groups": null,
+      "temporal_pairs_strict": 13351977,
+      "temporal_pairs_closure": 13351980,
+      "static_pairs": 25288198,
+      "temporal_density_strict_pct": 42.99,
+      "static_density_pct": 81.42,
+      "static_overcount_vs_strict_pct": 89.4,
+      "exact_bfs_strict_s": 233.23,
+      "strata_strict_s": 0.0868,
+      "speedup_strict": 2687.2,
+      "touched_vs_fullcopy_x": 102.2
+    }
+  ],
+  "note": "exact BFS times reused from v21 (identical deterministic reference); STRATA re-timed on v22 core (touched-row + unconditional strict merge)"
+}

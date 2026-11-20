@@ -1,0 +1,388 @@
+{
+  "dataset": "sx-stackoverflow",
+  "n": 2601977,
+  "m": 63497050,
+  "meta": {
+    "dataset": "sx-stackoverflow",
+    "max_edges": null,
+    "max_nodes": null,
+    "n": 2601977,
+    "relabel_compact": true,
+    "temporal_edges": 63497050,
+    "timestamp_max": 1457273428,
+    "timestamp_min": 1217567877,
+    "unique_timestamps": 52423237
+  },
+  "groups": 52423237,
+  "block_bits": 65536,
+  "blocks_total": 40,
+  "load_s": 5.63695308403112,
+  "prep": {
+    "sort_validate_s": 23.373413208057173,
+    "flatten_s": 3.7497375160455704e-07,
+    "group_boundaries_s": 0.04858354199677706,
+    "snapshot_plan_s": 0.25598150002770126,
+    "total_s": 23.677978625055403
+  },
+  "prep_sort": "time-then-group",
+  "prep_parallel": true,
+  "resident_block_bytes": 21315395584,
+  "relation_bits": 6770284308529,
+  "verified_sources": [
+    2641,
+    3121,
+    48181,
+    58941,
+    117802,
+    126864,
+    140323,
+    158205,
+    167083,
+    301123,
+    318081,
+    341011,
+    387205,
+    462421,
+    486313,
+    496923,
+    591475,
+    610180,
+    684928,
+    706305,
+    723136,
+    734364,
+    743632,
+    797423,
+    887410,
+    940655,
+    972890,
+    997497,
+    1021016,
+    1062817,
+    1131706,
+    1219914,
+    1282820,
+    1340835,
+    1416639,
+    1445636,
+    1486179,
+    1634102,
+    1639818,
+    1697422,
+    1724902,
+    1732551,
+    1745338,
+    1760712,
+    1767205,
+    1840885,
+    1952125,
+    2006064,
+    2024707,
+    2075541,
+    2094549,
+    2102194,
+    2196642,
+    2263939,
+    2269427,
+    2288816,
+    2299966,
+    2329928,
+    2335705,
+    2350898,
+    2495532,
+    2534774,
+    2548644,
+    2599789
+  ],
+  "reference": "per-source strict BFS",
+  "peak_rss_bytes": 29983670272,
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.18",
+    "numpy": "2.5.5",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.5, Numba 0.68.1"
+  },
+  "threads_record": {
+    "numba": 18,
+    "graphblas": null,
+    "threadpools": []
+  },
+  "runs": [
+    {
+      "threads": 18,
+      "layout": "tiled",
+      "schedule": "static",
+      "state": "tiles",
+      "blocks_run": 40,
+      "verified_sources": 64,
+      "kernel_s_total": 250.27202383225085,
+      "kernel_s_mean_block": 6.256800595806271,
+      "all_blocks_s": 250.27202383225085,
+      "blocks": [
+        {
+          "start": 0,
+          "width": 65536,
+          "kernel_s": 6.176266334019601,
+          "pairs": 135861202069
+        },
+        {
+          "start": 65536,
+          "width": 65536,
+          "kernel_s": 6.024068791011814,
+          "pairs": 112402003537
+        },
+        {
+          "start": 131072,
+          "width": 65536,
+          "kernel_s": 6.049905249965377,
+          "pairs": 107761653760
+        },
+        {
+          "start": 196608,
+          "width": 65536,
+          "kernel_s": 6.072012500022538,
+          "pairs": 106783390281
+        },
+        {
+          "start": 262144,
+          "width": 65536,
+          "kernel_s": 6.191095583024435,
+          "pairs": 104594677817
+        },
+        {
+          "start": 327680,
+          "width": 65536,
+          "kernel_s": 6.1726562500116415,
+          "pairs": 102045506083
+        },
+        {
+          "start": 393216,
+          "width": 65536,
+          "kernel_s": 6.101951958029531,
+          "pairs": 101124438300
+        },
+        {
+          "start": 458752,
+          "width": 65536,
+          "kernel_s": 6.141870749997906,
+          "pairs": 105399084543
+        },
+        {
+          "start": 524288,
+          "width": 65536,
+          "kernel_s": 6.078024209011346,
+          "pairs": 105846767608
+        },
+        {
+          "start": 589824,
+          "width": 65536,
+          "kernel_s": 6.209009709011298,
+          "pairs": 103724331712
+        },
+        {
+          "start": 655360,
+          "width": 65536,
+          "kernel_s": 6.158665959024802,
+          "pairs": 100146190658
+        },
+        {
+          "start": 720896,
+          "width": 65536,
+          "kernel_s": 6.239976125012618,
+          "pairs": 97637980287
+        },
+        {
+          "start": 786432,
+          "width": 65536,
+          "kernel_s": 6.309475457994267,
+          "pairs": 95621861532
+        },
+        {
+          "start": 851968,
+          "width": 65536,
+          "kernel_s": 6.347721666970756,
+          "pairs": 92511236834
+        },
+        {
+          "start": 917504,
+          "width": 65536,
+          "kernel_s": 6.440394165983889,
+          "pairs": 89758649170
+        },
+        {
+          "start": 983040,
+          "width": 65536,
+          "kernel_s": 6.413341375009622,
+          "pairs": 87036067437
+        },
+        {
+          "start": 1048576,
+          "width": 65536,
+          "kernel_s": 6.442386166017968,
+          "pairs": 83946772258
+        },
+        {
+          "start": 1114112,
+          "width": 65536,
+          "kernel_s": 6.398884875001386,
+          "pairs": 81461677871
+        },
+        {
+          "start": 1179648,
+          "width": 65536,
+          "kernel_s": 6.517048333014827,
+          "pairs": 77578498029
+        },
+        {
+          "start": 1245184,
+          "width": 65536,
+          "kernel_s": 6.404586374992505,
+          "pairs": 72856352094
+        },
+        {
+          "start": 1310720,
+          "width": 65536,
+          "kernel_s": 6.442847333033569,
+          "pairs": 71028471186
+        },
+        {
+          "start": 1376256,
+          "width": 65536,
+          "kernel_s": 6.401005833002273,
+          "pairs": 68774279371
+        },
+        {
+          "start": 1441792,
+          "width": 65536,
+          "kernel_s": 6.427741291990969,
+          "pairs": 64988568665
+        },
+        {
+          "start": 1507328,
+          "width": 65536,
+          "kernel_s": 6.455317415995523,
+          "pairs": 61044168644
+        },
+        {
+          "start": 1572864,
+          "width": 65536,
+          "kernel_s": 6.396119500044733,
+          "pairs": 57753915196
+        },
+        {
+          "start": 1638400,
+          "width": 65536,
+          "kernel_s": 6.405305374995805,
+          "pairs": 54912999366
+        },
+        {
+          "start": 1703936,
+          "width": 65536,
+          "kernel_s": 6.377730582957156,
+          "pairs": 50195845460
+        },
+        {
+          "start": 1769472,
+          "width": 65536,
+          "kernel_s": 6.382566083048005,
+          "pairs": 46267693384
+        },
+        {
+          "start": 1835008,
+          "width": 65536,
+          "kernel_s": 6.4472762910299934,
+          "pairs": 43041263477
+        },
+        {
+          "start": 1900544,
+          "width": 65536,
+          "kernel_s": 6.369030124973506,
+          "pairs": 39500180297
+        },
+        {
+          "start": 1966080,
+          "width": 65536,
+          "kernel_s": 6.357982041023206,
+          "pairs": 35531836138
+        },
+        {
+          "start": 2031616,
+          "width": 65536,
+          "kernel_s": 6.325992584053893,
+          "pairs": 31430479900
+        },
+        {
+          "start": 2097152,
+          "width": 65536,
+          "kernel_s": 6.405535666970536,
+          "pairs": 27038712318
+        },
+        {
+          "start": 2162688,
+          "width": 65536,
+          "kernel_s": 6.327192292024847,
+          "pairs": 22034125597
+        },
+        {
+          "start": 2228224,
+          "width": 65536,
+          "kernel_s": 6.346810583025217,
+          "pairs": 16704980533
+        },
+        {
+          "start": 2293760,
+          "width": 65536,
+          "kernel_s": 6.317701999971177,
+          "pairs": 11338538570
+        },
+        {
+          "start": 2359296,
+          "width": 65536,
+          "kernel_s": 6.302709417010192,
+          "pairs": 5650555215
+        },
+        {
+          "start": 2424832,
+          "width": 65536,
+          "kernel_s": 6.390922042017337,
+          "pairs": 2621285814
+        },
+        {
+          "start": 2490368,
+          "width": 65536,
+          "kernel_s": 6.289549916982651,
+          "pairs": 1883847187
+        },
+        {
+          "start": 2555904,
+          "width": 46073,
+          "kernel_s": 4.213345624972135,
+          "pairs": 163698055
+        }
+      ]
+    }
+  ]
+}

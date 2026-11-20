@@ -1,0 +1,141 @@
+{
+  "machine": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.18",
+    "numpy": "2.5.4",
+    "cpu_count": 18,
+    "cache_line_bytes": 128,
+    "cache_line_env_override": false,
+    "numba": "0.68.1",
+    "numba_max_threads": 18,
+    "numba_threading_layer_config": "default",
+    "cpu_brand": "Apple M5 Max",
+    "memory_bytes": 137438953472,
+    "perf_levels": [
+      {
+        "level": 0,
+        "name": "Super",
+        "physicalcpu": 6
+      },
+      {
+        "level": 1,
+        "name": "Performance",
+        "physicalcpu": 12
+      }
+    ],
+    "summary": "Apple M5 Max, 18 hardware threads (6 Super + 12 Performance), 128 GiB, 128-byte lines, Python 3.13.18, NumPy 2.5.4, Numba 0.68.1"
+  },
+  "tool": {
+    "adapter": "raphtory",
+    "version": "0.17.0",
+    "function": "raphtory.algorithms.temporally_reachable_nodes"
+  },
+  "rows": [
+    {
+      "dataset": "CollegeMsg",
+      "n": 1899,
+      "m": 59835,
+      "sources": 64,
+      "all_sources": false,
+      "semantics_check": {
+        "strict": {
+          "match": false,
+          "mismatched_sources": 64,
+          "examples": [
+            3,
+            10,
+            26,
+            59,
+            106
+          ]
+        },
+        "closure": {
+          "match": false,
+          "mismatched_sources": 64,
+          "examples": [
+            3,
+            10,
+            26,
+            59,
+            106
+          ]
+        }
+      },
+      "matched_semantics": null,
+      "timed": false,
+      "reason": "external relation matches neither semantics; not a same-problem run"
+    },
+    {
+      "dataset": "BitcoinOTC",
+      "n": 5881,
+      "m": 35592,
+      "sources": 64,
+      "all_sources": false,
+      "semantics_check": {
+        "strict": {
+          "match": false,
+          "mismatched_sources": 64,
+          "examples": [
+            14,
+            43,
+            107,
+            176,
+            237
+          ]
+        },
+        "closure": {
+          "match": false,
+          "mismatched_sources": 64,
+          "examples": [
+            14,
+            43,
+            107,
+            176,
+            237
+          ]
+        }
+      },
+      "matched_semantics": null,
+      "timed": false,
+      "reason": "external relation matches neither semantics; not a same-problem run"
+    },
+    {
+      "dataset": "BitcoinOTCpos",
+      "n": 5573,
+      "m": 32029,
+      "sources": 64,
+      "all_sources": false,
+      "semantics_check": {
+        "strict": {
+          "match": false,
+          "mismatched_sources": 64,
+          "examples": [
+            14,
+            27,
+            43,
+            107,
+            176
+          ]
+        },
+        "closure": {
+          "match": false,
+          "mismatched_sources": 64,
+          "examples": [
+            14,
+            27,
+            43,
+            107,
+            176
+          ]
+        }
+      },
+      "matched_semantics": null,
+      "timed": false,
+      "reason": "external relation matches neither semantics; not a same-problem run"
+    }
+  ],
+  "note": "timed only when the external relation equals STRATA's exact relation under the stated semantics; sampled-source times cover the sample only"
+}
