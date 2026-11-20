@@ -14,7 +14,7 @@ timestamped contacts propagate frontier deltas in time order, giving
 ## Layout
 
 ```
-05_Temporal_STRATA/
+Temporal_STRATA/
 ├── temporal_strata/          # core library
 │   ├── packed_reachability.py  #   temporal_strata_packed(): the algorithm
 │   ├── io.py                   #   standard edge-file loader
